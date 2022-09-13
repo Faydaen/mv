@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meta>
+    <metaobjects>
+<!-- stdfile -->
+        <metaobject code="stdfile" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="file" type="data" role="data" />
+                <metaattribute code="path" type="string" role="data" />
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="size" type="int" role="data" />
+                <metaattribute code="type_id" type="link_to_object" role="data" />
+                <metaattribute code="dt" type="datetime" role="data" />
+                <metaattribute code="attached" type="bool" role="data" />
+            </metaattributes>
+        </metaobject>
+<!-- stdimage -->
+        <metaobject code="stdimage" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="image" type="data" role="data" />
+                <metaattribute code="preview" type="data" role="data" />
+                <metaattribute code="path" type="string" role="data" />
+                <metaattribute code="previewpath" type="string" role="data" />
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="size" type="int" role="data" />
+                <metaattribute code="width" type="int" role="data" />
+                <metaattribute code="height" type="int" role="data" />
+                <metaattribute code="type_id" type="link_to_object" role="data" />
+                <metaattribute code="dt" type="datetime" role="data" />
+                <metaattribute code="attached" type="bool" role="data" />
+            </metaattributes>
+        </metaobject>
+<!-- stdfiletype -->
+        <metaobject code="stdfiletype" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="ext" type="string" role="data" />
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="category" type="string" role="data" />
+            </metaattributes>
+            <rows>
+                <row id="1"><ext></ext><name>Неизвестный файл</name><category></category></row>
+                <row id="2"><ext>jpg</ext><name>Изображение JPEG</name><category>image</category></row>
+                <row id="3"><ext>mp3</ext><name>Музыкальный файл MP3</name><category>audio</category></row>
+            </rows>
+        </metaobject>
+<!-- stdmodule -->
+        <metaobject code="stdmodule" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="code" type="string" role="data">
+                    <sql unique="1" />
+                </metaattribute>
+                <metaattribute code="name" type="string" role="data" />
+            </metaattributes>
+        </metaobject>
+<!-- stdtemplate -->
+        <metaobject code="stdtemplate" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="code" type="string" role="data">
+                    <sql unique="1" />
+                </metaattribute>
+                <metaattribute code="name" type="string" role="data" />
+            </metaattributes>
+        </metaobject>
+<!-- stdpage -->
+        <metaobject code="stdpage" versions="0" logs="0">
+            <installer generateclass="1" />
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="" type="link_to_object" typeparam="stdpage" role="system">
+                    <sql index="1" />
+                </metaattribute>
+                <metaattribute code="url" type="string" role="system" />
+                <metaattribute code="" type="link_to_object" typeparam="stdtemplate" role="system" />
+                <metaattribute code="" type="link_to_object" typeparam="stdmodule" tole="system" />
+                <!-- метаатрибуты, зависимые от проекта -->
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="content" type="text" role="data" />
+                <metaattribute code="pos" type="int" role="data" />
+                <metaattribute code="menuname" type="string" role="data" />
+                <metaattribute code="windowname" type="string" role="data" />
+                <metaattribute code="metakeywords" type="string" role="data" />
+                <metaattribute code="metadescription" type="string" role="data" />
+            </metaattributes>
+            <metaviews>
+                <metaview code="stdpage_form" name="Форма" oldcode="" type="form">
+                    <fields>
+                        <field metaattribute="name" name="Заголовок" defaultvalue="" required="1" hint="Заголовок страницы" />
+                        <field metaattribute="content" name="Контент" defaultvalue="" required="1" hint="Основное содержание страницы" />
+                        <field metaattribute="pos" name="Порядок" defaultvalue="" required="1" hint="Порядок сортировки страниц" />
+                        <field metaattribute="menuname" name="Пункт меню" defaultvalue="" hint="Название страницы в меню" />
+                        <field metaattribute="windowname" name="Заголовок окна" defaultvalue="" hint="" />
+                        <field metaattribute="metakeywords" name="Meta keywords" defaultvalue="" hint="" />
+                        <field metaattribute="metadescription" name="Meta description" defaultvalue="" hint="" />
+                    </fields>
+                </metaview>
+            </metaviews>
+            <rows>
+                <row id="1">
+                    <_id>0</_id>
+                    <url>index</url>
+                    <stdtemplate_id>1</stdtemplate_id>
+                    <stdmodule_id>1</stdmodule_id>
+                    <name>Главная страница</name>
+                    <content></content>
+                </row>
+            </rows>
+        </metaobject>
+<!-- -->
+    </metaobjects>
+</meta>

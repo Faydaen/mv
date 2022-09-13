@@ -1,0 +1,8 @@
+<tr>
+	<td class="num"><%i%></td>
+	<td class="box"><input type="checkbox" id="<%id%>" /></td>
+    <td><%metaobject%></td>
+    <td><%metaview%></td>
+    <td><%object%></td>
+    <td><%rights%></td>
+</tr>

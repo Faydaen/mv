@@ -1,0 +1,13 @@
+.stash .block-rounded { background:#F7B142; text-align:left; padding:20px; }
+
+.stash .stash-major { padding:5px; text-align:left; font-size:90%; }
+.stash .stash-major blockquote { float:right; font-style:italic; margin:0; }
+
+.stash .stash-buy { padding:5px; text-align:center; font-size:90%; }
+.stash .stash-change { padding:5px; text-align:center; font-size:90%; }
+
+.stash .stash-invite { padding:5px; text-align:left; font-size:90%; }
+.stash .stash-invite input { font-size:100%; font-family:Arial; width:100%; margin-top:0.3em; }
+.stash .stash-invite  p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.stash .stash-block { padding:5px; text-align:center; font-size:90%; }

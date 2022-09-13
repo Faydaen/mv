@@ -1,0 +1,25 @@
+
+.bank .welcome { background:url(../images/loc/bank.jpg) 50% 0% no-repeat #ffe9b3; padding-top:300px; margin-bottom:12px; position:relative; zoom:1; }
+.bank .welcome i.tlc,
+.bank .welcome i.trc { display:none; }
+.bank .welcome .block-rounded { background:#155a41; color:#fff; margin:0; }
+.bank .welcome .block-rounded .text { text-align:center; padding:10px 20px; }
+.bank .welcome .amount { color:#5ab791; position:absolute; top:135px; left:273px; white-space:nowrap; font-size:8pt; width:110px; text-align:center; overflow:hidden; font-family:Courier New, Monospace; }
+
+.bank .bank-deposit { padding:5px; text-align:left; font-size:90%; }
+.bank .bank-deposit  p { margin:0 0 1em 0; }
+.bank .bank-deposit select { margin:0 0 5px 0; }
+.bank .bank-deposit div.now { margin:0 0 1em 0; border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+.bank .bank-deposit div.now button { margin-top:3px; }
+
+.bank .stash-buy { padding:5px; text-align:center; font-size:90%; }
+.bank .stash-change { padding:5px; text-align:center; font-size:90%; }
+
+.bank .stash-invite { padding:5px; text-align:left; font-size:90%; }
+.bank .stash-invite input { font-size:100%; font-family:Arial; width:100%; margin-top:0.3em; }
+.bank .stash-invite  p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.bank .bank-robbery { padding:5px; text-align:left; font-size:90%; }
+.bank .bank-robbery .details { margin:0 0 1em 0; border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; line-height:1.6; }
+.bank .bank-robbery form { text-align:center; }
+.bank .bank-robbery .hint { margin-top:5px; color:#975D17; }

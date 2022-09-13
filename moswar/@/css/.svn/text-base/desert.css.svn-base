@@ -1,0 +1,6 @@
+
+.desert .welcome { background:url(../images/loc/desert.jpg) 50% 0% no-repeat #a73d14; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.desert .welcome i.tlc,
+.desert .welcome i.trc { display:none; }
+.desert .welcome .block-rounded { background:#a73d14; margin:0; }
+.desert .welcome .block-rounded .text { text-align:left; padding:10px 20px; }

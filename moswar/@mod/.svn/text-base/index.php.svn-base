@@ -1,0 +1,660 @@
+<?php
+class Index extends Page implements IModule {
+	public $moduleCode = 'Index';
+	public $checkQuests = false;
+	private $payTypes = array("sms", "webmoney", "onlinedengi", "yandex", "rbk");
+
+	public function __construct() {
+		parent::__construct();
+	}
+
+	public function processRequest() {
+		parent::onBeforeProcessRequest();
+
+		switch ($_POST["action"]) {
+			case "register" :
+				$this->validateRegister();
+				break;
+			case "login" :
+				if (substr($_POST['email'], 0, 11) == '#informico#') {
+					$_POST['email'] = Index::$sql->getValue("SELECT email FROM player WHERE id = " . substr($_POST['email'], 11, -1));
+				}
+
+				if ($_POST['email'] == '') {
+					Std::redirect('/');
+				}
+				
+				if (!isset($_POST["password"])) {
+					$authResult = Page::login($_POST['email'], false);
+				} else {
+					$authResult = Page::login($_POST['email'], $_POST['password']);
+				}
+				if ($authResult['result']) {
+					Std::redirect('/');
+				} else {
+					if (!isset($_POST["password"])) {
+						$content = array();
+						$content["email-error"] = $authResult["error"];
+						$content["email"] = $_POST["email"];
+						$this->showLogin($content);
+					} else {
+						$this->content['login-error'] = $authResult['error'];
+					}
+				}
+				break;
+			case "protect" :
+				$this->validateRegister(false, true);
+				break;
+			case "person" :
+				$this->validateRegister(true, false);
+				break;
+		}
+
+		//$this->content['preferedFraction'] = Page::getData('register/prefered_fracrion', "SELECT `fraction` FROM `rating_fraction` ORDER BY `members` ASC LIMIT 0, 1", 'value', 300);
+		$this->content['preferedFraction'] = Page::sqlGetCacheValue("select fraction from rating_fraction order by members asc limit 0,1;", 600);
+
+		switch ($this->url[0]) {
+			case "play" :
+				$this->demo();
+				break;
+			case "autologin" :
+				if (strlen($this->url[1]) == 32) {
+					$result = Page::tryAutologinSession($this->url[1]);
+					if ($result['result'] == 1) {
+						Std::redirect('/player/');
+					} else {
+						$this->content['login-error'] = $result['error'];
+						$this->page->setTemplate('empty.html');
+						$this->page->addPart('content', 'index.xsl', $this->content);
+					}
+				}
+				break;
+			case "register" :
+				$this->content['mode'] = 'register';
+				if (isset($this->url[1])) {
+					Runtime::set('referer', $this->url[1]);
+					if (is_numeric($this->url[1]) && ($referer = $this->sqlGetRecord("SELECT `sex`, `nickname` FROM `player` WHERE `id` = " . $this->url[1] . " LIMIT 1")) !== false) {
+						$this->content['referer'] = $referer["nickname"];
+						$this->content['sex'] = $referer["sex"];
+					} else {
+						self::$sql->query("UPDATE adv SET statsclicks=statsclicks+1 WHERE code='" . preg_replace('/[^\w]/', '', $this->url[1]) . "'");
+						//$this->content['referer'] = $this->url[1];
+					}
+				}
+				$this->page->setTemplate('empty.html');
+				$this->page->addPart('content', 'index.xsl', $this->content);
+				break;
+			case "login" :
+				$this->showLogin();
+				break;
+			case "protect" :
+				if (self::$player != false && self::$player->password == md5("")) {
+					$content = array();
+					$content["player"] = self::$player->toArray();
+					if ($this->url[1] == "pay" && in_array($this->url[2], $this->payTypes)) {
+						$content["pay"] = "true";
+						$content["paytype"] = htmlspecialchars($this->url[2]);
+					}
+					$this->content["window-name"] = "Сохранить персонажа";
+					$this->page->addPart("content", "player/protect.xsl", $content);
+				} else {
+					Std::redirect("/");
+				}
+				break;
+			default :
+				if ($_POST["action"] != "protect" && $_POST["action"] != "person" && !($_POST["action"] == "login" && !isset($_POST["password"]))) {
+					if (self::$player !== false) {
+						Std::redirect("/player/");
+					}
+
+					$this->page->setTemplate('empty.html');
+					$this->page->addPart('content', 'index.xsl', $this->content);
+				}
+				break;
+		}
+
+		if (Runtime::get('http_referer') === false) {
+			Runtime::set('http_referer', $_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : '');
+		}
+
+		/*
+		if (empty($this->url[0]))
+			$this->page->setTemplate('empty.html');
+		 */
+
+		//
+		/*
+		if ($_POST['action'] == 'register') {
+			$this->validateRegister ();
+		} elseif ($_POST['action'] == 'login') {
+			if (substr($_POST['email'], 0, 11) == '#informico#') {
+				$_POST['email'] = Index::$sql->getValue("SELECT email FROM player WHERE id = " . substr($_POST['email'], 11, -1));
+			}
+
+			$authResult = Page::login($_POST['email'], $_POST['password']);
+			if ($authResult['result']) {
+				Std::redirect('/');
+			} else {
+				if (!isset($_POST["password"])) {
+					$content = array();
+					$content["email-error"] = $authResult["error"];
+					$content["email"] = $_POST["email"];
+					$this->showLogin($content);
+				} else {
+					$this->content['login-error'] = $authResult['error'];
+				}
+			}
+		} elseif ($_POST['action'] == 'logout' || $this->url[0] == 'logout') {
+			Page::logout();
+			header('Location: /');
+			exit;
+		} elseif ($_POST["action"] == "protect") {
+			// Защита аккаунта
+			$this->validateRegister(false, true);
+		} elseif ($_POST["action"] == "person") {
+			// Создание персонажа после демо-входа
+			$this->validateRegister(true, false);
+		}
+*/
+		/*
+		if ($this->url[0] == 'autologin' && strlen($this->url[1]) == 32) {
+			$result = Page::tryAutologinSession($this->url[1]);
+			if ($result['result'] == 1) {
+				Std::redirect('/player/');
+			} else {
+				$this->content['login-error'] = $result['error'];
+			}
+		}
+*/
+		/*
+		if ($this->url[0] == 'register') {
+			$this->content['mode'] = 'register';
+			if (isset($this->url[1])) {
+				Runtime::set('referer', $this->url[1]);
+				if (is_numeric($this->url[1]) && ($referer = $this->sqlGetValue("SELECT `nickname` FROM `player` WHERE `id` = " . $this->url[1] . " LIMIT 1")) !== false) {
+					$this->content['referer'] = IndexLang::$textInvitedBy . ' (' . $referer . ')';
+				} else {
+					self::$sql->query("UPDATE adv SET statsclicks=statsclicks+1 WHERE code='" . preg_replace('/[^\w]/', '', $this->url[1]) . "'");
+					$this->content['referer'] = $this->url[1];
+				}
+			}
+		}
+*/
+		/*
+		if ($this->url[0] == "login") {
+			$this->showLogin();
+		}
+*/
+		/*
+		if ($this->url[0] == "protect") {
+			// Защита аккаунта
+			if (self::$player != false && self::$player->password == md5("")) {
+				$content = array();
+				$content["player"] = self::$player->toArray();
+				$this->page->addPart("content", "player/protect.xsl", $content);
+			} else {
+				Std::redirect("/");
+			}
+		}
+*/
+		//$this->content['preferedFraction'] = 'arrived';
+		
+		parent::onAfterProcessRequest();
+	}
+
+	private function showLogin($content = array()) {
+		if (self::$player == false) {
+			$this->content["window-name"] = "Войти по имени";
+			$this->page->addPart("content", "player/login.xsl", $content);
+		} else {
+			Std::redirect("/player/");
+		}
+	}
+
+	protected function register($name, $email, $password, $side, $avatar, $background, $emailNotice = true) {
+		global $data;
+		$email = strtolower($email);
+		Std::loadMetaObjectClass('player');
+		$player = new playerObject();
+		$player->email = $email;
+		$player->nickname = $name;
+		$player->avatar = $avatar;
+		$player->background = $background;
+		$player->fraction = $side;
+		$player->attention = 1;
+		$player->health = 1;
+		$player->strength = 1;
+		$player->dexterity = 1;
+		$player->intuition = 1;
+		$player->charism = 1;
+		$player->resistance = 1;
+
+		$player->attention_finish = 1;
+		$player->health_finish = 1;
+		$player->strength_finish = 1;
+		$player->dexterity_finish = 1;
+		$player->intuition_finish = 1;
+		$player->charism_finish = 1;
+		$player->resistance_finish = 1;
+
+		$player->level = 1;
+		$player->home_price = 10;
+		$player->money = 0;
+		$player->honey = 0;
+		$player->password = md5($email . $password);
+		$player->registeredtime = date('Y-m-d H:i:s', time());
+		$player->suspicion = -5;
+		$player->statsum = $player->health + $player->strength + $player->attention + $player->resistance + $player->charism + $player->dexterity + $player->intuition;
+		$player->maxhp = Page::calcHP($player);
+
+		$player->playboy = 0;
+		$player->playboytime = 0;
+
+		$player->rulesver = $this->getData('rulesver', "SELECT value FROM sysconfig WHERE code='rulesver'", 'value', 600);
+
+		$player->master = 0;
+		$player->shadowmode = 0;
+		$player->shadowdt = '0000-00-00 00:00:00';
+
+		if (DEV_SERVER && $_SERVER['REMOTE_ADDR'] == '85.93.150.50') {
+			$player->accesslevel = 2;
+		}
+
+		$player->ip = ip2long($_SERVER['REMOTE_ADDR']);
+
+		$referer = Runtime::get('referer');
+		/*if ($referer !== false) {
+			if (is_numeric($referer) && $this->sqlGetValue("SELECT 1 FROM `player` WHERE `id` = '" . $referer . "' LIMIT 1") === false) {
+				$referer = false;
+			}
+		}*/
+		if ($referer !== false) {
+			$player->referer = $referer;
+		}
+
+		$player->save();
+
+		if (isset($_COOKIE['player'])) {
+			$info = 'cookie: ' . $_COOKIE['player'];
+		} else {
+			$info = '';
+		}
+		self::$sql->insert("INSERT INTO authlog (player, browser, ip, time, info) VALUES(" . $player->id . ", '" . $_SERVER['HTTP_USER_AGENT'] . "', '" . $_SERVER['REMOTE_ADDR'] . "', NOW(), '" . $info . "')");
+
+		if ($player->id > 0) {
+			// настройки игрока в player2
+			Std::loadMetaObjectClass('player2');
+			$player2 = new player2Object();
+			$player2->player = $player->id;
+			$player2->lastnews = 0;
+			$player2->metrorat = -1;
+			$player2->metroorechance = 0;
+			$player2->botcheck = '';
+			$player2->timemachinetime = 0;
+			$player2->newlogs = 0;
+			$player2->newmes = 0;
+			$player2->bankbribe = 0;
+			$player2->naperstki = -1;
+			$player2->duelanim = 1;
+			$player2->save();
+
+			if (is_numeric($player->referer)) {
+				self::$sql->query("insert into contact (player, player2, type, info) values(" . $player->referer . ", " . $player->id . ", 'referer', 'Ученик зарегистрирован " . date("d.m.Y H:i") . ".')");
+			}
+
+			Runtime::$uid = $player->id;
+			$_SESSION['authkey'] = md5($email . $password);
+			//setcookie('authkey', md5($email . $password), time() + 2592000, '/', '.moswar.ru');
+			//setcookie('userid', $player->id, time() + 2592000, '/', '.moswar.ru');
+			
+			if (DEV_SERVER) {
+				setcookie('authkey', md5($email . $password), time() + 2592000, '/');
+				setcookie('userid', $player->id, time() + 2592000, '/');
+			} else {
+				setcookie('authkey', md5($email . $password), time() + 2592000, '/', '.moswar.ru');
+				setcookie('userid', $player->id, time() + 2592000, '/', '.moswar.ru');
+			}
+	
+			$titles['arrived']['male'] = IndexLang::$textEmailArrivedMale;
+			$titles['arrived']['female'] = IndexLang::$textEmailArrivedFemale;
+			$titles['resident']['male'] = IndexLang::$textEmailResidentMale;
+			$titles['resident']['female'] = IndexLang::$textEmailResidentFemale;
+
+			if (!empty($email)) {
+				$params = array("password" => $password, 'title' => $titles[$player->fraction][Page::$data['classes'][$player->avatar]['sex']]);
+				Page::sendNotify($player, "registration_" . $player->fraction, $params);
+
+				/*
+				$mail = Std::renderTemplate(Std::loadTemplate('email/registration_' . $player->fraction),
+						array('password' => $password, 'email' => $email, 'title' => $titles[$player->fraction][Page::$data['classes'][$player->avatar]['sex']]));
+				Std::sendMail($email, IndexLang::$textEmailRegTitle, $mail, 'informer@' . Lang::$textDomain);
+				*/
+
+				// увеличение счетчика регистраций
+				self::$sql->query("UPDATE `value` SET `value`=`value` + 1 WHERE name='registrations'");
+			}
+
+			self::$sql->insert("INSERT INTO authlog (player, browser, ip, time, info) VALUES(" . $player->id . ", '" . $_SERVER['HTTP_USER_AGENT'] . "', '" . $_SERVER['REMOTE_ADDR'] . "', NOW(), '')");
+
+			$sql = "INSERT INTO marketing_registrations (regtime, refer_code, player, http_referer, old_player) VALUES(" . time() . ", '" . mysql_escape_string((string) $referer) . "', " . $player->id . ", '" . mysql_escape_string((string) Runtime::get('http_referer')) . "', " . (int) $_COOKIE['player_id'] . ")";
+			Page::$sql->query($sql);
+
+			return $player->id;
+		} else {
+			return false;
+		}
+	}
+
+	private function demo() {
+		$sides = array("resident", "arrived");
+		$side = $this->url[1];
+		if ($side != "resident" && $side != "arrived") {
+			$side = $sides[rand(0, sizeof($sides) - 1)];
+		}
+		$result = $this->register("", "", "", $side, "", "avatar-back-6");
+		Std::redirect("/player/");
+	}
+
+	private function protect($email, $password) {
+		if (self::$player !== false) {
+			if (self::$player->password == md5("")) {
+				$email = strtolower($email);
+				self::$player->email = $email;
+				self::$player->password = md5($email . $password);
+				self::$player->save(self::$player->id, array(playerObject::$EMAIL, playerObject::$PASSWORD));
+
+				$key = self::signed(self::$player->id);
+				$userInfo = array();
+				$userInfo[$key] = array();
+				$userInfo[$key]["password"] = playerObject::$PASSWORD;
+				Page::chatUpdateInfo($userInfo);
+
+				$cachePlayer = self::$cache->get("user_chat_" . $key);
+				if ($cachePlayer) {
+					$cachePlayer["password"] = playerObject::$PASSWORD;
+					self::$cache->set("user_chat_" . $key, $cachePlayer);
+				}
+
+				$_SESSION["authkey"] = md5($email . $password);
+
+				if (DEV_SERVER) {
+					setcookie("authkey", md5($email . $password), time() + 2592000, "/");
+					setcookie("userid", self::$player->id, time() + 2592000, "/");
+				} else {
+					setcookie("authkey", md5($email . $password), time() + 2592000, "/", '.moswar.ru');
+					setcookie("userid", self::$player->id, time() + 2592000, "/", '.moswar.ru');
+				}
+
+				self::$sql->query("UPDATE `value` SET `value`=`value` + 1 WHERE name='registrations'");
+				$titles['arrived']['male'] = IndexLang::$textEmailArrivedMale;
+				$titles['arrived']['female'] = IndexLang::$textEmailArrivedFemale;
+				$titles['resident']['male'] = IndexLang::$textEmailResidentMale;
+				$titles['resident']['female'] = IndexLang::$textEmailResidentFemale;
+
+				$params = array("password" => $password, 'title' => $titles[self::$player->fraction][Page::$data['classes'][self::$player->avatar]['sex']]);
+				Page::sendNotify(self::$player, "registration_" . self::$player->fraction, $params);
+
+				Page::sendLog(self::$player->id, "player_protect", array(), 1);
+				if (Page::$player->referer == "gameleads" && Page::$player->password != "d41d8cd98f00b204e9800998ecf8427e") {
+					self::$sql->query("INSERT INTO `gameleads`(`player`, `level`, `dt`) VALUES(" . Page::$player->id . ", " . Page::$player->level . ", NOW())");
+				}
+
+				$sql = "update marketing_registrations set protected_time = " . time() . " where player = " . Page::$player->id;
+				Page::$sql->query($sql);
+
+				/*
+				$mail = Std::renderTemplate(Std::loadTemplate('email/registration_' . self::$player->fraction),
+						array('password' => $password, 'email' => $email, 'title' => $titles[self::$player->fraction][Page::$data['classes'][self::$player->avatar]['sex']]));
+				Std::sendMail($email, IndexLang::$textEmailRegTitle, $mail, 'informer@' . Lang::$textDomain);
+				 */
+			}
+		}
+	}
+
+	private function validateRegister($demo = false, $protect = false) {
+		global $data;
+
+		$output = '';
+		$errors = false;
+		$alertErrors = array();
+		$form = array();
+
+		// Проверка на бан
+		if (Page::isIpBanned($_SERVER['REMOTE_ADDR'])) {
+			$output .= 'alert("' . IndexLang::$errorIpBanned . '");';
+			$alertErrors[] = IndexLang::$errorIpBanned;
+			if (!$demo && !$protect) {
+				echo $output;
+				exit;
+			}
+		}
+
+		// Исправление имени (регистрация, демо-регистрация)
+		if (!$protect) {
+			$_POST['name'] = preg_replace('/\s*\-\s*/', '-', trim ($_POST['name']));
+			$_POST['name'] = preg_replace('/\s+/', ' ', $_POST['name']);
+
+			$output .= '$("input[name=name]").val ("'.$_POST['name'].'");';
+			$form["name"] = $_POST["name"];
+		}
+
+		// Проверка подставного автатара (регистрация, деморегистрация)
+		if (!$protect) {
+			if (!in_array($_POST['avatar'], array('man1.png', 'girl1.png', 'man2.png', 'girl2.png', 'man3.png', 'girl3.png', 'man4.png', 'girl4.png', 'man5.png', 'girl5.png', 'man6.png', 'girl6.png'))) {
+				$_POST['avatar'] = 'man1.png';
+			}
+
+			// Проверка стороны и подставного аватара (регистрация, демо-регистрация)
+			if ($_POST['side'] != 'arrived' && $_POST['side'] != 'resident') {
+				$output .= 'alert("' . IndexLang::$errorFractionNotSelected . '");';
+				$alertErrors[] = IndexLang::$errorFractionNotSelected;
+				$errors = true;
+			} elseif ($data['classes'][$_POST['avatar']]['fraction'] != $_POST['side']) {
+				$_POST['avatar'] = $_POST['side'] == 'resident' ? 'man1.png' : 'man2.png';
+			}
+			$form["avatar"] = $_POST["avatar"];
+			$form["side"] = $_POST["side"];
+			$form["background"] = $_POST["background"];
+		}
+
+		// Проверка на выбранность фракции (регистрация, демо-регистрация)
+		if (!$protect) {
+			if (!isset(self::$data['classes'][$_POST['avatar']]['fraction'])) {
+				$output .= 'alert("' . IndexLang::$errorFractionNotSelected . '");';
+				$alertErrors[] = IndexLang::$errorFractionNotSelected;
+				$errors = true;
+			}
+		}
+
+		// Проверка на запрещённое имя (регистрация, демо-регистрация)
+		if (!$protect) {
+			if (in_array(strtolower($_POST['name']), array('admin', 'administrator', 'administration', 'админ', 'администратор', 'администрация', 'moder', 'moderator', 'модератор', 'moder', 'support'))) {
+				$output .= '$("#login-error > span").text ("' . IndexLang::$errorBannedName . '");';
+				$alertErrors[] = IndexLang::$errorBannedName;
+				$errors = true;
+			}
+			if (!preg_match('~^(([a-z0-9\-\_\s]{3,18})|([а-яёЁ0-9\-\_\s]{3,18}))$~ui', $_POST['name']) || count(explode(' ' , $_POST['name'])) > 2) {
+				$output .= '$("#login-error > span").text ("' . IndexLang::$errorWrongName . '");';
+				$alertErrors[] = IndexLang::$errorWrongName;
+				$errors = true;
+			}
+		}
+
+		// Проверка на плохой e-mail (регистрация, защита аккаунта)
+		$form["email"] = $_POST["email"];
+		if (!$demo) {
+			if (!preg_match('~^[a-z0-9\.\-_]{2,}@[a-z0-9\-\.]{2,}\.[a-z]{2,4}$~i', $_POST['email'])) {
+				$output .= '$("#email-error > span").text("' . IndexLang::$errorWrongEmail . '");';
+				$alertErrors[] = IndexLang::$errorWrongEmail;
+				$errors = true;
+			}
+		}
+
+		// Проверка на плохой пароль (регистрация, защита аккаунта)
+		if (!$demo) {
+			if (strlen($_POST['password']) < 6 || strlen($_POST['password']) > 20) {
+				$output .= '$("#password-error > span").text("' . IndexLang::$errorWrongPassword . '");';
+				$alertErrors[] = IndexLang::$errorWrongPassword;
+				$errors = true;
+			}
+		}
+
+		// Вывод ошибок (надо без echo обойтись при демо-регситрации и защите)
+		if (!$demo && !$protect) {
+			if ($errors == true) {
+				echo $output;
+				exit;
+			}
+		} else {
+			if ($errors == true) {
+				self::addAlert(PageLang::$alertConditionsError, implode("<br />", $alertErrors), ALERT_ERROR);
+				if ($demo) {
+					$this->content["window-name"] = "Ваш персонаж";
+					$this->page->addPart('content', 'quest/StartQuest/person.xsl', $form);
+					return true;
+				} else {
+					$form["player"] = self::$player->toArray();
+					if (in_array($_POST["paytype"], $this->payTypes)) {
+						$form["pay"] = "true";
+						$form["paytype"] = htmlspecialchars($_POST["paytype"]);
+					}
+
+					$this->content["window-name"] = "Сохранить персонажа";
+					$this->page->addPart('content', 'player/protect.xsl', $form);
+					return true;
+				}
+			}
+		}
+
+		Std::loadMetaObjectClass('player');
+
+		// Проверка на существование имени (регистрация, демо-регистрация)
+		if (!$protect) {
+			if (self::$sql->getValue("SELECT count(*) FROM player WHERE nickname='" . mysql_real_escape_string($_POST['name']) . "'") > 0) {
+				$output .= '$("#login-error > span").text("' . IndexLang::$errorNameExists . '");';
+				// TODO обойтись без echo для demo
+				$alertErrors[] = IndexLang::$errorNameExists;
+
+				if (!$demo && !$protect) {
+					echo $output;
+					exit;
+				} else {
+					self::addAlert(PageLang::$alertConditionsError, implode("<br />", $alertErrors), ALERT_ERROR);
+					if ($demo) {
+						$this->content["window-name"] = "Ваш персонаж";
+						$this->page->addPart('content', 'quest/StartQuest/person.xsl', $form);
+						return true;
+					} else {
+						$this->content["window-name"] = "Сохранить персонажа";
+						if (in_array($_POST["paytype"], $this->payTypes)) {
+							$form["pay"] = "true";
+							$form["paytype"] = htmlspecialchars($_POST["paytype"]);
+						}
+						$this->page->addPart('content', 'player/protect.xsl', $form);
+						return true;
+					}
+				}
+			}
+		}
+
+		// Проверка на существование email (регистрация, защита аккаунта)
+		if (!$demo) {
+			if (self::$sql->getValue("SELECT count(*) FROM player WHERE email='" . mysql_real_escape_string($_POST['email']) . "'") > 0) {
+				$output .= '$("#email-error > span").text("' . IndexLang::$errorEmailExists . '");';
+				// TODO обойтись без echo для защты
+				$alertErrors[] = IndexLang::$errorEmailExists;
+
+				if (!$demo && !$protect) {
+					echo $output;
+					exit;
+				} else {
+					self::addAlert(PageLang::$alertConditionsError, implode("<br />", $alertErrors), ALERT_ERROR);
+					if ($demo) {
+						$this->content["window-name"] = "Ваш персонаж";
+						$this->page->addPart('content', 'quest/StartQuest/person.xsl', $form);
+						return true;
+					} else {
+						$this->content["window-name"] = "Сохранить персонажа";
+						if (in_array($_POST["paytype"], $this->payTypes)) {
+							$form["pay"] = "true";
+							$form["paytype"] = htmlspecialchars($_POST["paytype"]);
+						}
+						$this->page->addPart('content', 'player/protect.xsl', $form);
+						return true;
+					}
+				}
+			}
+		}
+
+		/* регистрация по инвайтам
+		if (Runtime::get('referer') == false && false) {
+			Std::loadMetaObjectClass('invite');
+			$criteria = new ObjectCollectionCriteria();
+			$criteria->createWhere(inviteObject::$INVITE, ObjectCollectionCriteria::$COMPARE_EQUAL, $_POST['invite']);
+			$criteria->addLimit(0, 1);
+			$invites = $collection->getObjectList(inviteObject::$METAOBJECT, $criteria);
+			if ($invites === false) {
+				$output .= '$("#invite-error > span").text("Ваш билет поддельный!");';
+				echo $output;
+				exit;
+			}
+		}
+		*/
+
+		// Регистрация (только для регистрации. При защите и демо-регистрации аккаунт уже создан)
+		if (!$demo && !$protect) {
+			$result = $this->register($_POST['name'], $_POST['email'], $_POST['password'], $_POST['side'], $_POST['avatar'], $_POST['background']);
+			if ($result !== false) {
+				if (Runtime::get('referer') == false && false) {
+					$invite = current($invites);
+					$invite->delete($invite->id);
+					$invite = Page::generateInvite();
+					Page::sendNotice($result, Lang::renderText(IndexLang::$textRegSuccess, array('invite' => $invite)));
+				} else {
+					Runtime::clear('referer');
+				}
+				$output .= 'registerSplashShow(); parent.location="/player/";';
+			} else {
+				$output .= 'registerSplashShow(); alert("' . IndexLang::$errorUnknown . '");';
+			}
+		} else {
+			if ($demo) {
+				$backId = str_replace('avatar-back-', '', $_POST['background']);
+				if ($backId < 1 || $backId > 6) {
+					$_POST['background'] = 'avatar-back-' . rand(1, 6);
+				}
+				if (self::$player !== false && self::$player->avatar == "") {
+					self::$player->nickname = $_POST['name'];
+					self::$player->avatar = $_POST['avatar'];
+					self::$player->background = $_POST['background'];
+					self::$player->fraction = $_POST['side'];
+					self::$player->save(self::$player->id, array(playerObject::$NICKNAME, playerObject::$AVATAR, playerObject::$BACKGROUND, playerObject::$FRACTION));
+
+					// добавление игрока в рейтинг
+					self::$sql->query("INSERT INTO rating_player (player, fraction, visible, level) values (" . self::$player->id . ", '" . self::$player->fraction . "', 1, 1)");
+					self::$sql->query("INSERT INTO rating_player2 (player, fraction, visible, level) values (" . self::$player->id . ", '" . self::$player->fraction . "', 1, 1)");
+					Std::redirect("/quest/next/");
+				}
+			}
+			if ($protect) {
+				$this->protect($_POST["email"], $_POST["password"]);
+				if (self::$player->referer == "gameleads") {
+					$_SESSION["protect_gameleads"] = true;
+				}
+				if (in_array($_POST["paytype"], $this->payTypes)) {
+					Std::redirect("/stash/" . $_POST["paytype"] . "/");
+				} else {
+					Std::redirect("/player/");
+				}
+			}
+		}
+
+		// Вывод результатата и завершение работы (только при регистрации)
+		if (!$demo && !$protect) {
+			echo $output;
+		}
+
+		exit;
+	}
+}
+?>

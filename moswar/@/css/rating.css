@@ -1,0 +1,23 @@
+﻿.rating table.buttons { margin:0 0 12px 0; }
+.rating table.buttons td { padding:2px; }
+.rating table.buttons .button { width:100%; font-size:110%; }
+
+.rating .search { text-align:center; font-size:90%; color:#975D17; }
+.rating .search input { width:16em; }
+.rating .search .center { padding:8px; }
+
+.rating .block-rounded {background:#ffe3b3; padding:10px; }
+.rating .block-rounded h3 { margin-bottom:8px; }
+.rating .pagescroll  .block-rounded  { background:#ffe3b3; }
+
+.side-rating { width:148px; text-align:left; margin-bottom:10px; white-space:nowrap; overflow:hidden; }
+.side-rating h3 { line-height:21px; height:21px; margin-bottom:0; background:url(../images/decor/personal.png) no-repeat 50% -320px; font-size:90%; font-weight:bold; text-align:center; color:#975D17; /*background:#fbe19f;*/ }
+.side-rating h3 a { text-decoration:none; }
+.side-rating .list-users { margin:0 0 -1px 0; border-top:0; }
+.side-rating .user {  font-weight:normal;  }
+.side-rating .user i { opacity: 0.9; //filter:alpha(opacity:90); }
+
+.rating-filter { margin:5px 0; text-align:center; }
+.rating-filter .button .c { padding:0 2px; }
+.rating-filter select,
+.rating-filter .button { vertical-align:middle; }

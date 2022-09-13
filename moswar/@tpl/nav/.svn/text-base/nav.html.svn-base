@@ -1,0 +1,5 @@
+<div class="pagescroll">
+	<%prev%>
+    <%pages%>
+	<%next%>
+</div>

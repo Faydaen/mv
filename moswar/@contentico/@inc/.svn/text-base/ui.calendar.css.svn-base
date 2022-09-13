@@ -1,0 +1,46 @@
+/* Default attributes of table container for entire calendar */
+.table-style {
+	font-family: arial;
+	border-width: 1;
+	border-style: solid;
+	border-color: #a0a0a0;
+	background-color: #ffffff;
+	font-family: arial;
+	font-size: 11px;
+	width: 160px;
+}
+
+/* Default attributes of DIV containing table container for entire calendar.
+ * You probably don't want to alter this style.
+ */
+.div-style { z-index:+998; position:absolute; visibility:hidden; }
+
+/* Default attributes used in calendar title (month and year columns).*/
+.title-style { padding:2px; font-family:arial; font-size:11px; color:#000; }
+
+/* Default attributes used in calendar title background.*/
+.title-background-style { /* background-color: #D4D0C8; */ background-color:#EDEDE1; }
+
+/* Normal appearance of controls in calendar title. */
+/* Note: The right, left and down icons are images, which must be edited if you need to change them. */
+.title-control-normal-style { font-weight:bold; cursor:pointer; }
+
+/* Default attributes of calendar body (weekday titles and numbers). */
+.body-style { background-color:#fff; font-family:verdana; font-size:10px; }
+
+.body-style td { padding:3px; font-family:verdana; font-size:10px; background-color:#F2F2F2; border:1px solid #FFFFFF; }
+
+/* Attributes of current day in calendar body. */
+td.current-day-style { background-color:#619761!important; }
+td.current-day-style a { color:#fff!important; text-decoration:none;  }
+
+/* Attributes of end-of-week days (Sundays) in calendar body. */
+a.end-of-weekday-style { color:#900!important; text-decoration:none; }
+
+/* Attributes of all other days in calendar body. */
+a.normal-day-style { color:#333!important; text-decoration:none; }
+
+/* Attributes of border around selected day in calendar body. */
+td.selected-day-style { background-color:#5284BA!important; }
+td.selected-day-style a { color:#fff!important; text-decoration:none; }
+

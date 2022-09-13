@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/moswar.ru/!svn/ver/24654/prod/moswar.ru/@lib
+END
+ds.mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/moswar.ru/!svn/ver/24654/prod/moswar.ru/@lib/ds.mysql.php
+END
+cachemanager.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/moswar.ru/!svn/ver/20824/prod/moswar.ru/@lib/cachemanager.php
+END
+cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/moswar.ru/!svn/ver/22864/prod/moswar.ru/@lib/cache.php
+END
+contentico.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/moswar.ru/!svn/ver/24998/prod/moswar.ru/@lib/contentico.php
+END
+ui.element.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/moswar.ru/!svn/ver/22815/prod/moswar.ru/@lib/ui.element.php
+END

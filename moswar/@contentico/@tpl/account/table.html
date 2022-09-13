@@ -1,0 +1,40 @@
+<form action="/@contentico/Account/<%action-url%>/metaview=<%metaview%>/" method="post" class="edit-form" enctype="multipart/form-data" id="object-form">
+
+    <%view-select%>
+
+    <table class="forms">
+        <tr>
+            <td class="group">Служебные данные</td>
+            <td></td>
+        </tr>
+        <tr>
+    	   <td class="label">Эл. почта (логин):</td>
+    	   <td class="input"><%email%></td>
+        </tr>
+        <tr>
+    	   <td class="label">Имя:</td>
+    	   <td class="input"><input type="text" name="name" class="wide" value="<%name%>" /></td>
+        </tr>
+        <tr>
+    	   <td class="label">Пароль:</td>
+    	   <td class="input"><input type="password" name="pwd" class="wide" value="*****" /></td>
+        </tr>
+		<tr>
+    	   <td class="label"></td>
+    	   <td class="input">
+    	       <input type="checkbox" name="cfghtmlarea" id="cfghtmlarea" <%cfghtmlarea%> />
+    	       <label for="cfghtmlarea">Визуальный HTML редактор</label>
+	       </td>
+        </tr>
+        <%tr%>
+	</table>
+
+    <div class="buttons">
+    	<input class="cancel" type="button" value="Отмена" onclick="history.back(-1);" />
+    	<input class="save" type="submit" value="Сохранить" />
+    	<input class="apply" type="button" value="Применить изменения (Ctrl+S)" onclick="GoApply();" />
+    </div>
+
+</form>
+
+<%ui-htmlarea-init%>

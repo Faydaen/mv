@@ -1,0 +1,21 @@
+<div><span class="addfolder"><a href="javascript:void(0);" onclick="$('#quickform').toggle();">Добавить</a></span></div>
+<div style="display:none;" id="quickform">
+    <form action="/@contentico/Metaobjects/<%action-url%>/metaview=<%metaview%>/-page=<%-page%>/-view=<%-view%>/" method="post" class="edit-form" enctype="multipart/form-data" id="object-form">
+        <%parent%>
+        <%return-url%>
+
+        <%view-select%>
+
+    	<table class="forms">
+    		<%tr%>
+    	</table>
+
+        <div class="buttons">
+        	<input class="save" type="submit" value="Сохранить" />
+        </div>
+
+    </form>
+
+    <%ui-htmlarea-init%>
+
+</div>

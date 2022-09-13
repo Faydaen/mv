@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title><%window-name%></title>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/@/css/style.css?51" />
+	<script type="text/javascript" src="/@/js/script.js?51"></script>
+	<%head-content%>
+</head>
+<body>
+
+<div class="main-bg" align="center">
+	
+	<!--<div id="underconstruction"><p><span>
+		Сегодня в 01:30 игра будет закрыта на 6 часов. Тех. работы.
+    </span></p></div>-->
+
+	<!--div id="underconstruction-blue"><p><span>
+		Внимание! Бой за флаг перенесен на 21:30. Запись начнется в 21:15.
+    </span></p></div-->
+	
+
+	<!--script>
+		$(document).ready(function() {
+			var d = new Date();
+			$.get("/@/pos.js?" + Math.floor(d.getTime()/1000/300), function(data) {
+				data = eval("(" + data + ")");
+				if (data["pos"] != null && typeof(data["pos"]) != "undefined") {
+					$("#PRpos").html(formatNumber(data["pos"]));
+					$("#PRvotes").html(formatNumber(data["votes"]));
+					$("#PRremain").html(formatNumber(data["remain"]));
+				}
+			});
+		});
+	</script-->
+
+	<div class="main-block">
+		<div class="main-block-topbg">
+			<div id="main" class="clear">
+				<div class="header clear">
+					<div class="links clear">
+						<b class="online">Онлайн: <%online%><span>/</span><span style="display:none"> Жителей столицы: </span><%registered%></b>
+						<a href="/news/"<%news%>>Новости</a>
+						<a href="/rating/">Рейтинг</a>
+						<a href="/photos/">Фото</a>
+						<a onclick="openChat();" href="#" >Чат</a>
+						<a href="http://<%new-forum%>forum.theabyss.ru/?act=external&project=moswar&session=<%session%>" target="_blank">Форум</a>
+						<span class="aslink" id="top-help-link">Помощь</span>
+						<a href="/faq/">FAQ</a>
+						<a href="/settings/">Настройки</a>
+						<a href="/auth/logout/" target="_top">Выход</a>
+						<span id="servertime" rel="<%servertime%>"></span>
+						<i id="icon-relaod" class="icon reload-icon" title="Обновить страницу" onclick="self.location.reload(true)"></i>
+					</div>
+					<a href="/" id="logo"></a>
+					<a href="/player/" class="pers" title="Персонаж"></a>
+					<a href="/alley/" class="alley" title="Закоулки"></a>
+					<a href="/square/" class="square" title="Площадь"></a>
+					<%hidearr1%>
+					<a href="/arbat/" class="square-arbat" title="Арбат"></a>
+					<a href="/tverskaya/" class="square-tverskaya" title="Тверская"></a>
+					<%hidearr2%>
+					<a href="/home/" class="home" title="Хата"></a>
+					<a href="/clan/" class="clan" title="Клан"></a>
+					<a href="/stash/" class="stash" title="Заначка"></a>
+					<a href="/<%location%>/" id="timeout" style="display:none;" timer="<%timer%>" endtime="<%endtime%>" intitle="1"></a>
+				</div>
+				<div class="column-left" align="center">
+					<%playerblock%>
+					
+					<%friends-side%>
+					<%rating-side%>
+					
+					<!--
+					<div style="margin:20px 0; text-align:center;">
+						<a href="/temp/party1/"><img src="/@/images/s/abyss-8may2010.png" /></a>
+					</div>
+					-->
+				</div>
+				<div class="column-right">
+					<%content%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="background" class="light"><spacer /></div>
+</div>
+
+<div class="footer">
+	<div class="links">
+		<a href="/faq/">Вопросы и ответы</a>
+		<a href="/news/">Новости</a>
+		<a href="http://<%new-forum%>forum.theabyss.ru/?act=external&project=moswar&session=<%session%>" target="_blank">Форум</a>
+		<a href="/rating/">Рейтинг</a>
+		<a href="/licence/">Условия использования</a>
+		<a href="/licence/game_rules/">Правила игры</a>
+		<a href="/support/">Контакты</a>
+		<a href="http://vkontakte.ru/club17459738" target="_blank">Вконтакте</a>
+	</div>
+</div>
+
+<%alertbox%>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11575786-1");
+pageTracker._setDomainName(".moswar.ru");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<div align="center" class="clear counters">
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+	document.write("<a href='http://www.liveinternet.ru/click' "+
+	"target=_blank><img style='margin:0 10px;' src='http://counter.yadro.ru/hit?t17.11;r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random()+
+	"' alt='' title='LiveInternet: показано число просмотров за 24"+
+	" часа, посетителей за 24 часа и за сегодня' "+
+	"border='0' width='88' height='31'><\/a>")
+	//--></script><!--/LiveInternet-->
+
+	<a href="http://www.ddestiny.ru" target="_blank"><img style="position:relative; top:-4px; margin:0 10px" src="/@/images/destiny-logo.png" /></a>
+</div>
+
+
+</body>
+</html>

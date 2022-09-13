@@ -1,0 +1,86 @@
+.factory .factory-investments { text-align:center; padding:5px; }
+.factory .factory-investments p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.factory .factory-investments p.hint { margin:1em 0 0 0; }
+
+.factory .factory-investments-pay { padding:10px; text-align:center; }
+.factory .factory-investments-pay table.forms td.label { width:40%; vertical-align:middle; }
+.factory .factory-investments-pay table.forms td.input { width:60%; text-align:left; }
+.factory .factory-investments-pay table.forms td.input .button { white-space:nowrap; }
+
+.factory .factory-statistics { text-align:center; padding:5px; }
+.factory .factory-statistics p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.factory .factory-statistics p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+.factory .factory-statistics p.investors { margin:1em 0 0 0; }
+
+.factory .welcome { background:url(../images/loc/factory.jpg) 50% 0% no-repeat #244A4B; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.factory .welcome i.tlc,
+.factory .welcome i.trc { display:none; }
+.factory .welcome .block-rounded { background:#4E504B; margin:0; }
+.factory .welcome .block-rounded .text { text-align:left; padding:10px 20px; }
+
+.factory .factory-nanoptric { text-align:center; padding:5px; font-size:90%; }
+.factory .factory-nanoptric p { margin:0 0 1em 0; text-align:left;  }
+.factory .factory-nanoptric p.hint { margin:1em 0 0 0; }
+.factory .factory-nanoptric p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.factory-pharma-enterance { padding:5px; font-size:90%; }
+.factory-pharma-enterance .hint { text-align:center; color:#975D17 }
+.factory-mf-enterance { padding:5px; font-size:90%; }
+.factory-mf-enterance .hint { text-align:center; color:#975D17 }
+
+/* factory mf */
+.factory .factory-mf .welcome { background:url(../images/loc/factory-mf.jpg) 50% 0% no-repeat #7fbeef; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.factory .factory-mf .welcome i.tlc,
+.factory .factory-mf .welcome i.trc { display:none; }
+.factory .factory-mf .welcome .block-rounded { background:#10628a; margin:0; }
+.factory .factory-mf .welcome .block-rounded .text { text-align:center; padding:10px 20px; }
+.factory .factory-mf .welcome .block-rounded .text { text-align:left; padding:10px 20px; }
+.factory .factory-mf .welcome .goback { background:#2a7a84; color:#bcf1e5; }
+.factory .factory-mf .welcome .goback a,
+.factory .factory-mf .welcome .goback a:link,
+.factory .factory-mf .welcome .goback a:visited { color:#bcf1e5; }
+
+.factory .factory-mf-about { text-align:center; padding:5px; font-size:90%; }
+.factory .factory-mf-about p { margin:0 0 1em 0; text-align:left;  }
+.factory .factory-mf-skill { text-align:center; padding:5px; font-size:90%; }
+.factory .factory-mf-skill p { margin:0 0 1em 0; text-align:left;  }
+
+.factory .factory-mf-item .welcome { background:url(../images/loc/factory-mf.jpg) 50% 0% no-repeat #7fbeef; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.factory .factory-mf-item .welcome i.tlc,
+.factory .factory-mf-item .welcome i.trc { display:none; }
+.factory .factory-mf-item .welcome .block-rounded { background:#10628a; margin:0; }
+.factory .factory-mf-item .welcome .block-rounded .text { text-align:left; padding:10px 20px; }
+.factory .factory-mf-item .welcome .goback { background:#2a7a84; color:#bcf1e5; }
+.factory .factory-mf-item .welcome .goback a,
+.factory .factory-mf-item .welcome .goback a:link,
+.factory .factory-mf-item .welcome .goback a:visited { color:#bcf1e5; }
+
+.factory .factory-mf-item .progressbar { width:80%; margin:12px 0; }
+.factory .factory-mf-item .progressbar .stats li { background:none; margin-right:10px; }
+.factory .factory-mf-item .progressbar .hint { color:#975D17; margin-top:5px; font-size:90%; }
+.factory .factory-mf-item .progressbar .passatiji { position:relative; text-align:left; clear:both; }
+.factory .factory-mf-item .progressbar .passatiji input { position:absolute; left:-22px; top:-1px; }
+.factory .factory-mf-item .progressbar .passatiji img { margin:0; }
+
+.factory .factory-mf-item ul.objects { margin:0; padding:0; padding:2px 2px 1px 2px; list-style-type:none; }
+.factory .factory-mf-item ul.objects .object { overflow:hidden; }
+.factory .factory-mf-item ul.objects .object h2 span.hint { font-size:90%; font-weight:normal; color:#975D17; }
+.factory .factory-mf-item ul.objects .object-current { background:#f7b142; }
+
+/* factory pharma */
+.factory .factory-pharma table.mixer { margin-bottom:16px; }
+.factory .factory-pharma table.mixer .vtabs { height:auto; }
+.factory .factory-pharma table.mixer dd { padding:0; //padding-bottom:1px; //margin-bottom:-1px; }
+.factory .factory-pharma table.mixer dd .object-thumbs { height:176px; //height:180px; }
+.factory .factory-pharma table.mixer .vtabs,
+.factory .factory-pharma table.mixer .vtabs dd { width:312px }
+.factory .factory-pharma table.mixer .empty { font-size:90%; padding:5px 0 0 0; }
+.factory .factory-pharma table.mixer .hint { font-size:90%; padding:5px; background:#eca12b; text-align:center; color:#975D17 }
+.factory .factory-pharma table.mixer .hint .attention { color:#df0500; margin:5px 0 0 0; }
+
+.factory .factory-pharma-about { text-align:center; padding:5px; font-size:90%; }
+.factory .factory-pharma-about p { margin:0 0 1em 0; text-align:left;  }
+.factory .factory-pharma-skill .hint { text-align:center; color:#975D17 }
+.factory .factory-pharma-skill { text-align:center; padding:5px; font-size:90%; }
+.factory .factory-pharma-skill p { margin:0 0 1em 0; text-align:left;  }
+

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meta>
+    <metaobjects>
+<!-- sysparams -->
+        <metaobject code="sysparams" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="link_to_object" typeparam="metaobject" role="data">
+                    <sql unique="1" />
+                </metaattribute>
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="sortby" type="string" role="data" />
+                <metaattribute code="sortorder" type="string" role="data" />
+                <metaattribute code="groupby" type="string" role="data" />
+                <metaattribute code="groupstyle" type="string" role="data" />
+                <metaattribute code="action_list" type="bool" role="data" />
+                <metaattribute code="action_view" type="bool" role="data" />
+                <metaattribute code="action_create" type="bool" role="data" />
+                <metaattribute code="action_edit" type="bool" role="data" />
+                <metaattribute code="action_delete" type="bool" role="data" />
+                <metaattribute code="export_metaattribute_id" type="link_to_object" typeparam="metaattribute" role="data" />
+                <metaattribute code="menupos" type="int" role="data" />
+            </metaattributes>
+        </metaobject>
+<!-- sysuser -->
+        <metaobject code="sysuser" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="" type="link_to_object" typeparam="sysuser" role="data">
+                    <sql index="1" />
+                </metaattribute>
+                <metaattribute code="email" type="string" role="data" />
+                <metaattribute code="pwd" type="password" role="data" />
+                <metaattribute code="enabled" type="bool" role="data" />
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="cfghtmlarea" type="bool" role="data" />
+            </metaattributes>
+            <contentico>
+                <params name="Пользователи" sortby="name" sortorder="asc" groupby="name" groupstyle="" export="name" menupos="0" />
+                <actions list="0" create="0" edit="0" delete="0" view="0" />
+            </contentico>
+            <rows>
+                <row id="1">
+                    <_id>0</_id>
+                    <enabled>1</enabled>
+                    <name>Администраторы</name>
+                </row>
+                <row id="2">
+                    <_id>1</_id>
+                    <enabled>1</enabled>
+                    <name>Администратор</name>
+                    <email>admin</email>
+                    <pwd>pr3v3d@dm1n</pwd>
+                    <cfghtmlarea>0</cfghtmlarea>
+                </row>
+            </rows>
+        </metaobject>
+<!-- sysconfig -->
+        <metaobject code="sysconfig" versions="0" logs="0">
+            <installer generateclass="1" />
+			<sql engine="InnoDB" />
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="code" type="string" role="data">
+                    <sql unique="1" />
+                </metaattribute>
+                <metaattribute code="value" type="string" role="data" />
+            </metaattributes>
+            <contentico>
+                <params name="Настройки" sortby="code" sortorder="asc" groupby="code" groupstyle="" export="code" menupos="1" />
+                <actions list="1" create="1" edit="1" delete="1" view="1" />
+            </contentico>
+            <metaviews>
+				<metaview code="sysconfig_list" name="Настройки" oldcode="" type="list">
+					<fields>
+                        <field metaattribute="code" lookup="" name="Параметр" defaultvalue="" lookupparams="" />
+						<field metaattribute="value" lookup="" name="Значение" defaultvalue="" lookupparams="" />
+					</fields>
+				</metaview>
+				<metaview code="sysconfig_form" name="Настройка" oldcode="" type="form">
+					<fields>
+						<field metaattribute="code" lookup="" name="Параметр" defaultvalue="" lookupparams="" />
+						<field metaattribute="value" lookup="" name="Значение" defaultvalue="" lookupparams="" />
+					</fields>
+				</metaview>
+				<metaview code="sysconfig_card" name="Настройка" oldcode="" type="card">
+					<fields>
+						<field metaattribute="code" lookup="" name="Параметр" defaultvalue="" lookupparams="" />
+						<field metaattribute="value" lookup="" name="Значение" defaultvalue="" lookupparams="" />
+					</fields>
+				</metaview>
+			</metaviews>
+            <rows>
+                <row id="1">
+                    <code>auth_captcha</code>
+                    <value>1</value>
+                </row>
+            </rows>
+        </metaobject>
+<!-- syssecurity -->
+        <metaobject code="syssecurity" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="" type="link_to_object" typeparam="sysuser" role="data" />
+                <metaattribute code="" type="link_to_object" typeparam="metaobject" role="data" />
+                <metaattribute code="object_id" type="link_to_object" typeparam="*" role="data" />
+                <metaattribute code="" type="link_to_object" typeparam="metaview" role="data" />
+                <metaattribute code="rights" type="int" role="data" />
+            </metaattributes>
+            <rows>
+                <row id="1">
+                    <sysuser_id>1</sysuser_id>
+                    <metaobject_id>5</metaobject_id>
+                    <object_id>1</object_id>
+                    <metaview_id>0</metaview_id>
+                    <rights>1</rights>
+                </row>
+                <row id="2">
+                    <sysuser_id>1</sysuser_id>
+                    <metaobject_id>5</metaobject_id>
+                    <object_id>3</object_id>
+                    <metaview_id>0</metaview_id>
+                    <rights>1</rights>
+                </row>
+                <row id="3">
+                    <sysuser_id>1</sysuser_id>
+                    <metaobject_id>5</metaobject_id>
+                    <object_id>4</object_id>
+                    <metaview_id>0</metaview_id>
+                    <rights>1</rights>
+                </row>
+            </rows>
+        </metaobject>
+<!-- sysmodule -->
+        <metaobject code="sysmodule" versions="0" logs="0">
+            <metaattributes>
+                <metaattribute code="" type="id" role="id">
+                    <sql primarykey="1" />
+                </metaattribute>
+                <metaattribute code="code" type="string" role="data">
+                    <sql unique="1" />
+                </metaattribute>
+                <metaattribute code="name" type="string" role="data" />
+                <metaattribute code="menupos" type="int" role="data" />
+            </metaattributes>
+            <rows>
+                <row id="1">
+                    <code>Index</code>
+                    <name>Обзор</name>
+                    <menupos>1</menupos>
+                </row>
+                <row id="2">
+                    <code>Pages</code>
+                    <name>Страницы</name>
+                    <menupos>2</menupos>
+                </row>
+                <row id="3">
+                    <code>Users</code>
+                    <name>Пользователи</name>
+                    <menupos>3</menupos>
+                </row>
+                <row id="4">
+                    <code>Account</code>
+                    <name>Профиль пользователя</name>
+                    <menupos>0</menupos>
+                </row>
+                <row id="5">
+                    <code>Files</code>
+                    <name>Файлы и картинки</name>
+                    <menupos>4</menupos>
+                </row>
+                <row id="6">
+                    <code>ImportXml</code>
+                    <name>Импорт данных из XML</name>
+                    <menupos>0</menupos>
+                </row>
+                <row id="7">
+                    <code>Stat</code>
+                    <name>Статистика</name>
+                    <menupos>5</menupos>
+                </row>
+                <row id="8">
+                    <code>Service</code>
+                    <name>Сервисы</name>
+                    <menupos>6</menupos>
+                </row>
+            </rows>
+        </metaobject>
+    </metaobjects>
+</meta>

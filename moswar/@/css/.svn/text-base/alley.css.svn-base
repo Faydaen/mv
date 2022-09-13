@@ -1,0 +1,123 @@
+.alley .search-alley { text-align:center; padding:5px; }
+.alley .search-alley .opponent { margin:0 0 5px 0; }
+.alley .search-alley p { margin:0 0 1em 0; font-size:90%; text-align:center; }
+.alley .search-alley p.timer { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+.alley .search-alley .timeleft { font-size:11px; background:#fbd493; color:#975d17; position:absolute; bottom:0; right:0; padding:2px 4px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.alley .search-alley .collectbar { font-size:90%; }
+
+.alley .search-name { text-align:center; padding:5px; }
+.alley .search-name .opponent { margin:0 0 5px 0; }
+.alley .search-name p { margin:0 0 1em 0; font-size:90%; text-align:center; }
+
+.alley .search-detailed { text-align:center; padding:5px; }
+.alley .search-detailed .level { margin:0 0 5px 0; }
+.alley .search-detailed p { margin:0 0 1em 0; font-size:90%; text-align:center;  }
+.alley .search-detailed .error { text-align:center; }
+
+.alley .patrol { text-align:center; padding:5px; font-size:90%; }
+.alley .patrol  .time { margin:5px 0; }
+.alley .patrol p { margin:0 0 1em 0; text-align:left;  }
+.alley .patrol p.timeleft { margin:5px 0 0 0; text-align:center; }
+.alley .patrol p.major { margin:5px 0 0 0; color:#945903; }
+.alley .patrol p.major a,
+.alley .patrol p.major a:link,
+.alley .patrol p.major a:visited { color:#945903; font-weight:bold; }
+.alley .patrol p.timer { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.alley .patrol .regions-choose { margin:10px 0; position:relative; }
+.alley .patrol .regions-choose ul { width:100%; padding:0; margin:0; }
+.alley .patrol .regions-choose ul li { width:100%; padding:0; margin:0; text-align:center; position:relative; }
+.alley .patrol .regions-choose ul li .name { color:#975D17; text-align:center;  position:relative; z-index:3; margin-top:-16px; }
+.alley .patrol .regions-choose ul li .name b { padding:1px 4px; background:#fff; font-weight:normal; -moz-border-radius:3px; -webkit-border-radius: 3px; border-radius:3px; opacity: 0.9; text-decoration:none; cursor:default; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+.alley .patrol .regions-choose  i.region1,
+.alley .patrol .regions-choose  i.region2,
+.alley .patrol .regions-choose  i.region3,
+.alley .patrol .regions-choose  i.region4,
+.alley .patrol .regions-choose  i.region5,
+.alley .patrol .regions-choose  i.region6,
+.alley .patrol .regions-choose  i.region7,
+.alley .patrol .regions-choose  i.region8,
+.alley .patrol .regions-choose  i.region9,
+.alley .patrol .regions-choose  i.region10,
+.alley .patrol .regions-choose  i.region11,
+.alley .patrol .regions-choose  i.region12,
+.alley .patrol .regions-choose  i.region13,
+.alley .patrol .regions-choose  i.region14,
+.alley .patrol .regions-choose  i.region15,
+.alley .patrol .regions-choose  i.region16 { background:url(../images/loc/citymap/patrol.png) 50% 0% no-repeat; height:99px; width:180px; margin:0; padding:0; }
+.alley .patrol .regions-choose  i.region1 { background-position:50% 0px; }
+.alley .patrol .regions-choose  i.region2 { background-position:50% -100px; }
+.alley .patrol .regions-choose  i.region3 { background-position:50% -200px; }
+.alley .patrol .regions-choose  i.region4 { background-position:50% -300px; }
+.alley .patrol .regions-choose  i.region5 { background-position:50% -400px; }
+.alley .patrol .regions-choose  i.region6 { background-position:50% -500px; }
+.alley .patrol .regions-choose  i.region7 { background-position:50% -600px; }
+.alley .patrol .regions-choose  i.region8 { background-position:50% -700px; }
+.alley .patrol .regions-choose  i.region9 { background-position:50% -800px; }
+.alley .patrol .regions-choose  i.region10 { background-position:50% -900px; }
+.alley .patrol .regions-choose  i.region11 { background-position:50% -1000px; }
+.alley .patrol .regions-choose  i.region12 { background-position:50% -1100px; }
+.alley .patrol .regions-choose  i.region13 { background-position:50% -1200px; }
+.alley .patrol .regions-choose  i.region14 { background-position:50% -1300px; }
+.alley .patrol .regions-choose  i.region15 { background-position:50% -1400px; }
+.alley .patrol .regions-choose  i.region16 { background-position:50% -1500px; }
+.alley .patrol .regions-choose .arrow-left { position:absolute; z-index:1; left:10px; top:50%; margin:-23px 0 0 0; }
+.alley .patrol .regions-choose .arrow-right { position:absolute; z-index:1; right:10px; top:50%; margin:-23px 0 0 0; }
+.alley .patrol .regions-choose .icon-locked { position:absolute; left:50%; top:50px; margin:-22px 0 0 -22px; z-index:4; }
+
+.alley .alley-groupfight { text-align:center; padding:5px; }
+.alley .alley-groupfight p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+
+.alley #bigbattle-hint { margin-top:5px; font-size:90%; }
+
+.alley .welcome { background:url(../images/loc/alley.jpg) 50% -15px no-repeat #998677; padding-top:240px; margin-bottom:12px; zoom:1; color:#fff;  }
+.alley .welcome i.tlc,
+.alley .welcome i.trc { display:none; }
+.alley .welcome .block-rounded { background:#998677; margin:0; }
+.alley .welcome .block-rounded .text { text-align:center; padding:10px 20px; }
+
+.alley  .alley-flag { text-align:center; font-size:90%; padding:5px;  text-align:left; }
+.alley .alley-flag p { margin:0 0 1em 0; text-align:left;  }
+.alley .alley-flag p.holders { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center;  margin:10px 0; }
+.alley .alley-flag p.holders a.now,
+.alley .alley-flag p.holders a.now:link,
+.alley .alley-flag p.holders a.now:visited { color:red; }
+.alley .alley-flag p.team .user { font-weight:normal; }
+.alley .alley-flag p.team .user i.arrived,
+.alley .alley-flag p.team .user i.resident { display:none; }
+.alley .alley-flag button .c { white-space:nowrap; }
+.alley .alley-flag .timeleft { font-size:11px; background:#fbd493; color:#975d17; position:absolute; top:0; right:0; padding:2px 4px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+
+.alley .alley-flag .sides { text-align:center; position:relative; z-index:1; }
+.alley .alley-flag .sides b { background:#fae5ad; padding:0 3px; white-space:nowrap; zoom:1; }
+.alley .alley-flag .grouping { margin:-7px 0 10px 0; border:1px solid #FFC466; font-weight:bold; padding:13px 5px 5px 5px; text-align:center; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; }
+.alley .alley-flag .grouping .button-place { margin:5px 0; text-align:center; }
+.alley .alley-flag .grouping h4 { color:#975D17; font-weight:bold; text-align:center; font-size:100%; }
+.alley .alley-flag .grouping .list { margin-top:5px; text-align:left; font-weight:normal; }
+.alley .alley-flag .grouping .list-link { font-weight:normal; text-align:center; }
+.alley .alley-flag .grouping a.now,
+.alley .alley-flag .grouping a.now:link,
+.alley .alley-flag .grouping a.now:visited { color:red; }
+
+.thimbles i.thimble-closed,
+.thimbles i.thimble-closed-active { margin:5px; width:64px; height:64px; background:url(../images/obj/thimble-closed.png) #f0d898; }
+.thimbles i.thimble-closed-active { cursor:pointer; }
+.thimbles i.thimble-empty { margin:5px; width:64px; height:64px; background:url(../images/obj/thimble-empty.png) #f0d898; }
+.thimbles i.thimble-guessed { margin:5px; width:64px; height:64px; background:url(../images/obj/thimble-guessed.png) #f0d898; }
+
+.alley-fractionswar-search { font-size:90%; padding:5px; }
+.alley-fractionswar-search table.process { margin:0 0 10px 0; }
+.alley-fractionswar-search .timeleft { font-size:11px; background:#fbd493; color:#975d17; position:absolute; top:0; right:0; padding:2px 4px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+
+.alley .groupfight-image { background:url(../images/loc/groupfight-small.png) 50% 0; width:312px; height:46px; margin:0 0 5px 0; }
+
+/* search-neftebarrel*/
+.alley .search-neftebarrel { font-size:90%; padding:5px; }
+.alley .search-neftebarrel .link { text-align:center; }
+.alley .search-neftebarrel #search-neftebarrel-bar { text-align:left; margin-top:5px; }
+.alley .search-neftebarrel #search-neftebarrel-bar p { margin:5px 0; }
+.alley .search-neftebarrel #search-neftebarrel-bar .barrel-bar,
+.alley .search-neftebarrel #search-neftebarrel-bar .barrel-bar .percent {  background:url(../images/ico/barrel.png) 0 0; }
+.alley .search-neftebarrel #search-neftebarrel-bar .barrel-bar { width:41px; height:62px; float:right; position:relative; margin:0px 20px 0 20px; }
+.alley .search-neftebarrel #search-neftebarrel-bar .barrel-bar .percent { width:41px; height:1%; float:left; background-position:-50px 100%; position:absolute; bottom:0; left:0; }
+.alley .search-neftebarrel #search-neftebarrel-bar .barrel-bar .num { padding:1px 4px; position:absolute; background:#5a5651; -moz-border-radius:5px; color:#bdbdbd; bottom:10px; right:32px; }

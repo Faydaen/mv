@@ -1,0 +1,82 @@
+.pipeline .welcome .block-rounded { padding:0; margin:0; }
+.pipeline .welcome .block-rounded .blc,
+.pipeline .welcome .block-rounded .brc { display:none; }
+.pipeline .welcome .block-rounded .text { background:#0a63aa; color:#fff; padding:10px; }
+
+.pipeline .pipeline-scroll-place  { background:url(../images/loc/pipeline/city-bg.jpg) no-repeat #888950; }
+.pipeline .pipeline-scroll { font-size:11px; height:466px; overflow-x:scroll; overflow-y:hidden; position:relative; }
+.pipeline .pipeline-scroll .pipes { background:url(../images/loc/pipeline/pipes-bottom.jpg) 0% 100% no-repeat; height:450px; width:1980px; position:relative; z-index:2; }
+.pipeline .pipeline-scroll .pipes div { background:url(../images/loc/pipeline/pipes-top.png) 0% 0% no-repeat; height:450px; }
+.pipeline .pipeline-scroll .enemy-place { position:absolute; z-index:4; width:1px height:1px; }
+.pipeline .pipeline-scroll .enemy { border:2px solid #e38d8d; background:#9e0505; text-align:center; width:90px; z-index:3; position:absolute; bottom:16px; left:-52px; padding:5px; color:#fff; -moz-border-radius:8px; border-radius:8px; -webkit-border-radius:8px; }
+.pipeline .pipeline-scroll .enemy .tail { background: url(../images/ico/hint-tails.png) no-repeat; background-position:-120px -94px; position:absolute; width:22px; height:22px; bottom:0px; left:50px; margin:0 0 -22px -11px;  }
+.pipeline .pipeline-scroll .enemy:hover { z-index:5; }
+.pipeline .pipeline-scroll .enemy .avatar { /* background:#B090CE; border:1px solid #BBA0D5; */ }
+.pipeline .pipeline-scroll .enemy .action { margin-top:5px; }
+.pipeline .pipeline-scroll .enemy .button .c { padding:0 2px; width:76px; }
+.pipeline .pipeline-scroll .enemy .button.attack-now  { margin:3px 0; }
+.pipeline .pipeline-scroll .enemy .button .c  i { margin-right:0; }
+
+.pipeline .pipeline-scroll .pulp3 .enemy,
+.pipeline .pipeline-scroll .pulp4 .enemy,
+.pipeline .pipeline-scroll .pulp5 .enemy,
+.pipeline .pipeline-scroll .pulp8 .enemy,
+.pipeline .pipeline-scroll .pulp9 .enemy,
+.pipeline .pipeline-scroll .pulp11 .enemy,
+.pipeline .pipeline-scroll .pulp12 .enemy,
+.pipeline .pipeline-scroll .pulp13 .enemy
+ { bottom:auto; top:16px; }
+.pipeline .pipeline-scroll .pulp3 .enemy .tail,
+.pipeline .pipeline-scroll .pulp4 .enemy .tail,
+.pipeline .pipeline-scroll .pulp5 .enemy .tail,
+.pipeline .pipeline-scroll .pulp8 .enemy .tail,
+.pipeline .pipeline-scroll .pulp9 .enemy .tail,
+.pipeline .pipeline-scroll .pulp11 .enemy .tail,
+.pipeline .pipeline-scroll .pulp12 .enemy .tail,
+.pipeline .pipeline-scroll .pulp13 .enemy .tail
+{ background-position:-120px 0px; bottom:auto; top:-22px; }
+
+.pipeline .pipeline-scroll i.icon-ok-tick { position:absolute; margin:-26px 0 0 -21px; z-index:5; }
+
+.pipeline .pipeline-scroll .icon-locked { position: absolute; z-index:4; margin:-22px 0 0 -22px; cursor:pointer; }
+.pipeline .pipeline-scroll-place  { position:relative; }
+.pipeline .pipeline-scroll-place i.arrow-left-circle  { position:absolute; left:-19px; top:50%; z-index:5; margin-top:-38px; }
+.pipeline .pipeline-scroll-place i.arrow-right-circle  { position:absolute; right:-19px; top:50%; z-index:5; margin-top:-38px; }
+.pipeline .pipeline-scroll-place .timeleft  { z-index:5; background:#0A63AA; color:#77abe5; position:absolute; right:0; top:0; line-height:1; padding:3px 4px 3px 5px; font-size:11px; -moz-border-radius:0 0 0 5px; }
+.pipeline .pipeline-scroll .enemy .timeleft  { z-index:5; background:#800001; color:#d36d6e; -moz-border-radius:0 8px 0 5px; border-radius:0 8px 0 5px; -webkit-border-radius:0 8px 0 5px; }
+
+.pipeline .pipeline-scroll .pulp1 { position:absolute; left:72px; top:253px; }
+.pipeline .pipeline-scroll .pulp2 { position:absolute; left:240px; top:218px; }
+.pipeline .pipeline-scroll .pulp3 { position:absolute; left:332px; top:85px; }
+.pipeline .pipeline-scroll .pulp4 { position:absolute; left:475px; top:31px; }
+.pipeline .pipeline-scroll .pulp5 { position:absolute; left:564px; top:142px; }
+.pipeline .pipeline-scroll .pulp6 { position:absolute; left:640px; top:234px; }
+.pipeline .pipeline-scroll .pulp7 { position:absolute; left:778px; top:306px; }
+.pipeline .pipeline-scroll .pulp8 { position:absolute; left:848px; top:120px; }
+.pipeline .pipeline-scroll .pulp9 { position:absolute; left:1015px; top:132px; }
+.pipeline .pipeline-scroll .pulp10 { position:absolute; left:1087px; top:315px; }
+.pipeline .pipeline-scroll .pulp11 { position:absolute; left:1139px; top:57px; }
+.pipeline .pipeline-scroll .pulp12 { position:absolute; left:1262px; top:106px; }
+.pipeline .pipeline-scroll .pulp13 { position:absolute; left:1356px; top:157px; }
+.pipeline .pipeline-scroll .pulp14 { position:absolute; left:1496px; top:259px; }
+.pipeline .pipeline-scroll .pulp15 { position:absolute; left:1637px; top:212px; }
+.pipeline .pipeline-scroll .pulp16 { position:absolute; left:1884px; top:226px; }
+
+/* pipeline-unavilable */
+.pipeline-unavilable .welcome .block-rounded .text { text-align:center;}
+.pipeline-unavilable .pipeline-scroll { overflow:hidden; height:450px; }
+.pipeline-unavilable .pipeline-scroll i,
+.pipeline-unavilable .pipeline-scroll .enemy-place,
+.pipeline-unavilable .pipeline-scroll-place .timeleft,
+.pipeline-unavilable .pipeline-scroll-place i.arrow-left-circle,
+.pipeline-unavilable .pipeline-scroll-place i.arrow-right-circle  { display:none; }
+
+/* pipeline-finished */
+.pipeline-finished .pipeline-scroll { overflow:hidden; height:450px; }
+.pipeline-finished .pipeline-scroll i,
+.pipeline-finished .pipeline-scroll .enemy-place,
+.pipeline-finished .pipeline-scroll-place .timeleft,
+.pipeline-finished .pipeline-scroll-place i.arrow-left-circle,
+.pipeline-finished .pipeline-scroll-place i.arrow-right-circle  { display:none; }
+
+

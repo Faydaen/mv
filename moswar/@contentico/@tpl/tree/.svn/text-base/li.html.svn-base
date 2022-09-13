@@ -1,0 +1,1 @@
+<li <%cur%>><a href="/@contentico/<%url%>/"><span class="name"><%name%></span><span class="number"><%count%></span></a></li>

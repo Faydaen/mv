@@ -1,0 +1,19 @@
+<form action="/@contentico/Files/action=<%action%>/<%id%>" method="post" class="edit-form" enctype="multipart/form-data">
+
+    <div id="edit-data">
+    	<table class="forms">
+
+            <tr>
+            	<td class="label">Файл:</td>
+            	<td class="input"><input type="file" name="file" class="wide" value="" /></td>
+            </tr>
+
+    	</table>
+    </div>
+
+    <div class="buttons">
+    	<input class="cancel" type="button" value="Отмена" onclick="history.back(-1);" />
+    	<input class="save" type="submit" value="Сохранить" />
+    </div>
+
+</form>

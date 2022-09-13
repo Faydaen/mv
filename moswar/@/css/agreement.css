@@ -1,0 +1,8 @@
+
+
+.agreement .welcome { background:url(/@/images/loc/agreement.jpg) 50% 0% no-repeat #f7ddd8; padding-top:300px; margin-bottom:12px; zoom:1; color:#975D17;  }
+.agreement .welcome i.tlc,
+.agreement .welcome i.trc { display:none; }
+.agreement .welcome .block-rounded { background:#f7ddd8; margin:0; }
+.agreement .welcome .block-rounded .text { text-align:center; padding:10px; font-size:140%; }
+.agreement .welcome .block-rounded .text p { margin-bottom:0; }

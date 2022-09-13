@@ -1,0 +1,213 @@
+﻿
+.clan-rupor { text-align:center; padding:0 4px 0 2px; font-size:90%; }
+.clan-rupor textarea { margin:5px 0; width:100%; height:5em; }
+
+.clan-settings { text-align:center; }
+.clan-settings textarea  { margin:5px 0; width:100%; height:10em; }
+.clan-leave { text-align:center; font-size:90%; }
+
+.clan .welcome { background:url(../images/loc/clan.jpg) 50% 0% no-repeat #2c0000; padding-top:300px; margin-bottom:12px; position:relative; zoom:1; }
+.clan .welcome i.emblem { position:absolute; width:99px; height:99px; right:22px; top:29px; text-align:center; font-size:90%; color:#ffd131; font-weight:bold; font-style:normal; }
+.clan .welcome i.emblem a,
+.clan .welcome i.emblem a:link,
+.clan .welcome i.emblem a:visited { text-decoration:none; color:#ffd131; }
+.clan .welcome i.emblem a:hover { color:#ffa531; }
+.clan .welcome i.tlc,
+.clan .welcome i.trc { display:none; }
+.clan .welcome .block-rounded { background:#2c0000; color:#fff; margin:0; }
+.clan .welcome .block-rounded .text { text-align:center; padding:10px 20px; }
+
+.clan  .clan-slots-place { background:#f7b142; padding:2px 0px 5px 0px; margin-top:-12px; }
+.clan  .clan-slots-place  td { vertical-align:middle;}
+.clan  .clan-slots-place .tlc,
+.clan  .clan-slots-place .trc { display:none; }
+.clan  .clan-slots-place .clan-slots .hint { font-size:90%; text-align:center; }
+.clan  .clan-slots-place h3 { text-shadow:0 1px 0 #ffd481 }
+.clan  .block-rounded .clan-slots img { margin:0 1px; }
+.clan  .block-rounded .clan-slots a:hover img { border:2px solid #f78a42; margin:-2px -1px; display:inline-block; zoom:1;  }
+.clan  .clan-slots-place .clan-links { text-align:center; font-size:90%; }
+.clan  .clan-slots-place .clan-links p { margin:3px 0 0 0; font-weight:bold; }
+.clan  .clan-slots-place .clan-links p a,
+.clan  .clan-slots-place .clan-links p a:link,
+.clan  .clan-slots-place .clan-links p a:visited { color:#975D17; }
+.clan  .clan-slots-place .hint,
+.clan  .clan-slots-place .hint a,
+.clan  .clan-slots-place .hint a:link,
+.clan  .clan-slots-place .hint a:visited { color:#945903; }
+.clan  .clan-slots-place .stats li { background:#FFC466; }
+.clan  .clan-slots-place .stats li .bar { top:0;}
+
+.clan .clan-registration .forms .label { width:25%; }
+.clan .clan-registration .forms input { width:200px; }
+.clan .clan-registration .forms textarea { width:100%; height:15em; }
+
+.clan .clan-list .block-rounded { background:#ffe3b3; padding:10px; }
+.clan .clan-search input.name,
+.clan .clan-search input.comment { width:200px; }
+
+.clan .flag { float:left; margin:0 0 0 -2px; min-height:131px; //height:131px; text-align:center; padding:29px 6px 0 0; width:148px; background:url(../images/decor/flag.png) no-repeat; }
+.clan .flag .prestige-info { margin-top:30px; text-align:center; font-size:11px; color:#905b06; }
+.clan img.emblem { margin:0px; }
+.clan .clan-info { padding:10px; margin-left:160px }
+.clan .clan-info table { margin-bottom:10px; }
+
+.clan .clan-legend { padding:10px 20px; }
+
+.clan .clan-kazna  { text-align:center; padding:5px; }
+.clan .clan-kazna p { margin:0 0 1em 0; text-align:left; font-size:90%; }
+.clan .clan-kazna p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+.clan .clan-kazna table { font-size:90%; margin:0 0 5px 0; }
+
+.clan .clan-members  { padding:5px; }
+.clan .clan-members  p { font-size:90%; }
+.clan .clan-members .clan-members-table th.name { padding-left:67px; }
+.clan .clan-members .clan-members-table td.name { width:30%; white-space:nowrap; }
+.clan .clan-members .clan-members-table td.position { width:40%; padding:auto 10px; }
+.clan .clan-members .clan-members-table td.date { width:25%; white-space:nowrap; }
+.clan .clan-members .clan-members-table td.actions { width:5%; text-align:right; }
+.clan .clan-members .clan-members-table td.position input { width:100%; font-size:100%; margin-bottom:3px; }
+.clan .clan-members .clan-members-table .button .c { padding:0 2px;}
+
+.clan-positions { padding:5px; font-size:90%; }
+.clan-positions table.forms td { padding:2px 5px; vertical-align:top; }
+.clan-positions table.forms td.label { width:15%; font-size:100%; color:#003399; white-space:nowrap; font-weight:bold; }
+.clan-positions table.forms td.claner { width:15%; white-space:nowrap; }
+.clan-positions table.forms td.claner select { font-size:100%; }
+.clan-positions table.forms td.description { width:70%; color:#7E5617; }
+
+.clan .clan-diplomacy  { padding:5px; }
+.clan .clan-diplomacy p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.clan .clan-diplomacy .empty { color:#975D17; font-style:italic; }
+.clan .friend { color:green; }
+.clan .enemy { color:red; }
+
+.clan .clan-diplomacy .clans-diplomacy-table { margin:5px 0; }
+.clan .clan-diplomacy .clans-diplomacy-table td.name { width:30%; }
+.clan .clan-diplomacy .clans-diplomacy-table td.state { width:40%; }
+.clan .clan-diplomacy .clans-diplomacy-table td.actions { width:30%; text-align:right; }
+.clan .clan-diplomacy .clans-diplomacy-table .button .c { padding:0 2px; white-space:nowrap; }
+
+.clan .clan-diplomacy-warstat { border:1px solid #FFC466; padding:5px; text-align:center; margin-bottom:5px; }
+.clan .clan-diplomacy-warstat-table { font-size:90%; }
+.clan .clan-diplomacy-warstat-table td { width:50%; padding:0 5px; text-align:center; }
+.clan .clan-diplomacy-warstat-table td.bold{ font-weight:bold; }
+
+.clan .clan-diplomacy-detective { float: right; width: 300px; background:#F6D47B; -moz-border-radius:5px; -webkit-border-radius: 5px; padding:10px; margin:5px 5px 7px 10px; }
+
+.clan .clan-info .button { margin:0 5px 5px 0; }
+.clan .clan-info .list-users { margin-top:0; }
+
+.clan .clan-headquarters { padding:5px; }
+.clan .clan-headquarters p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.clan .clan-headquarters p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+.clan .clan-headquarters p.pay { text-align:center; color:#975D17; margin-bottom:0; }
+.clan .clan-headquarters p.pay button { padding-bottom:3px; }
+
+/* .clan-slot-upgrade */
+.clan-slot-upgrade .progressbar { width:80%; margin:12px 0; }
+.clan-slot-upgrade .progressbar .stats li { background:none; margin-right:10px; }
+.clan-slot-upgrade  .block-rounded .tlc, 
+.clan-slot-upgrade  .block-rounded .trc { display:block; }
+
+.clan-slot-upgrade ul.objects { margin:0; padding:0; padding:2px 2px 1px 2px; list-style-type:none; }
+.clan-slot-upgrade ul.objects .object { overflow:hidden; }
+.clan-slot-upgrade ul.objects .object h2 span.hint { font-size:90%; font-weight:normal; color:#975D17; }
+.clan-slot-upgrade ul.objects .object-current { background:#f7b142; }
+
+/* clan store*/
+.clan-store-about ul.objects { margin:0 0 15px 0; padding:0; padding:2px 2px 1px 2px; list-style-type:none;  }
+.clan-store-about ul.objects .object { overflow:hidden; font-size:100%; padding:10px; }
+.clan-store-about ul.objects .text { margin-bottom:5px; width:100%; }
+.clan-store-about ul.objects .characteristics { min-height:0; width:100%; }
+
+.clan table.clan-store .vtabs { height:auto; /*height:111px;*/ }
+.clan table.clan-store dd { /*height:90px;*/ padding:0; //padding-bottom:1px; //margin-bottom:-1px; }
+.clan table.clan-store dd .object-thumbs { /*height:88px;*/ height:176px; //height:180px; }
+.clan table.clan-store { margin-bottom:16px; }
+.clan table.clan-store td.store-cell .vtabs,
+.clan table.clan-store td.store-cell .vtabs dd { width:312px }
+.clan table.clan-store .empty { font-size:90%; padding:5px 0 0 0; }
+.clan table.clan-store .hint { /*display:none;*/ font-size:90%; padding:2px 4px 3px 4px; background:#eca12b; text-align:center; color:#975D17 }
+
+.clan-store-logs { padding:0 5px 5px 5px; }
+.clan-store-logs p { font-size:90%; }
+.clan-store-logs .pagescroll { margin-bottom:0; }
+.clan-store-logs .pagescroll .block-rounded { margin-bottom:0; }
+
+/* clan-pacifist-time */
+.clan-pacifist-time { padding:5px; }
+.clan-pacifist-time p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.clan-pacifist-time p.now { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+.clan-pacifist-time p.set { text-align:center; }
+
+/* clan-warstat */
+.clan-warstat { padding:5px; }
+.clan-warstat p { font-size:90%; margin:0 0 1em 0; }
+.clan-warstat table.list { margin:5px 0; border-top:1px dotted #E8D092;  border-left:1px dotted #E8D092}
+.clan-warstat table.list .user { white-space:nowrap; }
+.clan-warstat table.list td,
+.clan-warstat table.list th{ vertical-align:top !important; padding:5px; border-right:1px dotted #E8D092; border-bottom:1px dotted #E8D092;  }
+.clan-warstat table.list th{ color:#905b06; font-weight:normal; }
+.clan-warstat table.list th.winning{ border:2px solid #ffb744; }
+.clan-warstat table.list th.winning p.num { font-weight:bold;}
+.clan-warstat table.list th p.num { font-size:150%; margin:2px 0 0 0; color:#000; }
+.clan-warstat .user-logs { display:none; }
+.clan-warstat .finished { text-align:center; color:red; font-weight:bold; }
+.clan-warstat table.fight-time-table{ margin:0 0 10px 0; border-left:1px dotted #E8D092; border-top:1px dotted #E8D092; }
+.clan-warstat table.fight-time-table td { border-right:1px dotted #E8D092; border-bottom:1px dotted #E8D092; text-align:center; font-weight:bold;  width:4%; padding:4px 3px; line-height:1; }
+.clan-warstat table.fight-time-table td small { font-weight:normal; color:#d0b279; margin-right:0.15em; font-size:9px; }
+.clan-warstat table.fight-time-table td.fight-time { border:1px solid #ae5e28; }
+.clan-warstat span.fight-time { border:1px solid #ae5e28; padding:1px 3px; }
+.clan-warstat table.fight-time-table td.pacifism-time { background:#e7e7be; font-weight:normal; color:#6f7c59;  }
+.clan-warstat span.pacifism-time { background:#e7e7be; font-weight:normal; color:#6f7c59; padding:1px 3px; }
+.clan-warstat table.fight-time-table td.pacifism-time small { color:#b7c694; }
+.clan-warstat table.fight-time-table td.fight-time.pacifism-time  { border-color:#c4c8bb; }
+.clan-warstat div.total  { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; font-size:90%; margin:0 0 10px 0; }
+.clan-warstat div.total  span.hint { font-weight:normal; }
+.clan-warstat table.score { margin-bottom:5px; }
+.clan-warstat table.score td { vertical-align:middle; white-space:nowrap; padding:2px 5px; }
+.clan-warstat table.score td.num { text-align:center; font-weight:bold; font-size:150%; background:#FFC466; padding:5px 15px; color:#7a4a3a; }
+.clan-warstat table.score td.side1 { text-align:right; width:50%; }
+.clan-warstat table.score td.side2 { text-align:left; width:50%; }
+
+.clan-warstat #fightlogs { font-size:90%; }
+
+.clan .welcome-begin { background:url(../images/loc/clanwar-begin.jpg) 50% 0% no-repeat #889d64; padding-top:300px; height:0; margin-bottom:12px; position:relative; zoom:1; }
+.clan .welcome-step1 { background:url(../images/loc/clanwar-teeth.jpg) 50% 0% no-repeat #983c7b; padding-top:300px; height:0; margin-bottom:12px; position:relative; zoom:1; }
+.clan .welcome-step2 { background:url(../images/loc/clanwar-groupfights.jpg) 50% 0% no-repeat #4b808e; padding-top:300px; height:0; margin-bottom:12px; position:relative; zoom:1; }
+.clan .welcome-finished { background:url(../images/loc/clanwar-win.jpg) 50% 0% no-repeat #527064; padding-top:300px; height:0; margin-bottom:12px; position:relative; zoom:1; }
+
+.clan-warstat-buttons { margin:0 0 12px 0; }
+.clan-warstat-buttons td { padding:2px; }
+.clan-warstat-buttons .button { width:100%; font-size:110%; }
+.clan-warstat-buttons .button .f { width:100%; }
+
+/* clan-affects */
+.clan-affects { padding:5px; font-size:90%; }
+.clan-affects table.forms td { padding:5px; vertical-align:middle; }
+.clan-affects table.forms td.label { width:width:20%; white-space:nowrap; font-size:100%; }
+.clan-affects table.forms td.input { width:20px; background:#fdde8c; padding:5px 2px 5px 2px; text-align:center; }
+.clan-affects table.forms td.input input { font-size:80%; border:none; background:none; font-weight:bold; color:#df5400; text-align:center; width:2em; }
+.clan-affects table.forms td.slider { padding:5px 12px 5px 5px; width:100%; }
+.clan-affects table.forms td select { margin-right:5px; }
+.clan-affects table.forms div.hint { color:#975D17; font-size:100%; margin-top:3px; }
+.clan-affects table.forms span.hint { color:#975D17; font-size:100%; }
+.clan-affects table.process {  }
+.clan-affects div.now { border:1px solid #FFC466; color:#975D17; padding:5px;  }
+.clan-affects div.now h3 { font-size:13px; }
+
+/* buttons */
+.clan table.buttons { margin:0 0 12px 0; }
+.clan table.buttons td { padding:2px; }
+.clan table.buttons .button { width:100%; font-size:110%; }
+
+/* clan-prestige */
+.clan-prestige { font-size:90%; }
+.clan-prestige table { background:#fcbd58; height:64px; margin-bottom:2px; }
+.clan-prestige table td { padding:2px 5px; vertical-align:middle; text-align:center; color:#975d17; }
+.clan-prestige table td .exp { margin-bottom:3px; }
+.clan-prestige table td .bar { width:100%; }
+.clan-prestige .label { text-align:left; }
+.clan-prestige .label .num { float:right; }
+.clan-prestige-description { padding:5px; font-size:90%; margin-top:10px; background:#fcbd58;}
+.clan-prestige-description h3 { font-size:12px !important;}

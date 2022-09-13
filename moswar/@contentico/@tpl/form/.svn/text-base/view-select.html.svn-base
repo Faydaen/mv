@@ -1,0 +1,6 @@
+<div class="metaview-select">
+	Показывать
+	<select onchange="document.location.href='/@contentico/Metaobjects/<%metaobject%>/action=<%action%>/id=<%id%>/view=' + this.options[this.selectedIndex].value;">
+        <%options%>
+	</select>
+</div>

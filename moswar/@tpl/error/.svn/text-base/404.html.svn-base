@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Понаехали, тут!</title>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/@/css/style.css" />
+	<script type="text/javascript" src="/@/js/script.js"></script>
+</head>
+<body>
+
+<div class="main-bg" align="center" style="height: 371px;">
+    <div style="width: 400px; margin:170px 0 100px 0;">
+        <div class="block-bordered">
+            <ins class="t l"><ins></ins></ins><ins class="t r"><ins></ins></ins>
+            <div class="center clear" style="text-align:left; padding:30px;">
+                <h1 align="center">Где я?!</h1>
+                <p>Хороший вопрос!</p>
+                <p style="text-align:center;"><a href="/">Назад</a></p>
+            </div>
+            <ins class="b l"><ins></ins></ins><ins class="b r"><ins></ins></ins>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+.berezka .welcome { background:url(../images/loc/berezka.jpg) 50% 0% no-repeat #ff621b !important; height:auto; padding-top:300px; margin-bottom:12px; zoom:1; color:#000; }
+.berezka .welcome i.tlc,
+.berezka .welcome i.trc { display:none; }
+.berezka .welcome .block-rounded { background:#ffd447; margin:0; }
+.berezka .welcome .block-rounded .text { text-align:center; padding:10px; }
+.berezka .welcome .borderdata  { border:none; margin-top:10px; background:#ffe694; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; font-size:90%; }

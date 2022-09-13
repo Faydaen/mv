@@ -1,0 +1,45 @@
+.police .police-attention { text-align:center; padding:5px; }
+.police .police-attention p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+
+.police .police-attention p.timer { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.police .police-attention .wanted { width:130px; font-size:90%; font-weight:bold; margin-bottom:1em; }
+.police .police-attention .wanted .bar { margin-top:3px; }
+.police .police-attention .wanted i.start { bottom:0; left:50%; margin-left:-66px; }
+.police .police-attention .wanted i.end { bottom:0; right:50%; margin-right:-66px; }
+
+.police .police-relations { text-align:center; padding:5px; }
+.police .police-relations p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.police .police-relations p.time { margin:1em 0 0 0; text-align:center; color:#c54624; font-weight:bold; }
+
+.police .police-passport { text-align:center; padding:5px; }
+.police .police-passport p { margin:1em 0 0 0; font-size:90%; text-align:left;  }
+
+.police .welcome { background:url(../images/loc/police.jpg) 50% 0% no-repeat #7bccec; padding-top:300px; margin-bottom:12px; zoom:1; margin-bottom:12px; }
+.police .welcome i.tlc,
+.police .welcome i.trc { display:none; }
+.police .welcome .block-rounded { background:#53b0d9; margin:0; }
+.police .welcome .block-rounded .text { text-align:center; padding:10px; }
+
+.police-rename { padding:5px; }
+.police-rename p { font-size:90%; }
+
+.police-werewolf { font-size:90%; padding:5px; }
+.police-werewolf form { width:100%; float:left; text-align:center; margin:5px 0; }
+.police-werewolf form label { font-size:12px; }
+
+.police-werewolf-view { position:relative; font-size:90%; }
+.police-werewolf-view h3.curves { font-size: 12px; }
+.police-werewolf-view ul.stats li.stat { font-size:100%; }
+.police-werewolf-view .pers-slogan h3 { font-weight:normal; }
+.police-werewolf-view .description .block-rounded { text-align:center; padding:5px; }
+.police-werewolf-view #avatar-back { position:relative; }
+.police-werewolf-view #avatar-back .slot-pet { position:absolute; top:140px; right:0px; z-index:1; background:none; }
+.police-werewolf-view #avatar-back .time { z-index:2; font-size:11px; text-align:center; color:#fff; position:absolute; left:50%; bottom:-5px; font-style:normal; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; background:#b85c12; padding:1px 3px;width:54px; margin-left:-30px; }
+.police-werewolf-view td.police-werewolf-lifes { padding:0 3px; }
+.police-werewolf-view td.police-werewolf-lifes .padding { text-align:center; padding:0px 5px 5px 5px; margin-top:-10px; position:relative; zoom:1; }
+.police-werewolf-view td.police-werewolf-lifes .life .bar { width:130px; }
+.police-werewolf-view p.borderdata { margin:5px 0; }
+.police-werewolf-view .hint { margin-top:5px; }
+
+#loading-stats { width:100%; height:270px; background:#fff4de url(../images/ico/loading-stats.gif) 50% 50% no-repeat; position:absolute; z-index:2; top:65px; left:0; opacity:0.8; //filter:alpha(opacity:80); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }

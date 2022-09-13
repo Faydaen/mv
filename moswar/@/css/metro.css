@@ -1,0 +1,24 @@
+
+.metro .metro-branch { text-align:center; padding:5px; }
+.metro .metro-branch p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.metro .metro-branch p.hint  { margin:5px 0 0 0; color:#945903; }
+.metro .metro-branch p.hint a,
+.metro .metro-branch p.hint a:link,
+.metro .metro-branch p.hint a:visited { color:#945903; font-weight:bold; }
+.metro .metro-branch table.process { font-size:90% }
+
+.metro .metro-statistics { text-align:center; padding:5px; }
+.metro .metro-statistics p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+
+.metro .metro-thimble { text-align:center; padding:5px; }
+.metro .metro-thimble p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.metro .metro-thimble p.holders { text-align:center; }
+
+.metro .welcome { background:url(../images/loc/metro.jpg) 50% 0% no-repeat #99917e; padding-top:300px; margin-bottom:12px; }
+.metro .welcome i.tlc,
+.metro .welcome i.trc { display:none; }
+.metro .welcome .block-rounded { background:#aea993; margin:0; }
+.metro .welcome .block-rounded .text { text-align:center; padding:10px; }
+.metro .welcome .block-rounded .text form { margin-top:10px; }
+
+.metro .metro-branch p.timer { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }

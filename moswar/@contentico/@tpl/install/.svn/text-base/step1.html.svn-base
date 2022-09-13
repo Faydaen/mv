@@ -1,0 +1,34 @@
+<%log%>
+
+<h2>Выберите необходимые операции</h2>
+
+<form action="/install.php?_a=install" method="post" enctype="multipart/form-data">
+	
+	<h3>Установка/Обновление</h3>
+    
+    <input type="checkbox" class="cb" name="install_meta" id="install_meta" /> <label for="install_meta">Обновить метаданные</label><br />
+    <input type="checkbox" class="cb" name="install_metadata" id="install_metadata" /> <label for="install_metadata">Обновыить метаобъекты (sys.xml, std.xml, project.xml)</label><br />
+    <input type="checkbox" class="cb" name="install_customsql" id="install_customsql" /> <label for="install_customsql">Обновить пользовательский SQL</label><br />
+    <input type="checkbox" class="cb" name="install_site" id="install_site" /> <label for="install_site">Обновить служебные данные проекта</label><br />
+    <div class="sub">
+    	<input type="checkbox" class="cb" name="install_htaccess" id="install_htaccess" onclick="if(this.checked){document.getElementById('install_site').checked=true;}" /> <label for="install_htaccess">Генерировать правила для .htaccess</label><br />
+    </div>
+    
+    <h3>Импорт/Экспорт</h3>
+    
+    <input type="checkbox" class="cb" name="install_import" id="install_import" onclick="document.getElementById('importfile').style.display=this.checked?'block':'none';" disabled="disabled" /> <label for="install_import">Импорт данных</label><br />
+    <div class="sub" id="importfile" style="display:none;">
+    	<input type="file" class="text" name="datafile" />
+    </div>
+    <input type="checkbox" class="cb" name="install_export" id="install_export" disabled="disabled" /> <label for="install_export">Экспорт данных</label><br />
+    
+    <h3>Упаковка/Распаковка</h3>
+    
+    <input type="checkbox" class="cb" name="install_pack" id="install_pack" disabled="disabled" /> <label for="install_pack">Запаковать проект</label><br />
+    <input type="checkbox" class="cb" name="install_unpack" id="install_unpack" disabled="disabled" /> <label for="install_unpack">Распаковать проект</label><br />
+
+    <div align="right">
+    	<input type="submit" value="Продолжить &rarr;" class="btn" />
+    </div>
+
+</form>

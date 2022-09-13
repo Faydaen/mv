@@ -1,0 +1,77 @@
+.home  .block-rounded { background:#f7b142; padding:2px 5px 5px 5px; }
+.home  .block-rounded h3 { text-shadow:0 1px 0 #f8ca81; }
+.home  .block-rounded .tlc,
+.home  .block-rounded .trc { display:none; }
+.home  .block-rounded .home-slots img { margin:2px; }
+.home  .block-rounded .home-slots .hint { font-size:90%; text-align:center; }
+.home  .block-rounded .home-slots-safe .object-thumb { margin:-2px; }
+.home  .block-rounded .home-slots-safe .object-thumb .padding { background:url(../images/ico/slots.png) no-repeat 2px -1538px #FCDAA4; }
+.home  .block-rounded .home-stats .hint { font-size:90%; padding:5px 10px; }
+.home  .block-rounded .hint,
+.home  .block-rounded .hint a,
+.home  .block-rounded .hint a:link,
+.home  .block-rounded .hint a:visited { color:#945903; }
+.home  .block-rounded .stats { background:#FFC466; height:54px; padding:5px; }
+.home  .block-rounded .stats li { background:#FFC466; }
+.home  .block-rounded .stats li .bar { top:0;}
+
+.home .home-trainer { text-align:center; padding:5px; }
+.home .home-trainer  p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+
+.home .home-medicine  { text-align:center; padding:5px; }
+.home .home-medicine p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+
+.home .home-rent { text-align:center; padding:5px; }
+.home .home-rent p { margin:0 0 1em 0; font-size:90%; text-align:left;  }
+.home .home-rent p.hint { margin:5px 0 0 0; color:#945903; }
+.home .home-rent p.hint a,
+.home .home-rent p.hint a:link,
+.home .home-rent p.hint a:visited { color:#945903; font-weight:bold; }
+
+.home .home-rent .profit { border:1px solid #ffc466; color:#975d17; font-weight:bold; text-align:center; padding:5px; }
+
+/* welcome */
+.home .welcome { padding-top:250px; background:url(/@/images/loc/home.jpg) 50% 0 no-repeat #d41d0f;}
+.home .welcome i.tlc,
+.home .welcome i.trc { display:none; }
+.home .welcome .block-rounded { background:#d41d0f; margin:0; color:#fff; }
+.home .welcome .block-rounded .text { text-align:center; padding:10px; }
+
+/* safe */
+.home .home-safe { padding:5px; font-size:90%; text-align:center; }
+.home .home-safe p { margin:0 0 1em 0; }
+.home .home-safe p.text { text-align:left; }
+.home .home-safe p.now { border:1px solid #ffc466; color:#975d17; font-weight:bold; text-align:center; padding:5px; margin:5px 0; }
+.home .home-safe p.hint { margin:5px 0 0 0; color:#945903; }
+
+/* cage */
+.home .home-cage { padding:5px; font-size:90%; text-align:center; }
+.home .home-cage p { text-align:left; }
+.home .home-cage .hint { color:#975D17; margin-top:5px; }
+.home .home-cage img { margin:0 5px 0 0; }
+
+/* collections */
+.home .vtabs { margin-bottom:15px; }
+.home .vtabs .about {  font-size:90%; padding:5px 10px; text-align:left; background:#eca12b; }
+
+.home table.inventary dd .object-thumbs { height:180px; }
+
+.home-collection-description { font-size:90%; padding:5px; }
+.home .collection table.inventary dl .hint { padding:5px; }
+.home .collection table.inventary dd .object-thumbs { height:auto; }
+.home .collection table.inventary dd .object-thumbs .object-thumb { height:auto; }
+.home-collection-gathered { font-size:90%; padding:5px; }
+.home-collection-gathered .success { font-weight:bold; color:green; }
+
+/* home-garage */
+.home .home-garage-buy { font-size:90%; padding:5px; }
+.home .home-garage-buy .hint { text-align:center; margin-top:5px; }
+.home .home-garage { width:312px; }
+.home .home-garage .object-thumb .padding { background:url(../images/ico/slots.png) no-repeat 2px -1608px #FCDAA4; }
+.home .home-garage .vtabs dt .num { cursor:pointer; }
+.home .home-garage .vtabs dt .num:hover { text-decoration:underline; }
+.home .home-garage .vtabs .about { text-align:center; }
+.home .home-garage dl .hint { padding-bottom:4px; }
+.home .home-garage #home-garage-enlarge { margin-top:5px; }
+
+

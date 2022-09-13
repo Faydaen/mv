@@ -1,0 +1,31 @@
+* { font-family:Arial; }
+body, td, div, span, p { font-size:12px; }
+body { background:#fff url(../@img/decor/body_gr.jpg) repeat-x left 2px; }
+
+div.left { float:left; height:20px; }
+div.right { float:right; height:20px; }
+div.leftright { height:19px; clear:both; border-bottom:1px solid #eee; margin-bottom:3px; }
+.ok { color:green; }
+.error { color:red; }
+.disabled { color:gray; }
+
+
+h1, h2, h3 { font-weight:normal; }
+h1, h2 { color:#7ccc55; }
+h3 { color:#5bccac; }
+
+a { color:#7ccc55; }
+a:hover { text-decoration:none; }
+
+div.main { border:1px solid #B0DADC; padding:4px; width:700px; text-align:left; }
+div.header { border-bottom:1px solid #8BB286; padding:12px 6px; background:#E6F8D8 url(../@img/decor/bar_bg.gif) repeat-x left top; }
+div.header img { margin-right:10px; }
+div.content { margin:10px; }
+
+div.contentico-link { float:right; }
+
+input.btn { background:#EBF6DC; border:1px solid #a3bc9a; padding:3px 11px; }
+input.cb { margin:0px; }
+input.text { border:1px solid #a3bc9a; }
+
+div.sub { margin:3px 0px 3px 20px; }

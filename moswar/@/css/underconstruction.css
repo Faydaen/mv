@@ -1,0 +1,6 @@
+
+.underconstruction .welcome { background:url(../images/loc/underconstruction.jpg) 50% 0% no-repeat #c15741; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.underconstruction .welcome i.tlc,
+.underconstruction .welcome i.trc { display:none; }
+.underconstruction .welcome .block-rounded { background:#d54223; margin:0; }
+.underconstruction .welcome .block-rounded .noaccess { text-align:center; padding:10px; }

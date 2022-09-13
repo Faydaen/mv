@@ -1,0 +1,20 @@
+<form action="/@contentico/Users/type=<%TYPE_GROUPS%>/action=<%action%>/<%id%>" method="post" class="edit-form" enctype="multipart/form-data">
+
+    <div id="edit-data">
+    	<table class="forms">
+
+            <tr>
+            	<td class="label">Название:</td>
+            	<td class="input"><input type="text" name="name" class="wide" value="<%name%>" /></td>
+            </tr>
+
+    	</table>
+    </div>
+
+    <div class="buttons">
+    	<input class="cancel" type="button" value="Отмена" onclick="history.back(-1);" />
+    	<input class="save" type="submit" value="Сохранить" />
+    	<%delete-button%>
+    </div>
+
+</form>

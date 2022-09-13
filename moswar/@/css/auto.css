@@ -1,0 +1,229 @@
+
+.auto .welcome { background:url(../images/loc/auto/auto.jpg) 50% 0% no-repeat #4d97de; padding-top:0px; margin-bottom:12px; zoom:1; color:#fff;  }
+.auto .welcome i.blc,
+.auto .welcome i.brc { z-index:1; }
+.auto .welcome .block-rounded { background:#4b96da; margin:0; padding:0; }
+.auto .welcome .block-rounded .text { text-align:center; padding:10px; }
+.auto .welcome .block-rounded .text .hint { font-size:11px; color:#ae89bd; margin-top:5px; }
+.auto .welcome .block-rounded .text .dashedlink { color:#fff; border-color:#fff; }
+
+.auto .welcome .buildings { background:url(../images/loc/auto/auto.jpg) 0% 0% no-repeat #4d97de; height:400px; position:relative; width:100%; overflow:hidden; }
+
+.auto .welcome .buildings .bulding-level-rul,
+.auto .welcome .buildings .bulding-level-kuzov,
+.auto .welcome .buildings .bulding-level-koleso,
+.auto .welcome .buildings .bulding-level-motor { background:url(../images/loc/auto/circles.png) no-repeat 0 0; width:34px; padding:0 1px 1px 0; height:34px; position:absolute; z-index:2; line-height:34px; text-align:center; font-weight:bold; cursor:pointer; }
+
+.auto .welcome .buildings .bulding-level-rul { background-position:0px 0px; top:300px; left:70px; }
+.auto .welcome .buildings .bulding-level-rul.hover,
+.auto .welcome .buildings .bulding-level-rul:hover { background-position:-50px 0px; }
+.auto .welcome .buildings .bulding-level-kuzov { background-position:0px -50px; top:143px; left:155px; }
+.auto .welcome .buildings .bulding-level-kuzov.hover ,
+.auto .welcome .buildings .bulding-level-kuzov:hover { background-position:-50px -50px; }
+.auto .welcome .buildings .bulding-level-koleso { background-position:0px -100px; top:170px; left:400px; }
+.auto .welcome .buildings .bulding-level-koleso.hover,
+.auto .welcome .buildings .bulding-level-koleso:hover { background-position:-50px -100px; }
+.auto .welcome .buildings .bulding-level-motor { background-position:0px -150px; top:320px; left:530px; }
+.auto .welcome .buildings .bulding-level-motor.hover,
+.auto .welcome .buildings .bulding-level-motor:hover { background-position:-50px -150px; }
+.auto .welcome .buildings .trees { position:absolute; z-index:3; }
+.auto .welcome .buildings .bulding-rul { position:absolute; z-index:1; left:1px; bottom:64px; }
+.auto .welcome .buildings .bulding-kuzov { position:absolute; z-index:1; left:116px; bottom:203px; }
+.auto .welcome .buildings .bulding-koleso { position:absolute; z-index:1; left:346px; bottom:191px; }
+.auto .welcome .buildings .bulding-motor { position:absolute; z-index:1; left:482px; bottom:29px; }
+
+.cars-build table.process { font-size:12px; margin:0 0 12px 0; background:#ffcb3d; }
+
+.cars-build .instruction { display:none; margin:0; padding:15px; list-style-type:none; background:#89c1f5;  position:relative;}
+.cars-build .instruction ul { padding:0; margin:0; float:left; width:100%; list-style-type:none; }
+.cars-build .instruction ul li { float:left; width:115px; padding: 0 15px 0 25px; position:relative; }
+.cars-build .instruction ul li b.numeric { color:#9cccf7; position:absolute; left:-5px; top:-5px; background-image:url(../images/ico/icons.png); background-position:0 -2310px; height:25px; width:25px; line-height:25px; text-align:center; }
+.cars-build .instruction ul li a,
+.cars-build .instruction ul li a:link,
+.cars-build .instruction ul li a:visited { color:#fff; }
+.cars-build .instruction .close-cross { font-size:17px; line-height:1; color:#dff0ff; font-weight:bold; position:absolute; top:2px; right:3px; cursor:pointer; }
+.cars-build .instruction .close-cross:hover { color:#fffdce; }
+
+/* cars-building */
+.auto .building-upgrade .block-rounded { padding:10px; }
+.auto .building-upgrade .block-rounded  .actions{ margin-top:10px; text-align:center; background:#f8c35b; padding:5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+.auto .building-upgrade .block-rounded  .parts-list { text-align:center; margin:5px 0; }
+.auto .building-upgrade .block-rounded  .parts-list .part-item { font-size:11px; width:130px; display:inline-block; //display:inline; zoom:1; background:#ffeec4; margin:3px; padding:8px 4px; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.auto .building-upgrade .block-rounded  .parts-list .part-item img { background:url(../images/decor/64-light.png); }
+.auto .building-upgrade .block-rounded  .parts-list .part-item .num  { margin:4px 0; }
+.auto .building-upgrade .block-rounded  .parts-list .part-item .num span { background:#b97a00; padding:2px 5px; font-size:11px; font-weight:bold; color:#ffe7ba; line-height:1; display:inline-block; //display:inline; zoom:1; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+.auto .building-upgrade .block-rounded  .parts-list .part-item .button .c { padding:0 1px; font-weight:normal; }
+.auto .building-upgrade .block-rounded  .parts-list .part-item .button .c span i { margin-right:0; }
+
+/* cars-produce */
+.auto .cars-produce { padding:5px; font-size:90%; }
+.auto .cars-produce .cars-produce-choose { margin:10px 0 0 0; position:relative; padding:0 40px; }
+.auto .cars-produce .cars-produce-choose .cars-produce-accordion { padding:0; overflow:hidden; }
+.auto .cars-produce .cars-produce-choose ul { width:100%; padding:0; margin:0; }
+.auto .cars-produce .cars-produce-choose ul li { width:182px; padding:0; margin:0; text-align:center; position:relative; min-height:160px; }
+.auto .cars-produce .cars-produce-choose ul li.locked .hover-area {display:none;  position:absolute; top:0; bottom:0; left:0; right:0; background:#fbe6af; position:absolute; z-index:3; opacity: 0.5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; }
+.auto .cars-produce .cars-produce-choose ul li.locked .hover-area { display:block; }
+.auto .cars-produce .cars-produce-choose ul li img { background:url(../images/decor/128-light.png); }
+.auto .cars-produce .cars-produce-choose ul li .name { font-size:11px; color:#975D17; text-align:center;  position:relative; z-index:3; margin-top:-20px; margin-bottom:5px; }
+.auto .cars-produce .cars-produce-choose ul li .name b { padding:1px 4px; background:#fff; font-weight:normal; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; opacity: 0.9; text-decoration:none; cursor:default; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+.auto .cars-produce .cars-produce-choose ul li .button .c { padding:0 2px; }
+.auto .cars-produce .cars-produce-choose ul li .button .c span.tugriki,
+.auto .cars-produce .cars-produce-choose ul li .button .c span.ruda,
+.auto .cars-produce .cars-produce-choose ul li .button .c span.med,
+.auto .cars-produce .cars-produce-choose ul li .button .c span.neft { font-size:10px; font-weight:normal; }
+.auto .cars-produce .cars-produce-choose .arrow-left { position:absolute; z-index:1; left:0px; top:50%; margin:-25px 0 0 0; }
+.auto .cars-produce .cars-produce-choose .arrow-right { position:absolute; z-index:1; right:0px; top:50%; margin:-25px 0 0 0; }
+.auto .cars-produce .cars-produce-choose .icon-locked { position:absolute; left:50%; top:64px; margin:-22px 0 0 -22px; z-index:4; }
+
+/* cars-trip */
+.auto .cars-trip .welcome .block-rounded { background:#85cefc; color:#000; padding:0; }
+.auto .cars-trip .welcome .block-rounded .text { text-align:left; padding:10px; }
+.auto .cars-trip .welcome .block-rounded .hint { color:#1f6ea0; margin-top:6px; }
+.auto .cars-trip .welcome .block-rounded .hint a,
+.auto .cars-trip .welcome .block-rounded .hint a:link,
+.auto .cars-trip .welcome .block-rounded .hint a:visited { color:#1f6ea0; }
+.auto .cars-trip .welcome .goback { background:#56BDFD; color:#D3EEFF; -moz-border-radius:7px 0 5px 0; -webkit-border-radius:7px 0 5px 0; border-radius:7px 0 5px 0; }
+.auto .cars-trip .welcome .goback a,
+.auto .cars-trip .welcome .goback a:link,
+.auto .cars-trip .welcome .goback a:visited { color:#D3EEFF; }
+
+.auto .cars-trip table.process { font-size:12px; background:#ffcb3d; }
+
+.auto .cars-trip .cars-trip-choose { margin:10px 0 0 0; position:relative; padding:0px; }
+.auto .cars-trip .cars-trip-choose .cars-trip-accordion { padding:0; margin:0 -3px; overflow:hidden; }
+.auto .cars-trip .cars-trip-choose ul { width:100%; padding:0; margin:0; }
+.auto .cars-trip .cars-trip-choose ul li { width:220px; padding:0; margin:0; text-align:center; position:relative; min-height:340px; font-size:90%;  }
+.auto .cars-trip .cars-trip-choose ul li .hover-area {display:none;  position:absolute; width:100%; height:100%; top:0; bottom:0; left:0; right:0; background:#fef3dd; position:absolute; z-index:3; opacity: 0.7; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
+.auto .cars-trip .cars-trip-choose ul li.locked .hover-area { display:block; }
+.auto .cars-trip .cars-trip-choose ul li .block-rounded { background:#ffd465; margin:0 3px; padding:6px; position:absolute; left:0; right:0; bottom:0; top:0; }
+.auto .cars-trip .cars-trip-choose ul li .picture { height:150px; position:relative; background-position:50% 50% !important; margin-bottom:0px; cursor:pointer; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.auto .cars-trip .cars-trip-choose ul li .picture .timeout { color:#975D17; position:absolute; top:50%; left:50%; margin:-16px 0 0 -40px; width:80px; text-align:center; }
+.auto .cars-trip .cars-trip-choose ul li .picture .timeout i.icon-locked-small { margin-bottom:-2px; }
+.auto .cars-trip .cars-trip-choose ul li .picture .timeout span { padding:0 1px; background:#fff; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+.auto .cars-trip .cars-trip-choose ul li h3 { font-size:13px; margin:5px 0; }
+.auto .cars-trip .cars-trip-choose ul li .actions { margin:5px 0; text-align:center; }
+.auto .cars-trip .cars-trip-choose ul li .require { color:#975D17; }
+.auto .cars-trip .cars-trip-choose ul li .require img { background:url(../images/decor/64-light.png); cursor:pointer; }
+.auto .cars-trip .cars-trip-choose .arrow-left-circle { position:absolute; z-index:3; left:0px; top:146px; margin:0 0 0 -16px; }
+.auto .cars-trip .cars-trip-choose .arrow-right-circle { position:absolute; z-index:3; right:0px; top:146px; margin:0 -16px 0 0; }
+.auto .cars-trip .cars-trip-choose .icon-locked { position:absolute; left:50%; top:80px; margin:-22px 0 0 -22px; z-index:4; }
+.auto .cars-trip .cars-trip-choose .alert .objects { margin:5px 0; }
+.auto .cars-trip .cars-trip-choose .object-thumb { color:#975D17; background:none; margin:-5px 0; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.auto .cars-trip .cars-trip-choose .object-thumb img { background:url(../images/decor/64-light.png); }
+.auto .cars-trip .cars-trip-choose .object-thumb .timeout { position:absolute; left:50%; top:50%; margin:-8px 0 0 -24px; width:48px; text-align:center; cursor:pointer; }
+.auto .cars-trip .cars-trip-choose .object-thumb .timeout i.icon-locked-small { margin-bottom:-2px; }
+.auto .cars-trip .cars-trip-choose .object-thumb .timeout span { padding:0 1px; background:#fff; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+.auto .cars-trip .cars-trip-choose .alert { margin-top:-100px; }
+.auto .cars-trip .cars-trip-choose .alert .object-thumb { cursor:pointer; }
+.auto .cars-trip .cars-trip-choose .alert .object-thumb:hover { background:#17cbf8;}
+
+.alert .auto-trip-result { text-align:center; }
+.alert .auto-trip-result .bonus { color:green; }
+.alert .auto-trip-result .bonus b { background:#fff3d3; padding:1px 4px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.alert .auto-trip-result .pic { position:relative; }
+.alert .auto-trip-result .pic img { height:100px; width:160px; -ms-interpolation-mode: bicubic; }
+.alert .auto-trip-result .pic i.icon-ok-tick { position:absolute; left:50%; top:50%; margin:-30px 0 0 -23px }
+/* .alert .auto-trip-result p b.trip-name { display:inline-block; } */
+.alert .auto-trip-result p b.trip-name:first-letter { text-transform:lowercase; }
+
+/* car-number */
+.car-number { line-height:1; background:#fff; padding:1px 3px; border:2px solid #000; font-size:10px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; white-space:nowrap; display:inline-block; //display:inline; vertical-align:middle; zoom:1; }
+.car-number b,
+.car-number strong { font-weight:normal; font-size:11px; margin:0 2px; }
+
+/* car-info */
+
+.car-info h3.curves { position:relative; }
+.car-info h3.curves .goback { position: absolute; left: 5px; top: 5px; font-size: 11px; font-weight: normal; text-shadow: none; }
+.car-info h3.curves .goback .arrow { font-family: Times New Roman; margin-right: 3px; }
+
+.car-info table.buttons { margin:0 0 12px 0; }
+.car-info table.buttons td { padding:2px; }
+.car-info table.buttons .button { width:100%; }
+
+.car-info .block-rounded  { padding:0; font-size:90%; }
+.car-info td.description  { width:33%; padding:15px 12px 15px 18px; }
+.car-info td.description div.avatar  { background:url(../images/decor/car-bg.png) 50% 50% no-repeat; text-align:center; position:relative; left:-3px; padding:16px 0; width:193px; vertical-align:middle; }
+.car-info td.description div.avatar .car-number-place { width:100%; text-align:center; position:absolute; bottom:-0.5em; left:0; }
+.car-info td.description div.avatar .car-number-place .car-number { font-weight:bold; color:#000; font-size:14px; //padding-bottom:2px; //padding-top:0; }
+.car-info td.description div.avatar .car-number-place .car-number:hover { color:red; border-color:red; cursor:pointer; }
+.car-info td.description div.avatar .car-number-place .car-number b,
+.car-info td.description div.avatar .car-number-place .car-number strong { font-weight:bold; font-size:16px; }
+.car-info td.data  { width:33%; padding:15px 20px; }
+.car-info td.data ul.stats { margin:5px -5px 15px -5px; }
+.car-info td.data ul.stats li.stat { font-size:100%; padding:3px 5px 5px 5px; }
+.car-info td.data ul.stats li.stat.odd { background:#ffce7f; }
+.car-info td.data ul.stats li.stat .bar { margin-top:1px; }
+.car-info td.data .fuel { background:#fff; padding:5px; margin:5px -5px 0px -5px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+.car-info td.data .fuel div.bar { width:100%; }
+.car-info td.upgrades { width:33%; padding:5px 5px 5px 10px; }
+.car-info td.upgrades .objects { width:217px; margin:0 0 0 -4px; } 
+.car-info td.upgrades .objects .slot-car-rul,
+.car-info td.upgrades .objects .slot-car-kuzov,
+.car-info td.upgrades .objects .slot-car-koleso,
+.car-info td.upgrades .objects .slot-car-motor,
+.car-info td.upgrades .objects .slot-car-extra,
+.car-info td.upgrades .objects img { background:url(../images/ico/slots.png) no-repeat 0 0; }
+.car-info td.upgrades .objects .slot-car-rul { background-position:2px -1188px; }
+.car-info td.upgrades .objects .slot-car-kuzov { background-position:2px -1258px; }
+.car-info td.upgrades .objects .slot-car-koleso { background-position:2px -1328px; }
+.car-info td.upgrades .objects .slot-car-motor { background-position:2px -1398px; }
+.car-info td.upgrades .objects .slot-car-extra { background-position:2px -1468px; }
+.car-info td.upgrades .objects .object-thumb i.icon-locked-small { z-index:2; position:absolute; left:5px; bottom:5px; }
+.car-info td.upgrades .objects .object-thumb i.empty { z-index:1; position:absolute; top:-2px; left:-2px; bottom:-2px; right:-2px; background:#fbe19f; opacity: 0.7; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
+.car-info td.upgrades .objects .clickable { cursor:pointer; }
+.car-info td.upgrades .objects .clickable:hover img { border:2px solid #f78a42; margin:-2px; }
+
+/* car-number-alert */
+.car-number-alert { width:520px; margin:-130px 0 0 -260px; }
+.car-number-choose .generate-button { text-align:center; }
+.car-number-choose .generate-button .button .c { padding:0 1px; }
+.car-number-choose ul { padding:0; margin:10px 0 2px 0; }
+.car-number-choose ul li { margin:0 -1px 5px 0; float:left; width:140px;  padding:0 0 0 22px; list-style-type:none; position:relative; }
+.car-number-choose ul li .button { margin-bottom:5px; }
+.car-number-choose ul li input { position:absolute; left:0px; top:-2px;  }
+.car-number-choose ul .car-number { background:none; border-width:1px; margin-top:-1px; }
+
+.car-number-big { text-align:center; margin:10px 0; }
+.car-number-big .car-number { font-size:60px; padding:3px 10px; border-width:3px; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.car-number-big .car-number b,
+.car-number-big .car-number strong { font-size:72px; }
+.car-number-big .car-number input { font-family:Tahoma; font-size:72px; width:3.75em; text-align:center; margin:0; padding:0; border:none; }
+
+.car-number-choose .elite .link { text-align:center; margin:5px 0;  }
+.car-number-choose .elite .link b { background:#fff; padding:3px 6px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.car-number-choose .elite .link b .dashedlink { color:#db5d00; border-color:#db5d00; }
+.car-number-choose .elite ul { float:left; width:49%; }
+.car-number-choose .elite li { width:100%; margin:3px 0; }
+.car-number-choose .elite li span.med { font-weight:normal; }
+.car-number-choose .elite .hint { text-align:center; width:100%; clear:both; }
+.car-number-choose .elite .car-number { background:#fff0ca;  }
+.car-number-choose .elite .taken { color:#905B06; }
+.car-number-choose .elite .taken .user { font-weight:normal; }
+.car-number-choose .elite .taken input { display:none; }
+.car-number-choose .elite .taken span.med,
+.car-number-choose .elite .taken  .user i,
+.car-number-choose .elite .taken  .user img { display:none; }
+.car-number-choose .elite .taken  .car-number { color:#905B06; border:1px solid #905B06; background:none; }
+.car-number-choose .elite .my  .car-number { background:#ffe971; }
+
+/* auto-bombila */
+.auto-bombila { padding:5px; font-size:90%; }
+.auto-bombila table.action { margin:-5px 0 5px 0; }
+.auto-bombila table.action td { vertical-align:middle; white-space:nowrap; text-align:center; width:50%; }
+.auto-bombila table.action td.car { padding:5px; text-align:center; width:50%; }
+.auto-bombila table.action td.car .object-thumb { background:none; margin:-12px 0; }
+.auto-bombila table.action td.car div { position:relative; z-index:1; }
+.auto-bombila table.action td.car img { background:url(../images/decor/64-light.png); cursor:pointer; }
+.auto-bombila table.action td.car .object-thumb .timeout { position:absolute; left:50%; top:50%; margin:-8px 0 0 -24px; width:48px; text-align:center; cursor:pointer; }
+.auto-bombila table.action td.car .object-thumb .timeout i.icon-locked-small { margin-bottom:-2px; }
+.auto-bombila table.action td.car .object-thumb .timeout span { padding:0 1px; color:#975D17; background:#fff; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+.auto-bombila table.action i.question-icon { margin:0 0 0 5px; }
+.auto-bombila .timeleft { font-size:11px; background:#fbd493; color:#975d17; position:absolute; top:0; right:0; padding:2px 4px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+#cars-trip-choose  .objects { margin:5px 0; }
+#cars-trip-choose .object-thumb .timeout { color:#975D17; position:absolute; left:50%; top:50%; margin:-8px 0 0 -24px; width:48px; text-align:center; cursor:pointer; }
+#cars-trip-choose .object-thumb .timeout i.icon-locked-small { margin-bottom:-2px; }
+#cars-trip-choose .object-thumb .timeout span { padding:0 1px; background:#fff; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+#cars-trip-choose .object-thumb:hover { background:#17cbf8;}
+#cars-trip-choose .object-thumb img { background:none;}
+#cars-trip-choose .object-thumb { cursor:pointer; color:#975D17; background:none; margin:-5px 0; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }

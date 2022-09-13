@@ -1,0 +1,16 @@
+<ul class="actions">
+    <li id="action-add" onclick="document.location.href='/@contentico/Users/type=<%TYPE_USERS%>/action=<%ACTION_CREATE%>/id=<%ID%>/';">Добавить</li>
+    <li id="action-edit" onclick="ContenticoUsersGoEditUser();">Редактировать</li>
+    <li id="action-delete" onclick="ContenticoUsersGoDeleteUser();">Удалить</li>
+</ul>
+
+<table class="listtable">
+	<tr>
+		<th class="num"></th>
+		<th class="box"><input type="checkbox" /></th>
+		<th>Имя</th>
+		<th>Электронная почта</th>
+		<th>Действителен?</th>
+	</tr>
+	<%tr%>
+</table>

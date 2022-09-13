@@ -1,0 +1,16 @@
+.shaurburgers .shaurburgers-work { text-align:center; padding:5px; font-size:90%; }
+.shaurburgers .shaurburgers-work .time { margin:1em 0; }
+.shaurburgers .shaurburgers-work p { margin:0; }
+.shaurburgers .shaurburgers-work .time-left { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.shaurburgers .shaurburgers-training { text-align:center; padding:5px; }
+.shaurburgers .shaurburgers-training .button { margin:1em 0 0 0; }
+.shaurburgers .shaurburgers-training p { margin:0; font-size:90%;  }
+
+.shaurburgers .welcome { background:url(/@/images/loc/shaurburgers.jpg?1) 50% 0% no-repeat #fdad3e; padding-top:300px; margin-bottom:12px;  }
+.shaurburgers .welcome i.tlc,
+.shaurburgers .welcome i.trc { display:none; }
+.shaurburgers .welcome .block-rounded { background:#fdad3e; color:#321801; margin:0; }
+.shaurburgers .welcome .block-rounded .text { text-align:left; padding:10px 20px; }
+
+

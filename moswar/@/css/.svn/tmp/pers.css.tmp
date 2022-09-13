@@ -1,0 +1,239 @@
+i.affects-icon,
+i.injury-icon,
+i.perks-icon,
+i.jail-icon,
+i.werewolf-icon,
+i.ratings-icon
+{ background: url('../images/ico/icons.png') no-repeat top left; }
+
+.enemy table.layout td.stats-cell { width:27%; height:100%; padding:12px 0; }
+.enemy table.layout td.slots-cell { width:46%; height:100%; padding:10px 18px; background:url(../images/decor/underslots.gif) 50% 0% no-repeat; }
+.enemy table.layout td.say-cell { width:27%; height:100%; padding:13px 0; }
+.enemy table.layout td.stats-cell p { font-size:90%; color:#945903; margin:0 0 0.5em 0; }
+.enemy div.buttons { text-align:center; margin:5px 0 16px -2px; }
+.enemy div.buttons .button { width:157px; margin:0 2px; }
+
+/* slots */
+ul.slots { width:278px; height:278px; position:relative; margin:0; padding:0; }
+ul.slots li,
+ul.slots li img { background:#eed48f url(../images/ico/slots.png) 0 0 no-repeat; }
+ul.slots li { width:64px; height:64px; position:absolute; list-style-type:none; }
+ul.slots li.slot1 { top:0; left:0; background-position:0 -140px; } /* ����� */
+ul.slots li.slot2 { top:0; right:0; background-position:0 -350px; } /* �������� */
+ul.slots li.slot3 { top:70px; left:0; background-position:0 -210px; } /* ������ */
+ul.slots li.slot4 { top:70px; right:0; background-position:0 -420px; } /* ������ */
+ul.slots li.slot5 { top:140px; left:0; background-position:0 -280px; } /* ���������� */
+ul.slots li.slot6 { top:140px; right:0; background-position:0 -490px; } /* ������� */
+ul.slots li.slot7 { top:210px; left:0; background-position:0 -560px; } /* ����� */
+ul.slots li.slot8 { top:210px; right:0; background-position:0 -630px; } /* ��������� */
+ul.slots li.slot9 { top:210px; left:70px; background-position:0 -700px; } /* ������ */
+ul.slots li.slot10 { top:210px; right:70px; background-position:0 -770px; } /* ����� */
+ul.slots li.avatar { top:0; left:69px; padding:0; width:140px; height:210px; background:url(../images/decor/underavatar.gif) 50% 50% no-repeat; }
+ul.slots li.avatar img { background:none; }
+ul.slots li.avatar img.eyes { position:absolute; top:0; left:0; border:1px solid red; }
+ul.slots li.slot-pet { top:140px; right:70px; z-index:1; background:none; }
+ul.slots li.slot-pet img { background:none; }
+ul.slots li.avatar div.icons-place { position:absolute; top:0; right:-2px; width:45px; text-align:right; }
+
+/*
+/*
+ul.slots .affects-icon { width:45px; height:42px; background-position:0 -550px; cursor:pointer; position:relative; z-index:2; margin:0 0 -1px 0; }
+ul.slots .affects-icon:hover { background-position:-50px -550px; }
+ul.slots .injury-icon { width:41px; height:40px; background-position:0 -810px; cursor:pointer; position:relative; z-index:1; margin:-4px 0 0 0; }
+ul.slots .injury-icon:hover { background-position:-50px -810px; }
+ul.slots .perks-icon { width:43px; height:38px; background-position:0 -1680px; cursor:pointer; position:relative; z-index:1; margin:-2px 0 2px; }
+ul.slots .perks-icon:hover { background-position:-50px -1680px; }
+ul.slots .jail-icon { width:41px; height:36px; background-position:0 -1730px; cursor:pointer; position:relative; z-index:1; margin:0px 1px 0 0; }
+ul.slots .jail-icon:hover { background-position:-50px -1730px; }
+*/
+
+ul.slots .affects-icon { width:34px; height:34px; background-position:0 -1680px; cursor:pointer; position:relative; z-index:2; margin:0 0 1px 0; }
+ul.slots .affects-icon:hover { background-position:-50px -1680px; }
+ul.slots .injury-icon { width:34px; height:34px; background-position:0 -1720px; cursor:pointer; position:relative; z-index:1; margin:0 0 1px 0; }
+ul.slots .injury-icon:hover { background-position:-50px -1720px; }
+ul.slots .perks-icon { width:34px; height:34px; background-position:0 -1800px; cursor:pointer; position:relative; z-index:1; margin:0 0 1px 0; }
+ul.slots .perks-icon:hover { background-position:-50px -1800px; }
+ul.slots .jail-icon { width:34px; height:34px; background-position:0 -1840px; cursor:pointer; position:relative; z-index:1; margin:0 0 1px 0; }
+ul.slots .jail-icon:hover { background-position:-50px -1840px; }
+ul.slots .werewolf-icon { width:34px; height:34px; background-position:0 -1760px; cursor:pointer; position:relative; z-index:1; margin:0 0 1px 0; }
+ul.slots .werewolf-icon:hover { background-position:-50px -1760px; }
+ul.slots .werewolf-icon span.time { display:none; z-index:-1; position:absolute; left:auto; right:32px; top:10px; font-style:normal; -moz-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; background:#920000; padding:1px 3px 1px 4px }
+ul.slots .werewolf-icon:hover span.time { display:block; }
+ul.slots .ratings-icon { display:none; position:absolute; left:-99px; top:0px; width:34px; height:34px; background-position:0 -2190px; cursor:pointer; z-index:1; margin:0 0 1px 0; }
+ul.slots .ratings-icon:hover { background-position:-50px -2190px; }
+ul.slots:hover .ratings-icon { display:block !important; } 
+
+ul.slots div.blocked { background: url(../images/ico/blocked.png) 0 0 no-repeat; width:388px; height:234px; position:absolute; top:20px; left:-55px; z-index:2; }
+ul.slots div.frozen { background: url(../images/ico/frozen.png) 0 0 no-repeat; width:326px; height:376px; position:absolute; top:-50px; left:-24px; z-index:2; }
+
+/* stats */
+ul.stats { margin:0; padding:0; }
+ul.stats li.stat { color:#945903; font-size:90%; font-weight:bold; padding:2px 4px 4px 4px; margin:0!important; list-style-type:none; display:block; }
+ul.stats li.stat div.label { overflow:hidden; //line-height:1.1; }
+ul.stats li.stat div.label b { float:left; }
+ul.stats li.stat div.label span.num { float:right; font-weight:normal; cursor:pointer; }
+ul.stats li.stat .bar,
+ul.stats li.stat div.bar div{ background:url(../images/ico/bar.gif) 0 0 no-repeat; zoom:1; }
+ul.stats li.stat div.bar { height:7px; padding-left:1px; position:relative; background-position:0 -40px; }
+ul.stats li.stat div.bar div { height:7px; width:100%; background-position:100% 0; }
+ul.stats li.stat div.bar div.percent  { height:7px; min-width:0px; -width:1px; background-position:100% -40px; float:left; }
+ul.stats li.stat div.bar div.percent2  { height:7px; min-width:0px; -width:1px; background-position:100% -100px; float:left; }
+ul.stats li.stat div.bar div.percent3  { height:7px; min-width:0px; -width:1px; background-position:100% -120px; float:left; }
+ul.stats li.odd { background:#ffc466; }
+ul.stats li.stat div.rank { color:#003399; font-weight:normal; }
+
+div.pers-statistics { padding:2px 4px; font-size:90%; }
+div.pers-statistics .bars { margin:2px 0; padding:1px 4px 4px 4px; background:#f5cf6e; text-align:center;
+border-bottom:1px solid #ffe8ad;
+border-top:1px solid #e08900;
+border-left:1px solid #ee970e;
+border-right:1px solid #ee970e;
+ }
+div.pers-statistics .bars .exp { padding:2px 0; }
+div.pers-statistics .bars .life { padding:2px 0; }
+div.pers-statistics .bars .wanted { padding:2px 0; }
+div.pers-statistics .bars .wanted .bar { margin-top:1px; }
+div.pers-statistics .bars .wanted i.start { bottom:4px; left:50%; margin-left:-66px; }
+div.pers-statistics .bars .wanted i.end { bottom:4px; right:50%; margin-right:-66px; }
+div.pers-statistics ul.numbers { padding:0; margin:5px 0; list-style-type:none;  }
+div.pers-statistics ul.numbers li { padding:1px 4px; }
+div.pers-statistics ul.numbers li.odd { background:#FFC466}
+div.pers-statistics ul.numbers li a { text-decoration:none; }
+
+/* object-thumb */
+
+.object-thumb .action span
+ { background: url(../images/ico/vtabs.png) no-repeat; height:19px; line-height:19px; }
+ 
+.object-thumbs { position:relative; overflow-y:scroll; height:213px; padding:2px 4px; }
+.object-thumb {  position:relative; list-style-type:none; height:86px; margin:2px 1px 2px 2px; float:left; width:68px; }
+.object-thumb .padding { background:#fcdaa4 url(../images/ico/slot-hidden.png) 2px 2px no-repeat; width:64px; min-height:64px; padding:2px; float:left; }
+.object-thumb img { background:url(../images/ico/slot.png) 0px 0px no-repeat; margin:0px; }
+.object-thumb .action  { background:#c67614; padding:0 1px 1px 1px; }
+.object-thumb .action a,
+.object-thumb .action a:link,
+.object-thumb .action a:visited,
+.object-thumb .action a span { text-decoration:none; display:block; }
+.object-thumb .action span:hover { background-position:0 -200px; background-color:#e86e12; }
+.object-thumb .action.disabled span:hover { background-position:0 -180px; background-color:#c67614; cursor:default; }
+.object-thumb .action span,
+.object-thumb .action-disabled span:hover{ display:block; border:1px solid #fff; border-bottom:1px solid #b66f2f; border-right:1px solid #b66f2f; text-align:center; font-size:90%; color:#fff; font-weight:bold; background-position:0 -180px; background-repeat:repeat-x; line-height:11px; height:11px; padding-bottom:2px; //line-height:12px; //height:12px; //padding-bottom:1px; background-color:#dc9728; cursor:pointer; }
+.object-thumb .action-disabled span,
+.object-thumb .action-disabled span:hover { color:#efd09d; cursor:default; opacity:0.8; //filter:alpha(opacity:8); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=8)"; }
+span.object-thumb { float:none; display:-moz-inline-stack; display:inline-block; //display:inline; zoom:1; height:auto; }
+
+ul.slots li .count,
+.object-thumb .count,
+.object i.thumb .count { font-style:normal; background:#ffce6f; text-transform:uppercase; color:#933700; font-weight:normal; font-size:10px; opacity:0.85; padding:1px 2px 1px 3px; position:absolute; right:3px; text-align:center; top:53px; line-height:1;  -moz-border-radius: 5px 0 0 0; border-radius:0 0 0 5px; //filter:alpha(opacity:85); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; }
+ul.slots li .mf,
+.object-thumb .mf ,
+.object i.thumb .mf { font-style:normal; background:#9E5800; text-transform:uppercase; color:#FFFFFF; font-size:10px; opacity:0.85; padding:1px 3px 2px 4px; line-height:1; position:absolute; right:2px; text-align:center; top:2px; -moz-border-radius:0 0 0 5px; border-radius:0 0 0 5px; //filter:alpha(opacity:85); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; }
+ul.slots li .mf { right:0; top:0; }
+ul.slots li .time,
+.object-thumb .time  { background:#c3740d; font-weight:normal; text-transform:uppercase; color:#fff; font-size:7pt; opacity:0.85; padding:0 4px 0 3px; position:absolute; top:2px; left:2px; text-align:center; -moz-border-radius:0 0 5px 0; border-radius:0 0 5px 0; }
+
+.object-overtip-place { border:1px solid red; position:absolute; left:200px; top:300px; }
+.object-overtip-place .overtip { left:auto; top:auto; bottom:22px; left:-104px; width:200px; }
+.object-overtip-place .overtip i.tail-bottom { left:74px; margin:0; }
+
+#stats-accordion { height:272px; }
+#stats-accordion dd { height:234px; padding:1px 5px; }
+#stats-accordion dd ul.stats { padding:3px 0; }
+
+#statistics-accordion { height:272px; }
+#statistics-accordion dd { height:217px; padding:0; //padding-bottom:1px; //margin-bottom:-1px; }
+
+table.inventary .vtabs { height:auto; /*height:111px;*/ }
+table.inventary dd { /*height:90px;*/ padding:0; //padding-bottom:1px; //margin-bottom:-1px; }
+table.inventary dd .object-thumbs { /*height:88px;*/ height:270px; padding:2px 0px 2px 4px }
+
+table.inventary { margin-bottom:16px; }
+table.inventary td.equipment-cell .vtabs,
+table.inventary td.equipment-cell .vtabs dd { width:312px; }
+table.inventary td.dopings-cell .vtabs,
+table.inventary td.dopings-cell .vtabs dd,
+table.inventary td.pet-cell .vtabs,
+table.inventary td.pet-cell .vtabs dd { width:169px; }
+
+/*
+table.inventary td.pet-cell { padding-bottom:2px; vertical-align:top; }
+table.inventary td.pet-cell .vtabs dd .object-thumbs { height:152px; }
+table.inventary td.collection-cell { vertical-align:bottom; }
+table.inventary td.collection-cell .vtabs dd .object-thumbs { height:88px; }
+*/
+
+table.inventary .empty { font-size:90%; padding:5px 0 0 0; }
+table.inventary .empty img { margin:0; opacity: 0.3; //filter:alpha(opacity:30); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; }
+table.inventary dl .hint { /*display:none;*/ font-size:90%; padding:2px 4px 3px 4px; background:#eca12b; text-align:center; color:#975D17 }
+
+/*
+table.inventary .hint { display:none; font-size:90%; padding:2px 4px; background:#eca12b; text-align:center; color:#975D17 }
+table.inventary dl.vtabs:hover dd { position: absolute; z-index: 99; width:inherit; height:auto; background:#F7B142; border-bottom:1px solid #b66f2f; }
+table.inventary dl.vtabs:hover dd .object-thumbs { height:176px; //height:180px; }
+table.inventary dl.vtabs:hover .hint { display:block; }
+
+/*
+table.inventary dl.vtabs:hover dt { background-color:#f36301; background-position:0 -60px; cursor:default; }
+table.inventary dl.vtabs:hover dt div { background-position:0 -80px; padding-left:10px; }
+table.inventary dl.vtabs:hover dt div div { background-position:100% -100px; padding-right:4px; }
+*/
+
+.pers-gifts div.block-rounded  { text-align:center; background:#ffd570; margin-bottom:14px; }
+.pers-gifts div.block-rounded img { border:2px solid #eacf8b; }
+.pers .gifts img { margin:0 -3px 0 0; }
+
+/* car-item */
+.pers-gifts .car-item { height:181px; }
+.pers-gifts .car-item .car-thumb { text-align:center; /* position:relative;*/ }
+.pers-gifts .car-item .car-thumb img { background:url(../images/decor/128-light.png); border:0; }
+.pers-gifts .car-item .car-thumb .car-number-place { position:absolute; width:100%; left:0; bottom:8px; text-align:center; }
+.pers-gifts .car-item .name { font-size:11px; color:#975D17; }
+.pers-gifts .car-item .car-number { line-height:1; background:#fff; font-weight:bold; padding:1px 4px; border:2px solid #000; font-size:14px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; white-space:nowrap; display:inline-block; //display:inline; vertical-align:middle; zoom:1; }
+.pers-gifts .car-item .car-number b,
+.pers-gifts .car-item .car-number strong { font-size:16px; font-weight:bold; }
+
+
+/* pers-slogan*/
+.pers-slogan .block-bordered  { text-align:center; margin-bottom:12px; }
+.pers-slogan .block-bordered label { text-align:center; display:block; margin-top:-12px; position:relative; }
+.pers-slogan .block-bordered label span { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background:#fff4de; padding:0 4px; color:#e5bb71; font-size:90%; font-weight:normal; }
+.pers-slogan .block-bordered h3 { margin:3px 0 6px 0; padding:0; text-align:center; color:#6d4000; }
+
+/* pers-text*/
+.pers-text .block-rounded  { padding:10px 20px; }
+.pers-text .pers-photo-thumb { float:right; background:#fff; padding:8px; text-align:center; margin:0 -10px 10px 10px; color:#975D17; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.pers-text .pers-photo-thumb img { margin-bottom:5px; }
+.pers-text img.avatar { margin:0 10px 10px -10px; float:left; }
+
+/* pers-admin */
+.pers-admin .button .c { padding:0 1px; }
+.pers-admin #admin-form { font-size:90%; padding:10px; }
+
+.pers-admin table.datatable { margin:0 0 1em 0; border-top:1px solid #e7b98c; }
+.pers-admin table.datatable td { padding:3px 5px; border-bottom:1px solid #e7b98c; }
+.pers-admin table.datatable th { padding:3px 5px; background:#e7b98c; font-weight:bold; text-align:left; color:#673a00; }
+.pers-admin table.datatable caption { padding:5px; background:#e7b98c; font-weight:bold; text-align:left; color:#000; text-transform:uppercase; }
+
+#pers-admin2-block table { font-size:80%; }
+#pers-admin2-block table td { font-size:9px; padding:3px 5px; }
+#pers-admin2-block table td.d { width:90px; }
+#pers-admin2-block table td.m { width:90px; }
+#pers-admin2-block table td.a { width:110px; }
+#pers-admin2-block table tr.odd { background:#fcdd76; }
+
+/* war */
+.pers .war-report { text-align:center; font-weight:bold; color:red; margin:-5px 0 5px 0; font-size:90%; }
+
+.pers .hunting-report { text-align:center; font-weight:bold; margin:-5px 0 5px 0; font-size:90%; color:#ac3202; }
+.pers .hunting-report img { vertical-align:middle; margin-right:5px; }
+.pers .hunting-report a,
+.pers .hunting-report a:link,
+.pers .hunting-report a:visited { color:#ac3202; }
+
+/* slots-groupfight */
+.equipment-groupfight-cell #equipment-accordion .object-thumbs { height:156px; }
+.slots-groupfight { padding:5px 15px 0 15px; width:282px; height:113px; background:url(@/images/decor/underslots.gif) 50% -320px; position:relative; top:-7px; margin-bottom:-4px; }
+.slots-groupfight h3 { color:#975d17; font-weight:bold; font-size:11px; text-align:center; margin-bottom:4px; }
+.slots-groupfight .object-thumbs { padding:0; margin:0; height:88px; overflow:hidden; }
+.slots-groupfight .object-thumbs .object-thumb { margin:0 1px; background:#eed48f no-repeat; }
+.slots-groupfight .object-thumbs .object-thumb .padding { padding:0; margin:0; background:url(@/images/ico/slots.png) 50% -1050px; }

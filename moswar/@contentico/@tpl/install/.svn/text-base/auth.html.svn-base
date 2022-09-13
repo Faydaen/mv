@@ -1,0 +1,14 @@
+<h2>Авторизация</h2>
+
+<form action="/install.php?_a=auth" method="post">
+
+    <table cellpadding="2">
+        <tr><td>E-mail:</td><td><input type="text" name="email" class="text" value="<%email%>" /></td></tr>
+        <tr><td>Пароль:</td><td><input type="password" name="pwd" class="text" /><%error%></td></tr>
+    </table>
+
+    <div align="right">
+        <input type="submit" value="Авторизоваться &rarr;" class="btn" />
+    </div>
+
+</form>

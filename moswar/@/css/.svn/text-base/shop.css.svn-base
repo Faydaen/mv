@@ -1,0 +1,21 @@
+.shop table.buttons { margin:0 0 12px 0; }
+.shop table.buttons td { padding:2px; }
+.shop table.buttons .button { width:100%; font-size:110%; }
+.shop .block-rounded .description { text-align:left; padding:5px; }
+
+
+.shop ul.objects { margin:0; padding:0; padding:2px 2px 1px 2px; background:#fff; }
+.shop .overtip div.data { font-size:90%; background:#fbe19f; padding:2px 2px; }
+.shop li.object { list-style-type:none; border:2px solid #f38c23; margin-bottom:2px; }
+
+.shop .welcome { background:url(/@/images/loc/shop.jpg) 50% 0% no-repeat #f8f7b0; height:300px; margin-bottom:12px; }
+
+.shop .error { text-align:center; }
+.shop .closed { padding:10px; }
+
+.shop .actions .count { color:#945900; margin:0 5px; }
+.shop .actions .count input { text-align: center; font-size:100%; width:20px; margin-top:-2px; //margin-top:0px; }
+.shop .actions .option { color:#945900; margin:0 10px 0 5px; }
+
+.shop-items-toggle h2 { margin: 0; }
+.shop-items-other { display: none; }

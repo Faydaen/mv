@@ -1,0 +1,115 @@
+<? informico | www.informico.ru ?>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Contentico - система управления сайтом</title>
+    <link rel="icon" href="/@contentico/@img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/@contentico/@img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/@contentico/@inc/common.css" />
+    <link rel="stylesheet" type="text/css" href="/@contentico/@inc/main.css" />
+    <script src="/@contentico/@inc/jquery.js" type="text/javascript"></script>
+    <script src="/@contentico/@inc/jquery-plugins.js" type="text/javascript"></script>
+    <script src="/@contentico/@inc/tools.js" type="text/javascript"></script>
+    <!-- ui -->
+    <script src="/@contentico/@inc/ui.calendar.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/@contentico/@inc/ui.calendar.css" />
+    <script src="/@contentico/@inc/ui.htmlarea/tiny_mce.js" type="text/javascript"></script>
+
+    <script src="/@contentico/@inc/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/@contentico/@inc/jquery.tinysort.min.js" type="text/javascript"></script>
+    <script src="/@contentico/@inc/sort_metaobjects.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div class="mainlayer">
+
+<table class="maintable">
+	<tr>
+		<td class="main-left-column">
+			<div class="logo"><a href="/@contentico/Index/"><img src="/@contentico/@img/logo<%logo-red%>.gif"></a></div>
+			<ul class="mainmenu">
+        			<%modules-menu%>
+                                <li><span id="top_sort">А-Я</span></li>
+                                <%metaobjects-menu%>
+                                <li><span id="bottom_sort">А-Я</span></li>
+			</ul>
+
+		</td>
+		<td class="main-right-column">
+			<table class="main-right-table">
+				<tr>
+					<td class="header-cell">
+
+					    <!--form class="search" method="get">
+							<input type="search" name="q" size="40" class="unfocused" value="поиск" onfocus="this.value=='поиск'?this.value='':true; this.className='focused'" onblur="this.value==''?this.value='поиск':true; this.className='unfocused'">
+							<input type="submit" value="Найти">
+						</form-->
+
+						<div class="useroptions">
+							<a class="nickname" href="/@contentico/Account/"><%user-name%></a>
+							<span class="group">(<%user-group%>)</span>
+							<a class="exit" href="/@contentico/Auth/exit/">Выход</a>
+						</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td class="content-cell">
+						<table class="module-block">
+							<tr>
+								<td class="module-header">
+									<div class="bar clear">
+
+										<div class="sublinks">
+											<a href="javascript:void(0);" class="reload" onclick="document.location.href=document.location.href;">Обновить</a>
+											<a href="javascript:void(0);" onclick="ShowContextHelp('<%help-context%>');">Справка</a>
+										</div>
+
+										<div class="path">
+											<a href="/@contentico/">Обзор</a>
+											<%path%>
+											<b></b>
+										</div>
+
+										<h2><%page-name%></h2>
+										<!--ul class="tabs">
+											<li class="cur"><a href=""><%tab-content%></a></li>
+											<li><a href="">Настройки новостей</li>
+										</ul--><br class="opera-cleaner" clear="all" />
+
+									</div>
+
+
+								</td>
+							</tr>
+							<tr>
+								<td class="module-content">
+
+									<table class="tree-layout">
+										<tr>
+											<%tree%>
+											<td class="tree-content-cell">
+												<%tabs%>
+												<%content%>
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</div>
+
+<div id="general-tip"><div class="centerer">Загрузка&hellip;</div></div>
+
+</body>
+</html>

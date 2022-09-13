@@ -1,0 +1,17 @@
+<div class="card-form">
+
+    <%view-select%>
+
+	<table class="forms">
+		<%tr%>
+	</table>
+
+    <div class="buttons">
+        <%delete-button%>
+        <%edit-button%>
+        <input class="back" type="button" value="&larr; Список" onclick="document.location.href='/@contentico/Metaobjects/<%metaobject%>/action=<%ACTION_LIST%>/page=<%-page%>/view=<%-view%>/';" />
+    </div>
+
+</div>
+
+<%children%>

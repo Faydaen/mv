@@ -1,0 +1,20 @@
+<ul class="content-tabs">
+	<li <%cur-files%>><a href="/@contentico/Files/type=<%TYPE_FILES%>/action=<%ACTION_LIST%>/">Файлы</a></li>
+    <li <%cur-images%>><a href="/@contentico/Files/type=<%TYPE_IMAGES%>/action=<%ACTION_LIST%>/">Картинки</a></li>
+</ul>
+
+<ul class="actions">
+    <li id="action-add" onclick="document.location.href='/@contentico/Files/action=<%ACTION_CREATE%>/';">Добавить</li>
+    <li id="action-edit" onclick="ContenticoFilesGoEditFile();">Редактировать</li>
+    <li id="action-delete" onclick="ContenticoFilesGoDeleteFile();">Удалить</li>
+</ul>
+
+<table class="listtable">
+	<tr>
+		<th class="num"></th>
+		<th class="box"><input type="checkbox" /></th>
+		<th>Файл</th>
+		<th>Дата добавления</th>
+	</tr>
+	<%tr%>
+</table>

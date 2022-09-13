@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Понаехали</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<frameset cols="0,*" id="chat-frameset-horizontal" border="0" framespacing="0" frameborder="no">
+	<frame id="chat-frame-left" name="chat-frame-left" src="about:blank" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize="true" />
+	<frameset rows="*,0"id="chat-frameset-vertical" border="0" framespacing="0" frameborder="no">
+		<frame id="game-frame" name="game-frame" src="<%url%>" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no" />
+		<frame id="chat-frame-bottom" name="chat-frame-bottom" src="about:blank" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize="true" />
+	</frameset>
+</frameset>
+
+</html>

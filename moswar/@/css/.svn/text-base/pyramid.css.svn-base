@@ -1,0 +1,49 @@
+
+
+.pyramid .welcome { background:none; padding-top:0px; margin-bottom:0; zoom:1; }
+.pyramid .welcome .goback { z-index:1; color:#a9baff; background:#5675ff; -moz-border-radius:5px 0 5px 0; -webkit-border-radius:5px 0 5px 0; border-radius:5px 0 5px 0; }
+.pyramid .welcome .goback a,
+.pyramid .welcome .goback a:link,
+.pyramid .welcome .goback a:visited { color:#a9baff;}
+
+.pyramid .welcome .introduction { background:#7a95ff; margin:0; padding:0 }
+.pyramid .welcome .introduction i.blc,
+.pyramid .welcome .introduction i.brc { display:none; }
+.pyramid .welcome .introduction .text { text-align:left; padding:22px 19px 12px 19px; color:#fff; }
+
+.pyramid .welcome .description i.tlc,
+.pyramid .welcome .description i.trc { display:none; }
+.pyramid .welcome .description { background:url(../images/loc/pyramid/sand-gradient.gif) #fad785 repeat-x; padding:10px 0 0 0; }
+.pyramid .welcome .description h3 { text-shadow:0 1px 0 #ffdc8f }
+.pyramid .welcome .description .padding { background:url(../images/loc/pyramid/warning.gif) 50% 100% no-repeat; margin:0; padding:3px 20px 40px 20px; }
+.pyramid .welcome .description .left { float:left; width:47%; }
+.pyramid .welcome .description .right { float:right; width:50%; text-align:center; font-size:11px; }
+.pyramid .welcome .description .right form { margin:10px 0; }
+.pyramid .welcome .description .right form input { text-align:center; }
+
+.pyramid .welcome .picture { position:relative; background:url(../images/loc/pyramid/pyramid.jpg) 0% 100% no-repeat #92c5ff; height:206px; padding-top:0; margin-bottom:0; zoom:1; color:#003c81;  }
+.pyramid .welcome .picture .text { width:250px; padding:15px 19px;  }
+.pyramid .welcome .picture .pyramid-cost { margin-top:18px; background:#fff; font-size:11px; float:left; padding:5px; position:relative; left:-8px; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.pyramid .welcome .picture .pyramid-cost table { width:auto; }
+.pyramid .welcome .picture .pyramid-cost table td { line-height:1.2; vertical-align:middle; color:#ab6a33; padding:2px 3px; }
+.pyramid .welcome .picture .pyramid-cost table td span.tugriki { font-size:32px; font-weight:normal; white-space:nowrap; }
+.pyramid .welcome .picture .pyramid-cost table td span.tugriki i { margin:-3px 0 0 3px; }
+.pyramid .welcome .picture .pyramid-stats { color:#975D17; position:absolute; text-align:center; width:220px; left:250px; bottom:5px; font-size:11px; }
+.pyramid .welcome .picture .pyramid-stats p { margin:0 0 12px 0; line-height:1.35; }
+.pyramid .welcome .picture .pyramid-stats .num { font-size:16px; font-weight:bold; white-space:nowrap; }
+.pyramid .welcome .picture .pyramid-stats .num .tugriki i { margin:-3px -16px 0 3px; }
+.pyramid .welcome .picture .avatar { position:absolute; right:3px; bottom:-18px; z-index:1; }
+.pyramid .welcome .picture .police-interested { color:#b80000; font-weight:bold; font-size:11px; background:#f5d37b; border:2px solid #f5916e; padding:5px; position:absolute; text-align:center; width:180px; left:270px; bottom:130px; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.pyramid .welcome .picture .police-interested .wanted {  margin-top:5px; display:inline-block; //display:inline; zoom:1; }
+
+.pyramid .welcome .pyramid-fail { background-image:url(../images/loc/pyramid/pyramid-fail.jpg); }
+.pyramid .welcome .pyramid-fail h2 { color:#c55103; font-weight:normal; font-size:42px; text-align:center; padding-top:60px; }
+.pyramid .welcome .pyramid-fail-description { color:#c50303; text-align:center; }
+.pyramid .welcome .pyramid-fail-description .timeleft { background:#ffe3a4; padding:0 3px; font-weight:bold; font-size:11px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+
+.square-pyramid { padding:5px; font-size:90%; }
+
+.pyramid-forecast { margin-top:10px; }
+.pyramid-forecast .link { font-weight:bold; }
+.pyramid-forecast #pyramid-forecast-advice { clear:both; }
+.pyramid-forecast #pyramid-forecast-advice .hint { background:#fbe9bc; margin:5px 0; padding:5px; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; }

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	<xsl:output method="html"/>
+	<xsl:template match="/data">
+		<div class="column-right-topbg">
+			<div class="column-right-bottombg" align="center">
+				<div class="heading clear">
+					<h2>Спортлото</h2>
+				</div>
+				<div id="content" class="casino">
+					<div id="musicSwf"></div>
+					<div class="casino-sportloto">
+						<div class="welcome">
+							<div class="goback">
+								<span class="arrow">◄</span>
+								<a href="/casino/">Выйти в холл Казино</a>
+							</div>
+
+							<div class="corner-links">
+								<div class="balance">
+									<b>Баланс: </b>
+									<span class="fishki">
+										<span id="fishki-balance-num"><xsl:value-of select="chip" /></span><i></i>
+									</span>
+									<a href="/casino/#exchange">Разменять</a>
+								</div>
+								<div class="chat-link">
+									<a href="#" onclick="openChat('casino');">Включить чат</a>
+								</div>
+							</div>
+
+							<div class="block-rounded">
+								<i class="tlc"></i>
+								<i class="trc"></i>
+								<i class="blc"></i>
+								<i class="brc"></i>
+								<div class="text clear">
+									<span class="jackpot">Фонд розыгрыша: <span class="fishki"><xsl:value-of select="fund" /><i></i></span></span>
+									&#160;&#160;<span class="jackpot">Джек-пот: <span class="fishki"><xsl:value-of select="jackpot" /><i></i></span></span>
+									<p style="margin:5px 0">
+										Угадайте <b>5 из 25</b> номеров и срубите большой куш.<br />
+										Даже, если угадаете хотя бы два номера — тоже не останетесь без выигрыша.
+									</p>
+
+									<div style="color:#b14972; font-size:90%; margin-left:0.5em;">Тем кто верит в себя — улыбнется судьба! &#169; Михаил Боярский</div>
+								</div>
+							</div>
+
+							<div id="casino-sportloto-musiclink">
+								<span class="dashedlink">Послушать мелодию</span>
+							</div>
+
+							<div class="balls" onmouseover="$(this).find('div.balls-back').show()" onmouseout="$(this).find('div.balls-back').hide()">
+								<xsl:if test="run != 0">
+									<xsl:for-each select="numbers/element">
+										<b class="icon ball-{position()}"><xsl:value-of select="current()" /></b>
+									</xsl:for-each>
+									<div class="balls-back">
+										<h3>Выигрышные номера тиража №<xsl:value-of select="run" />:</h3>
+										Успейте забрать выигрыш сегодня
+										<br />Следующий розыгрыш сегодня в полночь
+									</div>
+								</xsl:if>
+							</div>
+
+						</div>
+
+						<xsl:if test="run != 0">
+							<div class="block-bordered" style="position:relative; z-index:2;">
+								<ins class="t l">
+									<ins></ins>
+								</ins>
+								<ins class="t r">
+									<ins></ins>
+								</ins>
+								<div class="center clear">
+
+									<h3>Результаты розыгрыша <span class="num">Тираж №<xsl:value-of select="run" /></span></h3>
+									<div class="clear casino-sportloto-drawing" style="position:relative;">
+
+										<div style="float:left; width:49%;">
+											<p>Сегодня, <xsl:value-of select="today_date" /> в 00:00, cостоялся очередной розыгрыш тиража билетов Спортлото.
+												<br />
+												Выпали номера:
+												<b><xsl:value-of select="today_numbers" /></b>
+											</p>
+											<table class="forms" align="center">
+												<tr>
+													<td class="label">Джек-пот:</td>
+													<td class="input">
+														<span class="fishki"><xsl:value-of select="past_jackpot" /><i></i></span>
+														<div class="hint">
+															<xsl:choose>
+																<xsl:when test="past_jackpots = 0">
+																	Не угадал никто, и&#160;он&#160;переходит в&#160;следующий розыгрыш
+																</xsl:when>
+																<xsl:when test="past_jackpots = 1">
+																	Угадал только <xsl:value-of select="past_jackpots" /> игрок
+																</xsl:when>
+																<xsl:otherwise>
+																	Разделили <xsl:value-of select="past_jackpots" />
+																</xsl:otherwise>
+															</xsl:choose>
+														</div>
+
+													</td>
+												</tr>
+												<tr>
+													<td class="label">Призовой фонд:</td>
+													<td class="input">
+														<span class="fishki"><xsl:value-of select="past_fund" /><i></i></span>
+														<div class="hint">
+															<xsl:choose>
+																<xsl:when test="past_wins = 0">
+																	Не угадал никто
+																</xsl:when>
+																<xsl:when test="past_wins = 1">
+																	Угадал только <xsl:value-of select="past_wins" /> игрок
+																</xsl:when>
+																<xsl:otherwise>
+																	Разделили <xsl:value-of select="past_wins" />
+																</xsl:otherwise>
+															</xsl:choose>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="label">Билетов:</td>
+													<td class="input">
+														<b><xsl:value-of select="past_tickets_count" /></b>
+														<div class="hint">
+															<xsl:for-each select="past_gussed/element">
+																Угадано <xsl:value-of select="gussed" /> номера: <xsl:value-of select="format-number(tickets, '###,###,###')" /> шт.<br />
+															</xsl:for-each>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+
+										<xsl:choose>
+											<xsl:when test="count(past_tickets/element) = 0">
+												<div style="color:#975D17; position:absolute; right:0; bottom:0; width:205px; padding:0 110px 60px 0;">
+													<img src="/@/images/ico/girl-sportloto.png" style="position:absolute; bottom:-5px; right:10px;" />
+													Вчера вы были рассеянны и&#160;забыли купить билетик, поэтому никакого приза сегодня не&#160;получите. 
+													Но&#160;вы&#160;можете <b>взять билетик на&#160;завтра. Первый — бесплатно.</b>
+													<img src="/@/images/ico/arrow-down-sportloto.png" style="position:absolute; bottom:-50px; right:140px;" />
+												</div>
+											</xsl:when>
+											<xsl:otherwise>
+												<div style="float:right; width:49%;">
+													<table class="tickets list">
+														<tr>
+															<th class="num"></th>
+															<th class="numbers">Ваши билеты:</th>
+															<th class="value">Выигрыш</th>
+														</tr>
+														<!-- xsl:if test="count(past_tickets/element) = 0"><tr><td colspan="3"><center><strong>Билетов нет</strong></center></td></tr></xsl:if -->
+														<xsl:for-each select="past_tickets/element">
+															<tr>
+																<td class="num">#<xsl:value-of select="position()" /></td>
+																<td class="numbers">
+																	<b class="icon {type1}"><xsl:value-of select="n1" /></b>
+																	<b class="icon {type2}"><xsl:value-of select="n2" /></b>
+																	<b class="icon {type3}"><xsl:value-of select="n3" /></b>
+																	<b class="icon {type4}"><xsl:value-of select="n4" /></b>
+																	<b class="icon {type5}"><xsl:value-of select="n5" /></b>
+																</td>
+																<td class="value"><span class="fishki"><xsl:value-of select="prize" /><i></i></span></td>
+															</tr>
+														</xsl:for-each>
+													</table>
+													<div class="error" id="prize-error" style="text-align:center; display: none;"></div>
+													<xsl:choose>
+														<xsl:when test="obtained = 0">
+															<div id="get-prize-holder">
+																<div style="text-align:center;">
+																	<button class="button" type="button" id="button-prize-get">
+																		<span class="f">
+																			<i class="rl"></i>
+																			<i class="bl"></i>
+																			<i class="brc"></i>
+																			<div class="c">Получить выигрыш:
+																				<span class="fishki"><xsl:value-of select="prize" /><i></i></span>
+																			</div>
+																		</span>
+																	</button>
+																</div>
+																<div class="hint" style="text-align:center;">
+																	<b>Внимание:</b> выигрыш следует забрать до начала следующего розыгрыша, иначе он перейдет в фонд казино
+																</div>
+															</div>
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:choose>
+																<xsl:when test="prize = 0">
+																	<div style="text-align: center;" class="hint">
+																		Не расстраиваетесь. Возьмите билетик,<br /> может сегодня вам повезет.
+																	</div>
+																</xsl:when>
+																<xsl:otherwise>
+																	<p class="borderdata" style="margin:5px 0;">
+																		Выигрыш получен: <span class="fishki"><xsl:value-of select="prize" /><i></i></span>
+																	</p>
+																	<div class="hint" style="text-align:center">Купите билетик на завтра</div>
+																</xsl:otherwise>
+															</xsl:choose>
+														</xsl:otherwise>
+													</xsl:choose>
+												</div>
+
+											</xsl:otherwise>
+										</xsl:choose>
+									</div>
+
+								</div>
+								<ins class="b l">
+									<ins></ins>
+								</ins>
+								<ins class="b r">
+									<ins></ins>
+								</ins>
+							</div>
+						</xsl:if>
+
+
+						<div class="block-bordered">
+							<ins class="t l">
+								<ins></ins>
+							</ins>
+							<ins class="t r">
+								<ins></ins>
+							</ins>
+							<div class="center clear">
+
+								<h3>Билетов пачка</h3>
+								<div class="clear casino-sportloto-drawing">
+									<div style="float:left; width:49%;">
+										<p>В полночь состоится следующий розыгрыш Спортлото. Для участия в нем, необходимо приобрести лотерейный билетик.</p>
+										<p>Способ получения билетов классический — покупаете билет и отмечаете на нем 5 чисел.</p>
+										<p>И главное, один билетик в сутки —
+											<b>бесплатно!</b> Только
+											<b>не&#160;забудьте завтра прийти за выигрышем.</b>
+										</p>
+									</div>
+
+									<div style="float:right; width:49%;">
+										<div intitle="0" notitle="1" timer="{sportloto_timer}" endtime="{next_time}" class="timeleft"></div>
+
+										<table id="today-tickets" class="tickets list">
+											<tr>
+												<th class="num"></th>
+												<th class="numbers">Ваши билеты:</th>
+												<th class="value"></th>
+											</tr>
+											<xsl:for-each select="today_tickets/element">
+												<tr>
+													<td class="num">#<xsl:value-of select="position()" /></td>
+													<td class="numbers">
+														<b class="icon"><xsl:value-of select="n1" /></b>
+														<b class="icon"><xsl:value-of select="n2" /></b>
+														<b class="icon"><xsl:value-of select="n3" /></b>
+														<b class="icon"><xsl:value-of select="n4" /></b>
+														<b class="icon"><xsl:value-of select="n5" /></b>
+													</td>
+													<td class="value"></td>
+												</tr>
+											</xsl:for-each>
+										</table>
+
+										<div style="text-align:center;">
+											<button class="button" id="button-ticket-select" type="button">
+												<xsl:attribute name="onclick">
+													<![CDATA[ 
+													if($.browser.msie) { 
+														$('#casino-sportloto-ticket-new').toggle();
+													} else {
+														$('#casino-sportloto-ticket-new').slideToggle('fast');
+													}
+													]]>
+												</xsl:attribute>
+												<span class="f">
+													<i class="rl"></i>
+													<i class="bl"></i>
+													<i class="brc"></i>
+													<div class="c">
+														<xsl:choose>
+															<xsl:when test="count(today_tickets/element) != 0">
+																Купить билетик - <span class="fishki">60<i></i></span>
+															</xsl:when>
+															<xsl:otherwise>
+																Получить билетик - бесплатно
+															</xsl:otherwise>
+														</xsl:choose>
+													</div>
+												</span>
+											</button>
+										</div>
+										<div class="hint" style="text-align:center; margin-top:5px;">Больше билетов — больше шансов.
+											<br />
+											Часть собранных средств пойдет на строительство спортивной арены для забегов домашних питомцев.
+										</div>
+										<div class="error" id="ticket-error" style="text-align:center; margin-top:5px; display: none;"></div>
+										<div class="casino-sportloto-ticket-new" id="casino-sportloto-ticket-new" style="display:none;">
+											<h3>Укажите 5 счастливых чисел:
+												<!-- <i id="casino-sportloto-ticket-randomize" class="icon reload-icon"></i> -->
+											</h3>
+											<div class="randomize-link">
+												<span class="dashedlink" id="casino-sportloto-ticket-randomize">Выбрать случайно</span>
+											</div>
+											<div class="numbers">
+												<b class="icon">1</b>
+												<b class="icon">2</b>
+												<b class="icon">3</b>
+												<b class="icon">4</b>
+												<b class="icon">5</b>
+												<br />
+												<b class="icon">6</b>
+												<b class="icon">7</b>
+												<b class="icon">8</b>
+												<b class="icon">9</b>
+												<b class="icon">10</b>
+												<br />
+												<b class="icon">11</b>
+												<b class="icon">12</b>
+												<b class="icon">13</b>
+												<b class="icon">14</b>
+												<b class="icon">15</b>
+												<br />
+												<b class="icon">16</b>
+												<b class="icon">17</b>
+												<b class="icon">18</b>
+												<b class="icon">19</b>
+												<b class="icon">20</b>
+												<br />
+												<b class="icon">21</b>
+												<b class="icon">22</b>
+												<b class="icon">23</b>
+												<b class="icon">24</b>
+												<b class="icon">25</b>
+											</div>
+
+
+											<div style="margin-top:5px; ">
+												<button class="button" id="button-ticket-get">
+													<span class="f">
+														<i class="rl"></i>
+														<i class="bl"></i>
+														<i class="brc"></i>
+														<div class="c">Готово</div>
+													</span>
+												</button>
+											</div>
+														<!--
+														 После покупки необходимо написать:
+
+														 Вы купили билетик удачи!
+														 Розыгрышь состоится сегодня в полночь.
+														 В случае удачи, выигрыш следует забрать <b>в течение суток</b>, иначе он перейдет в фонд казино.
+														-->
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+							<ins class="b l">
+								<ins></ins>
+							</ins>
+							<ins class="b r">
+								<ins></ins>
+							</ins>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="alert" id="sportloto-message">
+			<div class="padding">
+				<h2></h2>
+				<div class="data">
+					<div class="text">
+					</div>
+					<div class="actions">
+						<button class="button" type="button"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i><div class="c">OK</div></span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/@/js/casino_sportloto.js"></script>
+	</xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,24 @@
+.registration .block-rounded { padding:0; }
+.registration .registration-top,
+.registration .registration-bottom { background:url(../images/decor/headerfooter-yellow.png); }
+.registration .registration-top { background-position:50% 100%; padding:20px 20px 40px 20px; text-align:center; font-weight:bold; }
+.registration .registration-bottom { background-position:50% 0%; padding:30px 20px 15px 20px; text-align:center; font-weight:bold; }
+.registration .registration-bottom .button .f { font-size:14px; width:150px; }
+
+.registration .registration-middle { padding:10px; font-size:11px; }
+.registration .registration-middle .button-randomize { width:109px; height:109px; background:url(../images/ico/randomize.png); cursor:pointer; }
+.registration .registration-middle .button-randomize:hover { background-position:0 -120px;  }
+.registration .registration-middle .nickname { font-weight:bold; color:#c8692a; font-size:12px; margin-top:30px; }
+.registration .registration-middle .left { float:left; width:40%; text-align:center; }
+.registration .registration-middle .right { float:left; width:59%; text-align:center; position:relative; }
+.registration .registration-middle .avatar-change  { margin-top:40px; font-size:12px; }
+.registration .registration-middle .avatar-change  #avatar-back { position:relative; }
+.registration .registration-middle .avatar-change  #avatar-back #avatar-back-thumb-arrived { position:absolute; top:-45px; left:28px; width:86px; height:52px; display:none; }
+.registration .registration-middle .avatar-change  #avatar-back #avatar-back-thumb-resident { position:absolute; top:-64px; left:40px; width:64px; height:64px; display:none; }
+.registration .registration-middle .avatar-change .registration-side-choose {position:absolute; left:132px; top:-40px; text-align:left; font-weight:bold; color:#c8692a; width:120px; }
+
+
+.regitration-save .block-rounded { background:url(../images/ico/mask.png) no-repeat 13px 8px #ffd952; padding:10px 10px 10px 50px; color:#970000; }
+.regitration-save .block-rounded a,
+.regitration-save .block-rounded a:link,
+.regitration-save .block-rounded a:visited { color:#970000; }

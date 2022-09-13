@@ -1,0 +1,336 @@
+.council .welcome { background:url(../images/loc/council.jpg) 50% -10px no-repeat #a38875; height:auto !important; padding-top:280px; margin-bottom:12px; zoom:1; color:#fff;  }
+.council .welcome i.tlc,
+.council .welcome i.trc { display:none; }
+.council .welcome .block-rounded { background:#ddbe96; color:#000; margin:0; }
+.council .welcome .block-rounded .text { text-align:left; padding:10px 20px; }
+.council .welcome .block-rounded .text h3 { text-shadow:0 1px 0 #f3daba }
+
+.council div.vs-icon { width:43px; height:35px; background:url(../images/ico/vs-small.png) 50% 47% no-repeat; }
+
+.council table.buttons { margin:0 0 12px 0; }
+.council table.buttons td { padding:2px; }
+.council table.buttons .button { width:100%; font-size:110%; }
+
+.council .council-rupor { text-align:center; padding:0 4px 0 2px; font-size:90%; }
+.council .council-rupor textarea { margin:5px 0; width:100%; height:5em; }
+
+.council-election { padding:5px; font-size:90%; }
+.council-election table.forms td.label,
+.council-election table.forms td.input,
+.council-election table.forms td.input .hint { font-size:100%; }
+.council-election table.list th,
+.council-election table.list td { font-size:100%; }
+.council-election ul.list-users li { font-size:100%; float:left; width:33%; }
+.council-election ul.list-users li .user { font-weight:normal; }
+.council-election ul.list-users li .user .arrived,
+.council-election ul.list-users li .user .resident { display:none; }
+
+.council-kazna { padding:5px; font-size:90%; }
+.council-kazna table.forms td.label,
+.council-kazna table.forms td.input,
+.council-kazna table.forms td.input .hint { font-size:100%; }
+.council-kazna table.list th,
+.council-kazna table.list td { font-size:100%; white-space:nowrap; }
+.council-kazna table.list th.value { text-align:right; padding-right:24px; }
+.council-kazna table.list td.value { text-align:right; }
+.council-kazna table.list td.num { width:5px; }
+
+.council-stationchoose { padding:5px; font-size:90%; }
+.council-stationchoose table.forms td.label,
+.council-stationchoose table.forms td.input,
+.council-stationchoose table.forms td.input .hint { font-size:100%; }
+.council-stationchoose table.list th,
+.council-stationchoose table.list td { font-size:100%; }
+.council-stationchoose table.list td.name { font-weight:bold; }
+
+.council-speach { padding:5px; font-size:90%; }
+.council-speach .avatar { float:left; margin:0 10px 0 0; }
+.council-speach textarea { width:100%; height:10em; margin:0 0 5px 0; }
+.council-speach ul.list-users li { font-size:100%; }
+
+.council .council-differentiation { background:#73ccf6; font-size:90%; padding:0; }
+.council .council-differentiation h3 { font-size:13px; color:#033857; text-shadow:0 1px 0 #a9e3ff; }
+.council .council-differentiation table.title { margin-bottom:2px; }
+.council .council-differentiation table.title td { vertical-align:middle; }
+.council .council-differentiation table.title td .hint { text-align:right; padding-right:5px; }
+.council .council-differentiation table.avatars td { padding-right:10px; text-align:left; width:20%; white-space:nowrap; text-align:center; }
+.council .council-differentiation table.avatars td h3 { text-align:center; color:#033857; font-size:11px; margin:4px 0 0 0; }
+.council .council-differentiation table.avatars td .icon { width:66px; height:66px; position:relative; }
+.council .council-differentiation table.avatars td .num { display:block; font-size:16px; font-style:normal; font-weight:bold; position:absolute; bottom:-3px; right:-3px; background:#0087d5; padding:0px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; color:#fff; width:1.7em; }
+.council .council-differentiation  .avatar  { background:#8cd5ff;  float:left; border:1px solid #bbe6ff; margin-right:5px; }
+.council .council-differentiation .hint { color:#285c7a; }
+.council .council-differentiation .hint a,
+.council .council-differentiation .hint a:link,
+.council .council-differentiation .hint a:visited { color:#285c7a; }
+
+.council-phases { background:#55cee4; padding:5px; }
+.council-phases-table  td{ padding:5px; }
+.council-phases-table  td a,
+.council-phases-table  td a:link,
+.council-phases-table  td a:visited { color:#000; }
+.council-phases-table  td.past{ color:#457f8a; }
+.council-phases-table  td.past a,
+.council-phases-table  td.past a:link,
+.council-phases-table  td.past a:visited { color:#457f8a; }
+.council-phases-table  td.today { background:#79f7ff; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.council-phases-table  td.today b { color:#0020e5; }
+
+.council-phases .activity { background:#72ddf0; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; padding:3px; margin-top:5px; }
+.council-phases .activity .collectbar { background:none; }
+.council-phases .activity .collectbar .objects { position:relative; height:32px; }
+.council-phases .activity .collectbar .objects .object { position:absolute; margin-left:-16px; width:32px; background:0; padding:0; margin:0 0 0 -16px; }
+.council-phases .activity .collectbar .objects .object img { width:32px; height:32px; -ms-interpolation-mode: bicubic; }
+.council-phases .activity .collectbar .objects .bonus1 { left:20%; }
+.council-phases .activity .collectbar .objects .bonus2 { left:40%; }
+.council-phases .activity .collectbar .objects .bonus3 { left:60%; }
+.council-phases .activity .collectbar .objects .bonus4 { left:80%; }
+.council-phases .activity .collectbar .objects .bonus5 { left:100%; }
+.council-phases .activity .collectbar div.textbar { background-position:0 -190px; background-color:#66d9dd; border-color:#cbf5f7; }
+.council-phases .activity .collectbar div.textbar div.percent  { width:0px; background-color:#089ba9; background-position:0 -220px; height:18px; }
+.council-phases .activity .collectbar div.textbar div.num { text-shadow:none;}
+.council-phases .activity .collectbar .progress { vertical-align:top; }
+.council-phases .activity .collectbar .actions { text-align:left; }
+
+.council-battle { padding:5px; font-size:90%; }
+.council-battle .council-battle-stats { background:#fff1cb; -moz-border-radius:5px; -webkit-border-radius: 5px; margin-bottom:5px; }
+.council-battle .council-battle-stats td.side { text-align:center; padding:5px; width:45%; }
+.council-battle .council-battle-stats td.side h3 { font-size:11px; }
+.council-battle .council-battle-stats td.side .num { position:relative; z-index:1; font-size:26px; color:#ea9419; font-weight:bold; font-family:Arial; letter-spacing:-1px; }
+.council-battle .council-battle-stats td.side .handicap { position:relative; }
+.council-battle .council-battle-stats td.side .handicap div { position:absolute; top:-6px; left:0; text-align:center; width:100% }
+.council-battle .council-battle-attack .council-battle-stats td.side .handicap div span { font-weight:bold; color:#ea9419; background:#FFDED3; padding:3px 5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.council-battle .council-battle-defence .council-battle-stats td.side .handicap div span { font-weight:bold; color:#ea9419; background:#d1faaf; padding:3px 5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.council-battle .council-battle-stats td.side .handicap div span i.question-icon { margin-left:3px; }
+.council-battle .council-battle-stats td.progress .textbar { width:100%; }
+.council-battle .council-battle-stats td.progress .textbar .present { min-width:2px; }
+.council-battle .council-battle-stats td.vs { text-align:center; width:10%; vertical-align:middle; color:#c68259; padding:5px 0; }
+
+.council-battle .council-battle-advantage { background:#fff1cb; -moz-border-radius:5px; -webkit-border-radius: 5px; margin-bottom:5px; }
+.council-battle .council-battle-advantage td { padding:3px 5px; }
+.council-battle .council-battle-advantage td.side { text-align:center; padding:1px 0 3px 0; width:45%; }
+.council-battle .council-battle-advantage td.side h3 { font-size:11px; }
+.council-battle .council-battle-advantage td.side .num { position:relative; z-index:1; font-size:26px; color:#ea9419; font-weight:bold; font-family:Arial; letter-spacing:-1px; }
+.council-battle .council-battle-advantage td.side .handicap { position:relative; }
+.council-battle .council-battle-advantage td.side .handicap div { position:absolute; top:-6px; left:0; text-align:center; width:100% }
+.council-battle .council-battle-attack .council-battle-advantage td.side .handicap div span { font-weight:bold; color:#ea9419; background:#FFDED3; padding:3px 5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.council-battle .council-battle-defence .council-battle-advantage td.side .handicap div span { font-weight:bold; color:#ea9419; background:#d1faaf; padding:3px 5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.council-battle .council-battle-advantage td.side .handicap div span i.question-icon { margin-left:3px; }
+.council-battle .council-battle-advantage td.progress  { padding:0 5px; }
+.council-battle .council-battle-advantage td.progress .textbar { width:100%; }
+.council-battle .council-battle-advantage td.progress .textbar .present { min-width:2px; }
+.council-battle .council-battle-advantage td.vs { text-align:center; width:10%; vertical-align:middle; color:#c68259; padding:1px 0; }
+
+.council .council-battle h3 { /*font-size:13px;*/ }
+.council-battle-attack { background:#fcbea9; -moz-border-radius:5px; -webkit-border-radius: 5px; margin-bottom:10px; padding:5px 5px 5px 5px; }
+.council-battle-attack h3.title  { color:#d0643f; font-size:13px; }
+.council-battle-attack .council-battle-stats,
+.council-battle-attack .council-battle-advantage  { background:#ffded3; }
+.council-battle-defence { background:#bcec95; -moz-border-radius:5px; -webkit-border-radius: 5px;  padding:5px 5px 5px 5px; }
+.council-battle-defence h3.title  { color:#5b9b27; font-size:13px; }
+.council-battle-defence .council-battle-stats,
+.council-battle-defence .council-battle-advantage  { background:#d1faaf; }
+.council-battle-attack .hint,
+.council-battle-defence .hint { margin-bottom:5px; }
+
+.council-affects { padding:5px; font-size:90%; }
+.council-affects .borderdata { margin:5px; }
+
+.council .council-affects-offer { padding:5px; font-size:90%; }
+.council .council-affects-offer ul.objects { padding:0; background:none; margin-bottom:-2px; }
+.council .council-affects-offer ul.objects li.object { font-size:100%; }
+.council .council-affects-offer ul.objects li.object .actions p { font-weight:bold; margin-bottom:5px; }
+.council .council-affects-offer ul.objects li.object .actions p .time { font-size:80%; font-style:normal; background:#eec482; color:#8d5600; padding:0 2px; -moz-border-radius:3px; -webkit-border-radius: 3px; border-radius:3px; font-weight:normal; }
+
+.council-leave { padding:5px; font-size:90%; text-align:center; }
+
+.council-perks-applied { padding:5px; font-size:90%; }
+.council-perks-applied .object-thumbs { height:auto; }
+
+.council-citymap #citymap { width:530px; height:480px; position:relative; margin:0 0 10px 0; }
+.council-citymap #citymap #citymap-land-1,
+.council-citymap #citymap #citymap-land-2,
+.council-citymap #citymap #citymap-land-3,
+.council-citymap #citymap #citymap-land-4,
+.council-citymap #citymap #citymap-land-5,
+.council-citymap #citymap #citymap-land-6,
+.council-citymap #citymap #citymap-land-7,
+.council-citymap #citymap #citymap-land-8,
+.council-citymap #citymap #citymap-land-9,
+.council-citymap #citymap #citymap-land-10,
+.council-citymap #citymap #citymap-land-11,
+.council-citymap #citymap #citymap-land-12,
+.council-citymap #citymap #citymap-land-13,
+.council-citymap #citymap #citymap-land-14,
+.council-citymap #citymap #citymap-land-15,
+.council-citymap #citymap #citymap-land-16 { position:absolute; background-image:url(../images/loc/citymap/land-grey.gif); }
+.council-citymap #citymap #citymap-land-1 { z-index:3; 	width:88px; 	height:81px; 	background-position:-255px -187px; 	left:211px; 	top:180px;  }
+.council-citymap #citymap #citymap-land-2 { z-index:1; 	width:132px; 	height:142px; 	background-position:-114px -126px; 	left:151px; 	top:94px; }
+.council-citymap #citymap #citymap-land-3 { z-index:2; 	width:139px; 	height:109px; 	background-position:-355px -126px; 	left:243px; 	top:109px; }
+.council-citymap #citymap #citymap-land-4 { z-index:1; 	width:128px; 	height:124px; 	background-position:-505px -126px; 	left:278px; 	top:194px; }
+.council-citymap #citymap #citymap-land-5 { z-index:2; 	width:161px; 	height:120px; 	background-position:-233px -273px; 	left:180px; 	top:254px; }
+.council-citymap #citymap #citymap-land-6 { z-index:1; 	width:98px; 	height:132px; 	background-position:-124px -273px; 	left:138px; 	top:196px; }
+.council-citymap #citymap #citymap-land-7 { z-index:1; 	width:138px; 	height:90px; 	background-position:-168px -10px; 	left:150px; 	top:30px; }
+.council-citymap #citymap #citymap-land-8 { z-index:1; 	width:135px; 	height:109px; 	background-position:-316px -10px; 	left:238px; 	top:22px; }
+.council-citymap #citymap #citymap-land-9 { z-index:1; 	width:113px; 	height:104px; 	background-position:-461px -10px; 	left:340px; 	top:92px; }
+.council-citymap #citymap #citymap-land-10 { z-index:1; 	width:95px; 	height:130px; 	background-position:-544px -273px; 	left:388px; 	top:187px; }
+.council-citymap #citymap #citymap-land-11 { z-index:1; 	width:114px; 	height:134px; 	background-position:-408px -273px; 	left:339px; 	top:278px; }
+.council-citymap #citymap #citymap-land-12 { z-index:1; 	width:141px; 	height:103px; 	background-position:-168px -420px; 	left:219px; 	top:353px; }
+.council-citymap #citymap #citymap-land-13 { z-index:1; 	width:144px; 	height:109px; 	background-position:-10px -420px; 	left:100px; 	top:332px; }
+.council-citymap #citymap #citymap-land-14 { z-index:1; 	width:104px; 	height:115px; 	background-position:-9px -273px; 	left:64px; 	top:246px; }
+.council-citymap #citymap #citymap-land-15 { z-index:1; 	width:94px; 	height:118px; 	background-position:-10px -126px; 	left:58px; 	top:142px; }
+.council-citymap #citymap #citymap-land-16 { z-index:1; 	width:148px; 	height:106px; 	background-position:-10px -10px; 	left:66px; 	top:67px; }
+.council-citymap #citymap #citymap-land-1.resident-color,
+.council-citymap #citymap #citymap-land-2.resident-color,
+.council-citymap #citymap #citymap-land-3.resident-color,
+.council-citymap #citymap #citymap-land-4.resident-color,
+.council-citymap #citymap #citymap-land-5.resident-color,
+.council-citymap #citymap #citymap-land-6.resident-color,
+.council-citymap #citymap #citymap-land-7.resident-color,
+.council-citymap #citymap #citymap-land-8.resident-color,
+.council-citymap #citymap #citymap-land-9.resident-color,
+.council-citymap #citymap #citymap-land-10.resident-color,
+.council-citymap #citymap #citymap-land-11.resident-color,
+.council-citymap #citymap #citymap-land-12.resident-color,
+.council-citymap #citymap #citymap-land-13.resident-color,
+.council-citymap #citymap #citymap-land-14.resident-color,
+.council-citymap #citymap #citymap-land-15.resident-color,
+.council-citymap #citymap #citymap-land-16.resident-color { position:absolute; background-image:url(../images/loc/citymap/land-green.gif); }
+.council-citymap #citymap #citymap-land-1.resident-color-attacked,
+.council-citymap #citymap #citymap-land-2.resident-color-attacked,
+.council-citymap #citymap #citymap-land-3.resident-color-attacked,
+.council-citymap #citymap #citymap-land-4.resident-color-attacked,
+.council-citymap #citymap #citymap-land-5.resident-color-attacked,
+.council-citymap #citymap #citymap-land-6.resident-color-attacked,
+.council-citymap #citymap #citymap-land-7.resident-color-attacked,
+.council-citymap #citymap #citymap-land-8.resident-color-attacked,
+.council-citymap #citymap #citymap-land-9.resident-color-attacked,
+.council-citymap #citymap #citymap-land-10.resident-color-attacked,
+.council-citymap #citymap #citymap-land-11.resident-color-attacked,
+.council-citymap #citymap #citymap-land-12.resident-color-attacked,
+.council-citymap #citymap #citymap-land-13.resident-color-attacked,
+.council-citymap #citymap #citymap-land-14.resident-color-attacked,
+.council-citymap #citymap #citymap-land-15.resident-color-attacked,
+.council-citymap #citymap #citymap-land-16.resident-color-attacked { position:absolute; background-image:url(../images/loc/citymap/land-green-attacked.gif); }
+.council-citymap #citymap #citymap-land-1.arrived-color,
+.council-citymap #citymap #citymap-land-2.arrived-color,
+.council-citymap #citymap #citymap-land-3.arrived-color,
+.council-citymap #citymap #citymap-land-4.arrived-color,
+.council-citymap #citymap #citymap-land-5.arrived-color,
+.council-citymap #citymap #citymap-land-6.arrived-color,
+.council-citymap #citymap #citymap-land-7.arrived-color,
+.council-citymap #citymap #citymap-land-8.arrived-color,
+.council-citymap #citymap #citymap-land-9.arrived-color,
+.council-citymap #citymap #citymap-land-10.arrived-color,
+.council-citymap #citymap #citymap-land-11.arrived-color,
+.council-citymap #citymap #citymap-land-12.arrived-color,
+.council-citymap #citymap #citymap-land-13.arrived-color,
+.council-citymap #citymap #citymap-land-14.arrived-color,
+.council-citymap #citymap #citymap-land-15.arrived-color,
+.council-citymap #citymap #citymap-land-16.arrived-color { position:absolute; background-image:url(../images/loc/citymap/land-blue.gif); }
+.council-citymap #citymap #citymap-land-1.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-2.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-3.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-4.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-5.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-6.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-7.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-8.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-9.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-10.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-11.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-12.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-13.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-14.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-15.arrived-color-attacked,
+.council-citymap #citymap #citymap-land-16.arrived-color-attacked { position:absolute; background-image:url(../images/loc/citymap/land-blue-attacked.gif); }
+.council-citymap #citymap #citymap-land-1.grafter-color,
+.council-citymap #citymap #citymap-land-2.grafter-color,
+.council-citymap #citymap #citymap-land-3.grafter-color,
+.council-citymap #citymap #citymap-land-4.grafter-color,
+.council-citymap #citymap #citymap-land-5.grafter-color,
+.council-citymap #citymap #citymap-land-6.grafter-color,
+.council-citymap #citymap #citymap-land-7.grafter-color,
+.council-citymap #citymap #citymap-land-8.grafter-color,
+.council-citymap #citymap #citymap-land-9.grafter-color,
+.council-citymap #citymap #citymap-land-10.grafter-color,
+.council-citymap #citymap #citymap-land-11.grafter-color,
+.council-citymap #citymap #citymap-land-12.grafter-color,
+.council-citymap #citymap #citymap-land-13.grafter-color,
+.council-citymap #citymap #citymap-land-14.grafter-color,
+.council-citymap #citymap #citymap-land-15.grafter-color,
+.council-citymap #citymap #citymap-land-16.grafter-color { position:absolute; background-image:url(../images/loc/citymap/land-violet.gif); }
+.council-citymap #citymap #citymap-land-1.rieltor-color,
+.council-citymap #citymap #citymap-land-2.rieltor-color,
+.council-citymap #citymap #citymap-land-3.rieltor-color,
+.council-citymap #citymap #citymap-land-4.rieltor-color,
+.council-citymap #citymap #citymap-land-5.rieltor-color,
+.council-citymap #citymap #citymap-land-6.rieltor-color,
+.council-citymap #citymap #citymap-land-7.rieltor-color,
+.council-citymap #citymap #citymap-land-8.rieltor-color,
+.council-citymap #citymap #citymap-land-9.rieltor-color,
+.council-citymap #citymap #citymap-land-10.rieltor-color,
+.council-citymap #citymap #citymap-land-11.rieltor-color,
+.council-citymap #citymap #citymap-land-12.rieltor-color,
+.council-citymap #citymap #citymap-land-13.rieltor-color,
+.council-citymap #citymap #citymap-land-14.rieltor-color,
+.council-citymap #citymap #citymap-land-15.rieltor-color,
+.council-citymap #citymap #citymap-land-16.rieltor-color { position:absolute; background-image:url(../images/loc/citymap/land-orange.gif); }
+.council-citymap #citymap #citymap-land-1.raider-color,
+.council-citymap #citymap #citymap-land-2.raider-color,
+.council-citymap #citymap #citymap-land-3.raider-color,
+.council-citymap #citymap #citymap-land-4.raider-color,
+.council-citymap #citymap #citymap-land-5.raider-color,
+.council-citymap #citymap #citymap-land-6.raider-color,
+.council-citymap #citymap #citymap-land-7.raider-color,
+.council-citymap #citymap #citymap-land-8.raider-color,
+.council-citymap #citymap #citymap-land-9.raider-color,
+.council-citymap #citymap #citymap-land-10.raider-color,
+.council-citymap #citymap #citymap-land-11.raider-color,
+.council-citymap #citymap #citymap-land-12.raider-color,
+.council-citymap #citymap #citymap-land-13.raider-color,
+.council-citymap #citymap #citymap-land-14.raider-color,
+.council-citymap #citymap #citymap-land-15.raider-color,
+.council-citymap #citymap #citymap-land-16.raider-color { position:absolute; background-image:url(../images/loc/citymap/land-brown.gif); }
+.council-citymap #citymap #citymap-land-1.hover,
+.council-citymap #citymap #citymap-land-2.hover,
+.council-citymap #citymap #citymap-land-3.hover,
+.council-citymap #citymap #citymap-land-4.hover,
+.council-citymap #citymap #citymap-land-5.hover,
+.council-citymap #citymap #citymap-land-6.hover,
+.council-citymap #citymap #citymap-land-7.hover,
+.council-citymap #citymap #citymap-land-8.hover,
+.council-citymap #citymap #citymap-land-9.hover,
+.council-citymap #citymap #citymap-land-10.hover,
+.council-citymap #citymap #citymap-land-11.hover,
+.council-citymap #citymap #citymap-land-12.hover,
+.council-citymap #citymap #citymap-land-13.hover,
+.council-citymap #citymap #citymap-land-14.hover,
+.council-citymap #citymap #citymap-land-15.hover,
+.council-citymap #citymap #citymap-land-16.hover { position:absolute; background-image:url(../images/loc/citymap/land-red.gif); }
+
+.council .council-citymap .council-citymap-place { background:#ffeabf; padding:5px; position:relative; margin-bottom:5px; -moz-border-radius:8px; -webkit-border-radius: 8px; }
+.council .council-citymap .council-citymap-place .description1 { background:#ffc552; width:170px; padding:5px; position:absolute; z-index:12; right:5px; top:5px; font-size:11px; text-align:left; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.council .council-citymap .council-citymap-place .description2 { background:#ffda90; width:160px; padding:5px; position:absolute; z-index:12; top:auto; bottom:5px; right:auto; left:5px; font-size:11px; text-align:left; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+
+.council .council-citymap .council-differentiation table.avatars td { padding:8px 5px 5px 5px; color:#fff; }
+.council .council-citymap .council-differentiation table.avatars td.raider-cell { background:#89593a; }
+.council .council-citymap .council-differentiation table.avatars td.raider-cell img.avatar { background:#ad8b75; border-color:#b89b89; }
+.council .council-citymap .council-differentiation table.avatars td.raider-cell span.num { background:#63361f; }
+.council .council-citymap .council-differentiation table.avatars td.rieltor-cell { background:#c58a3e; }
+.council .council-citymap .council-differentiation table.avatars td.rieltor-cell img.avatar { background:#d7ad78; border-color:#dcb98b; }
+.council .council-citymap .council-differentiation table.avatars td.rieltor-cell span.num { background:#aa6422; }
+.council .council-citymap .council-differentiation table.avatars td.grafter-cell { background:#8e60b9; }
+.council .council-citymap .council-differentiation table.avatars td.grafter-cell img.avatar { background:#b090ce; border-color:#bba0d5; }
+.council .council-citymap .council-differentiation table.avatars td.grafter-cell span.num { background:#683c9a; }
+.council .council-citymap .council-differentiation table.avatars td.resident-cell { background:#72ad64; }
+.council .council-citymap .council-differentiation table.avatars td.resident-cell img.avatar { background:#9dc693; border-color:#aacea2; }
+.council .council-citymap .council-differentiation table.avatars td.resident-cell span.num { background:#4c8b3f; }
+.council .council-citymap .council-differentiation table.avatars td.arrived-cell { background:#608be7; }
+.council .council-citymap .council-differentiation table.avatars td.arrived-cell img.avatar { background:#90aeee; border-color:#a0b9f1; }
+.council .council-citymap .council-differentiation table.avatars td.arrived-cell span.num { background:#3c65da; }
+.council .council-citymap .council-differentiation table.avatars td h3 { color:#fff; text-shadow:none; }
+
+.side-fractionwar { text-align:center; margin-bottom:20px; width:138px; color:#fff; background:#637c9e no-repeat; padding:194px 5px 5px 5px; -moz-border-radius:10px; -webkit-border-radius: 0px; border-radius:10px; text-decoration:none; }
+a .side-fractionwar,
+a:link .side-fractionwar,
+a:visited .side-fractionwar { text-decoration:none; }

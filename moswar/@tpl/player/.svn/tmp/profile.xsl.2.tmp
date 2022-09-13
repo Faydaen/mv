@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	<xsl:output method="html"/>
+
+	<xsl:include href="common/playerlink.xsl" />
+	<xsl:include href="common/stats.xsl" />
+	<xsl:include href="common/item.xsl" />
+	<xsl:include href="player/tips.xsl" />
+
+	<xsl:template name="player" match="/data">
+		<h3 class="curves clear"><xsl:call-template name="playerlink"><xsl:with-param name="player" select="player" /></xsl:call-template></h3>
+
+		<xsl:if test="player/wanted = 1">
+			<div class="hunting-report">
+				<img src="/@/images/obj/symbol2-icon.png" />Вы <a href="/huntclub/me/">в розыске</a> Охотничьим клубом
+			</div>
+		</xsl:if>
+
+		<xsl:if test="result = 0">
+			<xsl:call-template name="error">
+				<xsl:with-param name="error" select="error" />
+			</xsl:call-template>
+		</xsl:if>
+		<xsl:if test="alert = 'aftersafeunlocking'">
+			<div class="alert" style="display: block !important;">
+				<div class="padding">
+					<h2>Вы открыли сейф</h2>
+					<div class="data">
+						С помощью отмычек тебе удалось открыть <b>Мини-сейф</b>, внутри которого ты нашел фотографию странного мужика с рыжей шевелюрой.
+						Но фотография тебя не интересует, ведь теперь ты можешь пользоваться этим сейфом целый день.
+						<div class="actions">
+							<button class="button" onclick="document.location.href='/home/';">
+								<span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i>
+									<div class="c">В Хату</div>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xsl:if>
+
+		<xsl:if test="count(result) > 0 and result != 0">
+			<xsl:call-template name="error">
+				<xsl:with-param name="result" select="result" />
+			</xsl:call-template>
+		</xsl:if>
+
+		<table class="layout">
+			<tr>
+				<td class="stats-cell">
+					<dl id="stats-accordion" class="vtabs">
+						<dt class="selected active"><div><div>Характеристики</div></div></dt>
+						<dd>
+							<xsl:call-template name="stats">
+								<xsl:with-param name="player" select="player" />
+							</xsl:call-template>
+							<center style="padding-top: 3px;"><div class="button" onclick="document.location.href='/trainer/';"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i><div class="c">Потренироваться</div></span></div></center>
+						</dd>
+						<xsl:if test="player/level > 4">
+							<dt><div><div>Мастерство</div></div></dt>
+							<dd>
+								<ul class="stats">
+									<li class="stat odd">
+										<div class="label"><b>Подрывник</b><span class="num"><xsl:value-of select="skill_granata/value" />/<xsl:value-of select="skill_granata/nextlevel" /></span></div>
+										<div class="bar"><div><div class="percent" style="width:{skill_granata/percent}%;"></div></div></div>
+										<div class="rank">Звание: <xsl:value-of select="skill_granata/name" /></div>
+									</li>
+									<li class="stat">
+										<div class="label"><b>Охотник</b><span class="num"><xsl:value-of select="skill_hunt/value" />/<xsl:value-of select="skill_hunt/nextlevel" /></span></div>
+										<div class="bar"><div><div class="percent" style="width:{skill_hunt/percent}%;"></div></div></div>
+										<div class="rank">Звание: <xsl:value-of select="skill_hunt/name" /></div>
+									</li>
+									<li class="stat odd">
+										<div class="label"><b>Модификатор</b><span class="num"><xsl:value-of select="skill_mf/value" />/<xsl:value-of select="skill_mf/nextlevel" /></span></div>
+										<div class="bar"><div><div class="percent" style="width:{skill_mf/percent}%;"></div><div class="percent2" style="width:0%;"></div></div></div>
+										<div class="rank">Звание: <xsl:value-of select="skill_mf/name" /></div>
+									</li>
+								</ul>
+							</dd>
+						</xsl:if>
+					</dl>
+					<script type="text/javascript">
+						<xsl:if test="player/level > 4">
+							jQuery('#stats-accordion').accordion({
+							active: '.selected',
+							selectedClass: 'active',
+							header: "dt",
+							animated: false,
+							fillSpace: ( $.browser.msie ? true : false )
+							});
+						</xsl:if>
+						<xsl:if test="count(captcha) > 0">
+							$(document).ready(function(){
+							showCaptcha('<xsl:value-of select="captcha/return_url" />');
+							});
+						</xsl:if>
+					</script>
+				</td>
+				<td class="slots-cell" align="center">
+					<ul class="slots">
+						<xsl:if test="player/accesslevel = -1">
+							<div class="blocked"></div>
+						</xsl:if>
+						<xsl:if test="player/accesslevel = -2">
+							<div class="frozen"></div>
+						</xsl:if>
+						<li class="slot1">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/hat" />
+							</xsl:call-template>
+						</li>
+						<li class="slot2">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/talisman" />
+							</xsl:call-template>
+						</li>
+						<li class="slot3">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/cloth" />
+							</xsl:call-template>
+						</li>
+						<li class="slot4">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/weapon" />
+							</xsl:call-template>
+						</li>
+						<li class="slot5">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/accessory1" />
+							</xsl:call-template>
+						</li>
+						<li class="slot6">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/tech" />
+							</xsl:call-template>
+						</li>
+						<li class="slot7">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/shoe" />
+							</xsl:call-template>
+						</li>
+						<li class="slot8">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/pouch" />
+							</xsl:call-template>
+						</li>
+						<li class="slot9">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/jewellery" />
+							</xsl:call-template>
+						</li>
+						<li class="slot10">
+							<xsl:call-template name="item">
+								<xsl:with-param name="item" select="/data/equipped/cologne" />
+							</xsl:call-template>
+						</li>
+						<li class="avatar {player/background}">
+							<div class="icons-place">
+								<xsl:if test="player/dopings != ''">
+									<i class="icon affects-icon" tooltip="1" clickable="1" title="Временные допинги||{player/dopings}"></i>
+								</xsl:if>
+								<xsl:if test="player2/werewolf = 1">
+									<i class="icon werewolf-icon" onclick="document.location.href='/police/werewolf/';">
+										<span class="time" timer="{player2/werewolf_timer}" notitle="1"><xsl:value-of select="player2/werewolf_timer2" /></span>
+									</i>
+								</xsl:if>
+								<xsl:if test="player2/travma = 1">
+									<a href="/home/"><i class="icon injury-icon" tooltip="1" title="Травма||Вы получили травму из-за черезмерно частых боев и теперь не можете драться до {player2/travmadt}."></i></a>
+								</xsl:if>
+                                <xsl:if test="player/perks != ''">
+									<a href="javascript:void(0);" onclick="showPerks(this,true);" onmouseover="showPerks(this,false);" onmouseout="hidePerks(false);" rel='notfreeze'><i class="icon perks-icon" title="Перки (можно кликнуть)"></i></a>
+                                </xsl:if>
+                                <xsl:if test="player/state = 'police'">
+									<i class="icon jail-icon" tooltip="1" title="Милиция||Персонаж находится в тюрьме"></i>
+                                </xsl:if>
+								<xsl:if test="player/full_dopings != ''">
+									<i class="icon ratings-icon" tooltip="1" clickable="1" title="Все усиления||{player/full_dopings}"></i>
+								</xsl:if>
+							</div>
+							<div class="">
+								<img src="/@/images/pers/{player/avatar_without_ext}_eyes.gif" style="background: transparent url(/@/images/pers/{player/avatar}) repeat scroll 0% 0%; height: 200px; width: 140px;" />
+							</div>
+						</li>
+						<xsl:if test="count(showpetinprofile) = 1">
+							<li class="slot-pet">
+								<img src="/@/images/obj/{showpetinprofile}" />
+							</li>
+						</xsl:if>
+					</ul>
+				</td>
+				<td class="say-cell">
+					<dl id="statistics-accordion" class="vtabs">
+						<dt class="selected active"><div><div>Статистика</div></div></dt>
+						<dd>
+							<div class="pers-statistics">
+								<div class="bars">
+									<div align="center">
+										<div class="exp">
+											Опыт: <xsl:value-of select="player/exp" />/<xsl:value-of select="player/exp_next_level" />
+											<div class="bar"><div><div class="percent" style="width:{player/procentexp}%;"></div></div></div>
+										</div>
+										<div class="life" title="У вас должно быть более 35% жизни, чтобы можно было драться">
+											Жизни: <span class="currenthp"><xsl:value-of select="player/hp" /></span>/<xsl:value-of select="player/maxhp" />
+											<div class="bar" align="center"><div><div class="percent" style="width:{player/procenthp}%;"></div></div></div>
+										</div>
+										<div class="wanted" title="Когда розыск положительный, вы можете попасть за решетку">
+											Розыск: <i class="start">-5</i><i class="end">+5</i>
+											<div class="bar"><div><div class="percent" style="width:{player/procentsuspicion}%;"></div></div></div>
+										</div>
+									</div>
+								</div>
+
+								<ul class="numbers">
+									<li><b>Крутость: </b><xsl:value-of select="player/statsum2" /></li>
+									<li class="odd"><b>Респект: </b>
+										<xsl:choose>
+											<xsl:when test="player/respect &gt; 0">
+												<span style="color:green;"><xsl:value-of select="player/respect" /></span>
+											</xsl:when>
+											<xsl:when test="player/respect &lt; 0">
+												<span style="color:red;"><xsl:value-of select="player/respect" /></span>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="player/respect" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</li>
+									<li><b>Учеников: </b><xsl:value-of select="player/stat/referers" /></li>
+									<li class="odd"><b>Побед: </b><xsl:value-of select="player/stat/wins" /></li>
+									<li><b>Награблено: </b><xsl:value-of select="format-number(player/stat/moneygrabbed, '###,###,###,###')" /></li>
+									<li class="odd"><b>Потеряно: </b><xsl:value-of select="format-number(player/stat/moneylost, '###,###,###,###')" /></li>
+									<xsl:if test="player/referer_nickname != ''">
+										<li><b>Сэнсэй: </b> <a href="/player/{player/referer}/"><xsl:value-of select="player/referer_nickname" /></a></li>
+									</xsl:if>
+								</ul>
+
+								<center style="padding-top: 2px;"><div class="button" onclick="document.location.href='/alley/';"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i><div class="c">Искать соперников</div></span></div></center>
+
+							</div>
+						</dd>
+					</dl>
+					<script>
+						/*
+						jQuery('#equipment-accordion').accordion({
+						animated:false,
+						active: '.selected',
+						selectedClass: 'active',
+						header: "dt",
+						fillSpace: true
+						});
+						*/
+					</script>
+				</td>
+			</tr>
+		</table>
+
+			<table class="inventary">
+				<tr>
+					<td class="dopings-cell" style="width:27%;">
+						<dl id="dopings-accordion" class="vtabs">
+							<dt class="selected active"><div><div>Сладости</div></div></dt>
+							<dd>
+								<div class="object-thumbs">
+									<xsl:choose>
+										<xsl:when test='count(doping/element) = 0'>
+											<div class="empty">
+												<img src="/@/images/obj/drugs1.png" align="left" />
+												Скушай разноцветных конфеточек и покори весь мир!
+											</div>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:for-each select="doping/element">
+												<div class="object-thumb">
+													<div class="padding">
+														<xsl:call-template name="item">
+															<xsl:with-param name="item" select="current()" />
+														</xsl:call-template>
+														<xsl:if test="stackable = 1">
+															<div class="count">#<xsl:value-of select="durability" /></div>
+														</xsl:if>
+														<xsl:choose>
+															<xsl:when test="(type = 'usableitem' and unlockedby != '' and count(notOvertip) = 0) or ((type = 'weapon' or type = 'drug') and usestate = 'fight')">
+																<div class="action" onclick="showObjectOvertip(this, '{unlockedby}', {id});" rel='notfreeze'><span>испол-ть</span></div>
+															</xsl:when>
+															<xsl:when test="count(action/code)">
+																<div class="action" onclick="document.location.href='/player/{action/code}/{id}/';">
+																	<xsl:choose>
+																		<xsl:when test="/data/existingBoosts[*[name()=current()/code]]">
+																			<xsl:attribute name="class">action disabled</xsl:attribute>
+																			<xsl:attribute name="onclick">return false;</xsl:attribute>
+																			<span>уже</span>
+																		</xsl:when>
+																		<xsl:otherwise>
+																			<span><xsl:value-of select="action/title" /></span>
+																		</xsl:otherwise>
+																	</xsl:choose>
+																</div>
+															</xsl:when>
+														</xsl:choose>
+													</div>
+												</div>
+											</xsl:for-each>
+										</xsl:otherwise>
+									</xsl:choose>
+								</div>
+								<div class="hint">
+									От жвачек до конфет вы&#160;найдете в&#160;<a href="/shop/section/pharmacy/">Киоске</a>.
+								</div>
+							</dd>
+						</dl>
+					</td>
+					<td class="equipment-cell" style="width:46%; padding:0 2px">
+						<div style="width:312px;">
+							<dl id="equipment-accordion" class="vtabs">
+								<dt class="selected active"><div><div>Инвентарь (<xsl:value-of select="player/inventory/amount" />/<xsl:value-of select="player/inventory/capacity" />)</div></div></dt>
+								<dd>
+									<div class="object-thumbs">
+										<xsl:choose>
+											<xsl:when test='count(equipment/element) = 0'>
+												<div class="empty">
+													<img src="/@/images/obj/weapon5.png" align="left" />
+													Оденься и стань самым сильным!
+												</div>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:for-each select="equipment/element">
+													<div class="object-thumb">
+														<div class="padding">
+															<xsl:call-template name="item">
+																<xsl:with-param name="item" select="current()" />
+															</xsl:call-template>
+															<xsl:if test="stackable = 1">
+																<div class="count">#<xsl:value-of select="durability" /></div>
+															</xsl:if>
+															<xsl:choose>
+                                                                <xsl:when test="type = 'gift' or type = 'gift2'">
+																	<div class="action" onclick="document.location.href='/player/opengift/{id}/';"><span>открыть</span></div>
+																</xsl:when>
+																<xsl:when test="(type = 'usableitem' and unlockedby != '' and count(notOvertip) = 0) or ((type = 'weapon' or type = 'drug') and usestate = 'fight')">
+                                                                    <div class="action" onclick="showObjectOvertip(this, '{unlockedby}', {id});" rel='notfreeze'><span>испол-ть</span></div>
+                                                                </xsl:when>
+																<xsl:when test="action/title != '' and action/code != ''">
+																	<div class="action" onclick="document.location.href='/player/{action/code}/{id}/';"><span><xsl:value-of select="action/title" /></span></div>
+																</xsl:when>
+																<xsl:when test="action/title != ''">
+																	<div class="action"><span><xsl:value-of select="action/title" /></span></div>
+																</xsl:when>
+															</xsl:choose>
+														</div>
+													</div>
+												</xsl:for-each>
+											</xsl:otherwise>
+										</xsl:choose>
+									</div>
+									<div class="hint">
+										Все желания исполняются в&#160;<a href="/shop/section/">Торговом центре</a>.<br />Будь модным — носи одежду! &#174;
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</td>
+					<td class="pet-cell" style="width:27%;">
+						<dl id="pet-accordion" class="vtabs">
+							<dt class="selected active"><div><div>Питомец</div></div></dt>
+							<dd>
+								<div class="object-thumbs">
+									<xsl:choose>
+										<xsl:when test="count(pets/element) = 0">
+											<div class="empty">
+												<img src="/@/images/obj/pet1.png" align="left" />
+												В вашем нелегком пути необходим надежный и молчаливый друг!
+											</div>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:for-each select="pets/element">
+												<div class="object-thumb">
+													<div class="padding">
+														<xsl:call-template name="item">
+															<xsl:with-param name="item" select="current()" />
+														</xsl:call-template>
+														<xsl:if test="stackable = 1">
+															<div class="count">#<xsl:value-of select="durability" /></div>
+														</xsl:if>
+														<xsl:choose>
+															<xsl:when test="type = 'pet'">
+																<div class="action" onclick="document.location.href='/petarena/train/{id}/';return false;"><span>инфо</span></div>
+															</xsl:when>
+															<xsl:when test="type = 'petfood' or type = 'petautofood'">
+																<div class="action">
+																<xsl:choose>
+																	<xsl:when test="/data/pet/image != ''">
+																		<xsl:attribute name="onclick">petFoodConfirm(<xsl:value-of select="id" />, '<xsl:value-of select="/data/pet/name" />', '<xsl:value-of select="/data/pet/image" />');</xsl:attribute>
+																		<xsl:attribute name="rel">notfreeze</xsl:attribute>
+																	</xsl:when>
+																	<xsl:otherwise>
+																		<xsl:attribute name="class">action disabled</xsl:attribute>
+																	</xsl:otherwise>
+																</xsl:choose>
+																<span><xsl:value-of select="action/title" /></span></div>
+															</xsl:when>
+															<xsl:otherwise>
+																<xsl:if test="action/code != ''">
+																	<div class="action" onclick="document.location.href='/player/{action/code}/{id}/';"><span><xsl:value-of select="action/title" /></span></div>
+																</xsl:if>
+															</xsl:otherwise>
+														</xsl:choose>
+													</div>
+												</div>
+											</xsl:for-each>
+										</xsl:otherwise>
+									</xsl:choose>
+								</div>
+								<div class="hint">
+									Все для питомцев ищите в&#160;<a href="/shop/section/zoo/">Зоомагазине</a>.
+									<!-- Сезонные скидки на волнистого попугайчика! Сегодня <a href="">в&#160;Зоомагазине</a>. -->
+								</div>
+							</dd>
+						</dl>
+					</td>
+				</tr>
+			</table>
+
+		<div align="center">
+			<div class="button">
+				<a class="f" href="/settings/"><i class="rl"></i><i class="bl"></i><i class="brc"></i>
+					<div class="c">Редактировать анкету</div>
+				</a>
+			</div>
+		</div>
+
+        <div class="object-overtip-place" id="object-overtip-place" style="display:none;">
+            <div class="overtip">
+                <div class="help">
+                    <h2></h2>
+                    <div class="data">
+                        <form action="" method="post">
+                            <div></div>
+                            <div class="actions">
+                                <button class="button" type="submit"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i>
+                                    <div class="c">Использовать</div>
+                                </span></button>
+                                &#0160;
+                                <div class="button" onclick="$('#object-overtip-place').hide();"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i>
+                                    <div class="c">Отмена</div>
+                                </span></div>
+                            </div>
+                        </form>
+                        <i class="tail-bottom"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overtip overtip-perks" id="perks-popup" style="display:none;">
+            <div class="help">
+                <h2>Перки</h2>
+                <div class="data">
+                    <div class="objects">
+                        <xsl:for-each select="player/perks/element">
+                            <span class="object-thumb">
+								<div class="padding">
+									<img src="/@/images/obj/perks/{image}" tooltip="1" title="{name}||{info}|||{special1name}: {special1before}{special1}{special1after}" />
+									<div class="time" timer="{timeleft2}"><xsl:value-of select="timeleft" /></div>
+								</div>
+                            </span>
+                        </xsl:for-each>
+                    </div>
+                </div>
+            </div>
+			<span class="close-cross" onclick="hidePerks(true);" style="display:none;">&#215;</span>
+        </div>
+
+	</xsl:template>
+
+	<xsl:template match="/data">
+		<div class="column-right-topbg">
+			<div class="column-right-bottombg" align="center">
+
+				<div class="heading clear"><h2>
+						<span class="pers"></span>
+				</h2></div>
+				<div id="content" class="pers enemy">
+					<xsl:choose>
+						<xsl:when test="result = 0 and block = 1">
+							<xsl:call-template name="error">
+								<xsl:with-param name="error" select="error" />
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:if test="player/password = 'd41d8cd98f00b204e9800998ecf8427e'">
+								<div class="regitration-save">
+									<div class="block-rounded">
+										<i class="tlc"></i><i class="trc"></i><i class="blc"></i><i class="brc"></i>
+<<<<<<< .working
+										<b>Защитите своего персонажа.</b> Если вы не хотите, чтобы посторонние люди играли вашим
+=======
+										<b>Защитите своего персонажа.</b> Если вы не хотите, чтобы посторонние люди играли Вашим
+>>>>>>> .merge-right.r24959
+										персонажем или украли его, <a href="/protect/">придумайте пароль своему персонажу</a>.
+									</div>
+								</div>
+							</xsl:if>
+							<xsl:if test="protect_gameleads = 'true'">
+								<img src="http://pix.gameleads.ru/{protect_order}/q1/{protect_md5}" />
+							</xsl:if>
+							<xsl:call-template name="player" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</div>
+			</div>
+		</div>
+
+		<xsl:if test="player/level = 1">
+			<xsl:call-template name="helphintsstart" />
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="error">
+		<xsl:param name="error" />
+		<xsl:param name="type" />
+		<xsl:param name="params" />
+		<xsl:param name="action" />
+		<xsl:param name="result" />
+
+		<xsl:choose>
+			<!-- errors -->
+			<xsl:when test="$result/result = 0 and $result/type = 'player' and $result/action = 'dress' and $result/error = 'low level'"><p class="error" align="center">Вы еще не доросли, чтобы носить такое.</p></xsl:when>
+			<xsl:when test="$result/result = 0 and $result/type = 'player' and $result/action = 'withdraw' and $result/error = 'item is not undressable'"><p class="error" align="center">Эту вещь нельзя снять.</p></xsl:when>
+			<xsl:when test="$result/result = 0 and $result/type = 'player' and $result/action = 'use item' and $result/error = 'you already have this boost'"><p class="error" align="center">Вы уже находитесь под таким эффектом.</p></xsl:when>
+			<!-- successes -->
+			<xsl:when test="$result/result = 1 and $result/type = 'player' and $result/action = 'dress'"></xsl:when>
+			<xsl:when test="$result/result = 1 and $result/type = 'player' and $result/action = 'withdraw'"></xsl:when>
+			<xsl:when test="$result/result = 1 and $result/type = 'player' and $result/action = 'change pet name'"><p class="success" align="center">Вы обучили питомца новой кличке.</p></xsl:when>
+			<xsl:when test="$result/result = 1 and $result/type = 'player' and $result/action = 'use item'"></xsl:when>
+		</xsl:choose>
+
+	</xsl:template>
+
+</xsl:stylesheet>

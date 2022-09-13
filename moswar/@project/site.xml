@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <modules>
+        <module name="Статическая страница" code="Page" />
+		<module name="Главная страница" code="Index" />
+		<module name="Персонаж" code="Player" />
+		<module name="Тренажер" code="Trainer" />
+		<module name="Хата" code="Home" />
+		<module name="Закоулки" code="Alley" />
+		<module name="Макдональдс" code="Macdonalds" />
+		<module name="Площадь" code="Square" />
+		<module name="Ночной Клуб" code="Nightclub" />
+		<module name="Метро" code="Metro" />
+		<module name="Завод" code="Factory" />
+		<module name="Полиция" code="Police" />
+		<module name="Магазин" code="Shop" />
+		<module name="Авторизация" code="Auth" />
+		<module name="Настройки" code="Settings" />
+		<module name="Форум" code="Forum" />
+		<module name="Заначка" code="Stash" />
+		<module name="Наперстки" code="Thimble" />
+		<module name="Клан" code="Clan" />
+		<module name="Телефон" code="Phone" />
+		<module name="Пустыня" code="Desert" />
+		<module name="API" code="API" />
+		<module name="Рейтинг" code="Rating" />
+        <module name="Чат" code="Chat" />
+		<module name="Квест" code="Quest" />
+		<module name="Cron" code="Cron" />
+        <module name="Новости" code="News" />
+        <module name="Техподдержка" code="Support" />
+		<module name="Банк" code="Bank" />
+        <module name="Арбат" code="Arbat" />
+		<module name="Групповой бой" code="Fight" />
+		<module name="Фото" code="Photos" />
+        <module name="Банк" code="Bank" />
+        <module name="Охотничий клуб" code="Huntclub" />
+        <module name="Совет" code="Sovet" />
+        <module name="Березка" code="Berezka" />
+        <module name="Тверская" code="Tverskaya" />
+		<module name="Казино" code="Casino" />
+        <module name="Страницы с ошибками" code="Error" />
+        <module name="Нефтепровод" code="Neft" />
+		<module name="Дрессировка питомцев" code="Petarena" />
+		<module name="Пирамида WWW" code="Pyramide" />
+    </modules>
+    <templates>
+        <template name="Cтраница" code="page" />
+    </templates>
+    <htaccess>
+		<rewriterule><![CDATA[^/?register/(.*)$ /index.php?_m=Index&url=register/$1]]></rewriterule>
+        <rewriterule><![CDATA[^/?r/(.*)$ /index.php?_m=Index&url=register/$1]]></rewriterule>
+		<rewriterule><![CDATA[^/?autologin/(.*)$ /index.php?_m=Index&url=autologin/$1]]></rewriterule>
+		<rewriterule><![CDATA[^/?play/(.*)$ /index.php?_m=Index&url=play/$1]]></rewriterule>
+		<rewriterule><![CDATA[^/?protect/(.*)$ /index.php?_m=Index&url=protect/$1]]></rewriterule>
+		<rewriterule><![CDATA[^/?login/(.*)$ /index.php?_m=Index&url=login/$1]]></rewriterule>
+		<rewriterule><![CDATA[^/?(.*)$ /index.php?_m=Page&url=$1]]></rewriterule>
+    </htaccess>
+</site>

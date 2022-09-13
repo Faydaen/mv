@@ -1,0 +1,14 @@
+
+
+.levelup .welcome { background:url(../images/loc/levelup-boy.jpg) 50% 0% no-repeat #e8420d; padding-top:440px; margin-bottom:12px; zoom:1; color:#fff; }
+.levelup .welcome i.tlc,
+.levelup .welcome i.trc { display:none; }
+.levelup .welcome .block-rounded { background:#ff8d8d; margin:0; color:#6c3d00; }
+.levelup .welcome .block-rounded .text { text-align:center; padding:5px 10px; }
+.levelup .welcome table { margin-bottom:1em; }
+.levelup .welcome span.big { font-size:200%; color:#6c3d00; font-weight:bold; }
+.levelup .welcome span.big .tugriki { color:#6c3d00; }
+
+
+.levelup .levelup-girl { background:url(../images/loc/levelup-girl.jpg) 50% 0% no-repeat #e8420d; }
+.levelup .levelup-boy { background:url(../images/loc/levelup-boy.jpg) 50% 0% no-repeat #e8420d; }

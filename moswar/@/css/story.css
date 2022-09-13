@@ -1,0 +1,56 @@
+
+.story  .block-rounded { background:#ffe080; margin:0; padding:0; }
+.story  .block-rounded .text,
+.story  .block-rounded .text1,
+.story  .block-rounded .text2 { text-align:center; padding:10px 20px; line-height:1.6; }
+.story .block-rounded .picture { height:300px; }
+.story .block-rounded .actions { margin-bottom:0; text-align:center; margin-top:5px; }
+
+.story form { text-align:center; }
+
+.story  #StartQuest.story1-arrived .text1 { background:#a0f2fe; color:#000; }
+.story  #StartQuest.story1-arrived .text2 { background:#c4b6b6; color:#000; }
+.story  #StartQuest.story1-arrived .picture { background:url(../images/loc/story1-1.jpg) #909084; color:#000; }
+
+.story  #StartQuest.story1 .text1,
+.story  #StartQuest.story1-resident .text1 { background:#fad294; color:#000; }
+.story  #StartQuest.story1 .text2,
+.story  #StartQuest.story1-resident .text2 { background:#928076; color:#fff; }
+.story  #StartQuest.story1 .picture,
+.story  #StartQuest.story1-resident .picture { background:url(../images/loc/story1-2.jpg) #a39b90; }
+
+.story  #StartQuest.story3 .text1 { background:#d0cab4; color:#000; }
+.story  #StartQuest.story3 .text2 { background:#6a6562; color:#fff; }
+.story  #StartQuest.story3 .picture { background:url(../images/loc/story2.jpg) #a39b90; }
+
+.story  #StartQuest.story5  .text1 { background:#ccf3d2; color:#000; }
+.story  #StartQuest.story5  .text2 { background:#5a5651; color:#fff; }
+.story  #StartQuest.story5  .picture { background:url(../images/loc/story3.jpg) #d0e2ff; }
+
+.story  #StartQuest.story6 .text1 { background:#cdbfba; color:#000; }
+.story  #StartQuest.story6 .text2 { background:#676082; color:#fff; }
+.story  #StartQuest.story6 .picture { background:url(../images/loc/story4.jpg) #535e64; }
+
+.story  #StartQuest.story7 .text1 { background:#9eb3d0; color:#000; text-align:left; }
+.story  #StartQuest.story7 .text2 { background:#b6733f; color:#000; text-align:left; }
+.story  #StartQuest.story7 .picture { background:url(../images/loc/story5.jpg) #535e64; }
+
+.story  #StartQuest.story9 .text1 { background:#472d29; color:#fff; text-align:left; }
+.story  #StartQuest.story9 .text2 { background:#820c0c; color:#fff; text-align:left; }
+.story  #StartQuest.story9 .picture { background:url(../images/loc/story7.jpg) #535e64; }
+
+.story  #StartQuest.story11 .text1 { background:#eeae57; color:#000; text-align:left; }
+.story  #StartQuest.story11 .text2 { background:#8fc4ed; color:#000; text-align:left; }
+.story  #StartQuest.story11 .picture { background:url(../images/loc/story6.jpg) #535e64; }
+
+.story #StartQuest.story10 .text1 { background:#5a586d; color:#fff; text-align:left; }
+.story #StartQuest.story10 .text2 { background:#b4a1ad; color:#000; text-align:left; }
+.story #StartQuest.story10 .picture { background:url(../images/loc/story8.jpg) #535e64; }
+
+.story #StartQuest.story8 .text1 { background:#6d78b4; color:#fff; text-align:left; }
+.story #StartQuest.story8 .text2 { background:#8c9fb7; color:#000; text-align:left; }
+.story #StartQuest.story8 .picture { background:url(../images/loc/story9.jpg) #535e64; }
+
+.story #StartQuest.story12 .text1 { background:#664957; color:#fff; text-align:left; }
+.story #StartQuest.story12 .text2 { background:#eac9ae; color:#000; text-align:left; }
+.story #StartQuest.story12 .picture { background:url(../images/loc/story11.jpg) #535e64; }

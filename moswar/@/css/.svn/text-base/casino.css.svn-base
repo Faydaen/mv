@@ -1,0 +1,265 @@
+.casino .welcome { background:url(../images/loc/casino/casino.jpg) 50% 0% no-repeat #f6cf5a; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.casino .welcome i.tlc,
+.casino .welcome i.trc { display:none; }
+.casino .welcome .block-rounded { background:#990a0c; margin:0; }
+.casino .welcome .block-rounded .text { text-align:center; padding:10px; }
+
+.casino .welcome .corner-links { position:absolute; right:0; top:0; z-index:4; white-space:nowrap; z-index:4; }
+
+.casino .welcome .balance { float:right; margin:0 0 0 5px; font-size:11px;  white-space:nowrap; background:#a4404c; color:#fff; padding:5px 10px 5px 10px; -moz-border-radius:0 0 0 5px; border-radius:0 0 0 5px;  opacity: 0.9; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+.casino .welcome .balance span.fishki { color:#ffaeda; }
+.casino .welcome .balance a,
+.casino .welcome .balance a:link,
+.casino .welcome .balance a:visited { color:#fff; }
+
+.casino .welcome .chat-link { float:right; margin:0 0 0 5px; font-size:11px; white-space:nowrap; background:#fff4de; color:#fff; padding:5px 10px 5px 10px; -moz-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; opacity: 0.8; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+.casino .welcome .chat-link a,
+.casino .welcome .chat-link a:link,
+.casino .welcome .chat-link a:visited { color:#c97600; font-weight:bold; }
+
+.casino table.buttons { margin:0 0 12px 0; }
+.casino table.buttons td { padding:2px; }
+.casino table.buttons .button { width:100%; font-size:110%; }
+
+.casino .casino-casher { padding:5px; font-size:90%; }
+.casino .casino-casher form { text-align:center; }
+
+.casino .casino-luckylist { padding:5px; font-size:90%; }
+.casino .casino-luckylist table.list th,
+.casino .casino-luckylist table.list td { font-size:100%; }
+.casino .casino-luckylist table.list th.value { text-align:right; padding-right:8px; }
+.casino .casino-luckylist table.list td.value { text-align:right; }
+
+/* kubovich */
+.casino .kubovich .welcome { background:url(../images/loc/casino/kubovich.jpg) 0% 0% no-repeat #2d9eeb; padding-top:0px; margin-bottom:12px; zoom:1; }
+.casino .kubovich .welcome i.tlc,
+.casino .kubovich .welcome i.trc { display:none; }
+.casino .kubovich .welcome .block-rounded { background:#cfe4fa; margin:0; color:#000; }
+.casino .kubovich .welcome .block-rounded .text { text-align:left; padding:5px 10px 10px 10px; font-size:90%; }
+.casino .kubovich .welcome .block-rounded .text h3 { font-size:110%; color:#5482b2; }
+.casino .kubovich .welcome .block-rounded .text table { border-color:#93b5e0; width:90px; }
+.casino .kubovich .welcome .block-rounded .text table.list td { font-size:100%; border-color:#93b5e0; }
+.casino .kubovich .welcome .block-rounded .text table.list td.num { font-weight:normal; padding:2px 5px 2px 5px; }
+.casino .kubovich .welcome .block-rounded .text table.list td.cost { text-align:right; }
+.casino .kubovich .welcome .goback { z-index:4; background:#3c57e6; color:#cfe4fa; }
+.casino .kubovich .welcome .goback a,
+.casino .kubovich .welcome .goback a:link,
+.casino .kubovich .welcome .goback a:visited { color:#cfe4fa; }
+
+.casino .kubovich .welcome .balance { background:#f4d290; color:#975D17; }
+.casino .kubovich .welcome .balance span.fishki { color:#b000a2; }
+.casino .kubovich .welcome .balance a,
+.casino .kubovich .welcome .balance a:link,
+.casino .kubovich .welcome .balance a:visited { color:#975D17; }
+
+.casino .kubovich .reel-place { height:440px; text-align:center; position:relative; }
+.casino .kubovich .reel-place .reel { width:356px; height:356px; position:relative; margin:16px 0 0 0; padding:0; }
+.casino .kubovich .reel-place .reel .reel-bw { background:url(../images/loc/casino/kubovich-reel-bw.png) no-repeat 50% 50%; width:356px; height:356px; position:absolute; top:0; left:0; z-index:1; }
+.casino .kubovich .reel-place .reel .reel-yellow { background:url(../images/loc/casino/kubovich-reel-yellow.png) no-repeat 50% 50%; width:356px; height:356px; position:absolute; top:0; left:0; z-index:1; }
+.casino .kubovich .reel .owl { background:url(../images/loc/casino/kubovich-owl.png) no-repeat; width:95px; height:86px; position:absolute; top:103px; left:131px; z-index:3; margin:0; padding:0; }
+.casino .kubovich #kubovich-smile  { background:url(../images/loc/casino/kubovich-smile.gif) no-repeat; width:138px; height:195px; position:absolute; top:44px; left:505px; z-index:1; margin:0; padding:0; }
+
+.casino .kubovich .reel .reel-turning,
+.casino .kubovich .reel .reel-turning1,
+.casino .kubovich .reel .reel-turning2,
+.casino .kubovich .reel .reel-turning3,
+.casino .kubovich .reel .reel-turning4,
+.casino .kubovich .reel .reel-turning5,
+.casino .kubovich .reel .reel-turning6,
+.casino .kubovich .reel .reel-turning7,
+.casino .kubovich .reel .reel-turning8,
+.casino .kubovich .reel .reel-turning9,
+.casino .kubovich .reel .reel-turning10 { background:url(../images/loc/casino/kubovich-reel-turning.png) no-repeat; width:350px; height:350px; position:absolute; top:0; left:0; z-index:2; margin:3px; }
+.casino .kubovich .reel .reel-turning,
+.casino .kubovich .reel .reel-turning10 { background-position:0 0; }
+.casino .kubovich .reel .reel-turning1 { background-position:-350px 0; }
+.casino .kubovich .reel .reel-turning2 { background-position:-700px 0; }
+.casino .kubovich .reel .reel-turning3 { background-position:-1050px 0; }
+.casino .kubovich .reel .reel-turning4 { background-position:-1400px 0; }
+.casino .kubovich .reel .reel-turning5 { background-position:-1750px 0; }
+.casino .kubovich .reel .reel-turning6 { background-position:-2100px 0; }
+.casino .kubovich .reel .reel-turning7 { background-position:-2450px 0; }
+.casino .kubovich .reel .reel-turning8 { background-position:-2800px 0; }
+.casino .kubovich .reel .reel-turning9 { background-position:-3150px 0; }
+
+.casino .kubovich .reel .objects { position:absolute; left:0; top:0; width:356px; height:356px; z-index:3;}
+.casino .kubovich .reel .objects .object { margin:0; padding:0; background:none; position:absolute; }
+
+.casino .kubovich .controls { margin-top:14px; }
+.casino .kubovich .controls table { width:auto; }
+.casino .kubovich .controls table td { vertical-align:middle; }
+.casino .kubovich .controls td.supergame { padding:0 0 0 10px; }
+.casino .kubovich .controls td.supergame .padding { white-space:nowarp; background:#f3b643; padding:4px 5px; margin:0; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.casino .kubovich .controls td.supergame .padding .cellbar { margin:0 5px 0 0; }
+.casino .kubovich .controls td.supergame .padding .button .c { padding:0 1px; }
+.casino .kubovich .controls td.supergame .padding .button .c i.reel-yellow { margin-right:0; }
+
+/* slots */
+.casino .casino-slots .welcome { background:url(../images/loc/casino/slots.jpg) 0% 0% no-repeat #3f0a26; padding-top:500px; margin-bottom:12px; zoom:1; }
+.casino .casino-slots .welcome i.tlc,
+.casino .casino-slots .welcome i.trc { display:none; }
+.casino .casino-slots .welcome .block-rounded { background:#c0b4f2; margin:0; color:#000; }
+.casino .casino-slots .welcome .block-rounded .text { text-align:left; padding:5px 10px 10px 10px; font-size:90%; }
+.casino .casino-slots .welcome .block-rounded .text h3 { font-size:110%; color:#5482b2; }
+.casino .casino-slots .welcome .goback { z-index:4; background:#5a1807; color:#866b47; }
+.casino .casino-slots .welcome .goback a,
+.casino .casino-slots .welcome .goback a:link,
+.casino .casino-slots .welcome .goback a:visited { color:#8a783d; }
+
+.casino .casino-slots .welcome .balance { background:#a4404c; color:#fff; }
+.casino .casino-slots .welcome .balance span.fishki { color:#ffaeda; }
+.casino .casino-slots .welcome .balance a,
+.casino .casino-slots .welcome .balance a:link,
+.casino .casino-slots .welcome .balance a:visited { color:#fff; }
+
+.casino .casino-slots .welcome #roll1,
+.casino .casino-slots .welcome #roll2,
+.casino .casino-slots .welcome #roll3 { height:190px; width:111px; position:absolute; top:176px; z-index:1; overflow:hidden; }
+.casino .casino-slots .welcome #roll1 { left:166px; }
+.casino .casino-slots .welcome #roll2 { left:278px; }
+.casino .casino-slots .welcome #roll3 { left:390px; }
+
+.casino .casino-slots .welcome #roll1-animation,
+.casino .casino-slots .welcome #roll2-animation,
+.casino .casino-slots .welcome #roll3-animation {  background:url(../images/loc/casino/slots-objects-russia-roll.gif) 50% 0; height:190px; width:111px; position:absolute; top:176px; z-index:1; overflow:hidden;  }
+.casino .casino-slots .welcome #roll1-animation { left:166px; }
+.casino .casino-slots .welcome #roll2-animation { left:278px; }
+.casino .casino-slots .welcome #roll3-animation { left:390px; }
+
+.casino .casino-slots .welcome .roll1-shadow,
+.casino .casino-slots .welcome .roll2-shadow,
+.casino .casino-slots .welcome .roll3-shadow,
+.casino .casino-slots .welcome #payline { background:url(../images/loc/casino/slots-spritemap.png); height:190px; width:111px; position:absolute; top:176px; z-index:2; }
+.casino .casino-slots .welcome .roll1-shadow { left:166px; }
+.casino .casino-slots .welcome .roll2-shadow { left:278px; }
+.casino .casino-slots .welcome .roll3-shadow { left:390px; }
+.casino .casino-slots .welcome .actions { position:absolute; text-align:center; width:386px; left:132px; top:384px; zoom:1; z-index:1; padding:10px 8px; background:#ab67be; -moz-border-radius:8px; -webkit-border-radius: 8px; border-radius:8px; }
+.casino .casino-slots .welcome .actions .button i { margin-right:0; }
+.casino .casino-slots .welcome .actions .button .c { padding:2px 4px; }
+.casino .casino-slots .welcome .actions .element { width:123px; float:left; text-align:center; }
+.casino .casino-slots .welcome #payline { background-position:0 -200px; height:18px; width:378px; position:absolute; top:259px; left:121px; z-index:3; }
+.casino .casino-slots .welcome #tablo { height:29px; line-height:29px; vertical-align:middle; width:147px; position:absolute; top:92px; left:255px; z-index:1; text-align:center; color:#b86ace; font-weight:bold; font-size:11px; }
+.casino .casino-slots .welcome #tablo span.fishki { color:#B86ACE; }
+
+.casino .casino-slots .welcome .belt { text-align:center; width:111px; position:absolute; bottom:0; margin-bottom:-55px; left:0; }
+
+.casino .casino-slots table.payout { background:#d2c8f8; border-top:1px solid #6c52da; border-left:1px solid #6c52da; }
+.casino .casino-slots table.payout th,
+.casino .casino-slots table.payout td { padding:5px; border-right:1px solid #6c52da; border-bottom:1px solid #6c52da; white-space:nowrap; vertical-align:middle; text-align:center; }
+.casino .casino-slots table.payout th { background:#b0a1ee; text-align:center; padding:5px 0; }
+.casino .casino-slots table.payout th i { margin:0 !important; }
+.casino .casino-slots table.payout td.lot { padding:1px; }
+.casino .casino-slots table.payout td.lot img { width:32px; height:32px; -ms-interpolation-mode: bicubic; }
+.casino .casino-slots table.payout td.win { width:32px; }
+.casino .casino-slots table.payout td.jackpot { padding:0; }
+.casino .casino-slots table.payout td.blink { background:url(../images/decor/blink-bg-green.gif); }
+
+#slots-win-sum { font-size:100px; color:#d200ff; font-weight:bold; position:absolute; z-index:30; text-shadow:2px 3px #fff; top:550px; right:150px; }
+
+.casino .casino-slots i.pic-russia-1,
+.casino .casino-slots i.pic-russia-2,
+.casino .casino-slots i.pic-russia-3,
+.casino .casino-slots i.pic-russia-4,
+.casino .casino-slots i.pic-russia-5,
+.casino .casino-slots i.pic-russia-6,
+.casino .casino-slots i.pic-russia-7,
+.casino .casino-slots i.pic-russia-8,
+.casino .casino-slots i.pic-russia-9 { background:url(../images/loc/casino/slots-objects-russia.png) no-repeat 50% 0%; width:99px; height:99px; margin:0 0 1px 0; }
+.casino .casino-slots i.pic-russia-1 { background-position:50% 0px; }
+.casino .casino-slots i.pic-russia-2 { background-position:50% -100px; }
+.casino .casino-slots i.pic-russia-3 { background-position:50% -200px; }
+.casino .casino-slots i.pic-russia-4 { background-position:50% -300px; }
+.casino .casino-slots i.pic-russia-5 { background-position:50% -400px; }
+.casino .casino-slots i.pic-russia-6 { background-position:50% -500px; }
+.casino .casino-slots i.pic-russia-7 { background-position:50% -600px; }
+.casino .casino-slots i.pic-russia-8 { background-position:50% -700px; }
+.casino .casino-slots i.pic-russia-9 { background-position:50% -800px; }
+
+.casino .casino-slots i.thumb-russia-1,
+.casino .casino-slots i.thumb-russia-2,
+.casino .casino-slots i.thumb-russia-3,
+.casino .casino-slots i.thumb-russia-4,
+.casino .casino-slots i.thumb-russia-5,
+.casino .casino-slots i.thumb-russia-6,
+.casino .casino-slots i.thumb-russia-7,
+.casino .casino-slots i.thumb-russia-8,
+.casino .casino-slots i.thumb-russia-9,
+.casino .casino-slots i.thumb-any,
+.casino .casino-slots i.thumb-jackpot { background:url(../images/loc/casino/slots-objects-russia-small.png) no-repeat 50% 0%; width:32px; height:32px; margin:0; }
+.casino .casino-slots i.thumb-russia-1 { background-position:50% 0px; }
+.casino .casino-slots i.thumb-russia-2 { background-position:50% -50px; }
+.casino .casino-slots i.thumb-russia-3 { background-position:50% -100px; }
+.casino .casino-slots i.thumb-russia-4 { background-position:50% -150px; }
+.casino .casino-slots i.thumb-russia-5 { background-position:50% -200px; }
+.casino .casino-slots i.thumb-russia-6 { background-position:50% -250px; }
+.casino .casino-slots i.thumb-russia-7 { background-position:50% -300px; }
+.casino .casino-slots i.thumb-russia-8 { background-position:50% -350px; }
+.casino .casino-slots i.thumb-russia-9 { background-position:50% -400px; }
+.casino .casino-slots i.thumb-jackpot { background-position:50% -450px; }
+.casino .casino-slots i.thumb-any { background-position:50% -500px; }
+
+
+/* sportloto */
+.casino .casino-sportloto .welcome { background:url(../images/loc/casino/sportloto.jpg) 0% 0% no-repeat #ea9e6c; padding-top:300px; margin-bottom:12px; zoom:1; }
+.casino .casino-sportloto .welcome i.tlc,
+.casino .casino-sportloto .welcome i.trc { display:none; }
+.casino .casino-sportloto .welcome .block-rounded { background:#772042; margin:0; color:#fff; }
+.casino .casino-sportloto .welcome .block-rounded .text { text-align:center; padding:10px; font-size:100%; }
+.casino .casino-sportloto .welcome .block-rounded .text .jackpot { font-weight:bold; color:#FFAEDA; background:#b0406b; padding:2px 5px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.casino .casino-sportloto .welcome .block-rounded .text .jackpot .fishki { color:#FFAEDA; }
+
+.casino .casino-sportloto .welcome .goback { z-index:4; background:#b57230; color:#fff; }
+.casino .casino-sportloto .welcome .goback a,
+.casino .casino-sportloto .welcome .goback a:link,
+.casino .casino-sportloto .welcome .goback a:visited { color:#fff; }
+
+.casino .casino-sportloto .welcome .balance { background:#b53613; color:#fff; }
+.casino .casino-sportloto .welcome .balance span.fishki { color:#ffaeda; }
+.casino .casino-sportloto .welcome .balance a,
+.casino .casino-sportloto .welcome .balance a:link,
+.casino .casino-sportloto .welcome .balance a:visited { color:#fff; }
+
+.casino .casino-sportloto .welcome .balls { position:absolute; z-index:2; top:223px; left:132px; white-space:nowrap; color:green; width:240px; }
+.casino .casino-sportloto .welcome .balls b { position:relative; z-index:3; background:url(../images/loc/casino/sportloto-balls.png) 0% 0% no-repeat; text-align:center; width:46px; height:46px; line-height:46px; margin:0 2px 0 0; font-size:16px; }
+.casino .casino-sportloto .welcome .balls b.ball-1 { background-position:0 0; color:#c24c50 }
+.casino .casino-sportloto .welcome .balls b.ball-2 { background-position:-50px 0; color:#279316; }
+.casino .casino-sportloto .welcome .balls b.ball-3 { background-position:-100px 0; color:#382fb7; }
+.casino .casino-sportloto .welcome .balls b.ball-4 { background-position:-150px 0; color:#c708ac; }
+.casino .casino-sportloto .welcome .balls b.ball-5 { background-position:-200px 0; color:#be3f00; }
+.casino .casino-sportloto .welcome .balls-back { display:none; background:#39a9f1; font-size:11px; color:#abdeff; text-align:center; position:absolute; top:-26px; left:-10px; width:240px; padding:6px 10px; -moz-border-radius:10px; -webkit-border-radius: 0px; border-radius:10px; }
+.casino .casino-sportloto .welcome .balls-back h3 { font-size:100%; color:#fff; font-weight:bold; text-align:center; margin-bottom:54px; text-shadow:none; }
+
+
+
+#casino-sportloto-musiclink { z-index:1; position:absolute; top:277px; right:0; font-size:11px; padding:4px; }
+#casino-sportloto-musiclink .dashedlink { color:#fff; border-color:#fff; }
+
+.casino-sportloto h3 .num { text-shadow:none; font-size:10px; font-weight:normal; background:#e3b66d; color:#fbe6af; padding:0 3px; -moz-border-radius:4px; -webkit-border-radius: 4px; }
+.casino-sportloto-drawing { padding:5px; font-size:90%; }
+.casino-sportloto-drawing table.forms { width:auto; }
+.casino-sportloto-drawing table.forms td.label { font-size:100%; white-space:nowrap; width:auto; }
+.casino-sportloto-drawing table.forms td.label,
+.casino-sportloto-drawing table.forms td.input { padding-top:2px; padding-bottom:3px; width:auto; }
+.casino-sportloto-drawing table.forms .hint { margin-top:0; color:#975D17; font-size:100%; }
+.casino-sportloto-drawing table.tickets { margin:0 0 5px 0; padding:0; list-style-type:none; border-top:0px; }
+.casino-sportloto-drawing table.tickets th { text-align:center; padding:4px 2px; background:none; font-size:100%; }
+.casino-sportloto-drawing table.tickets td { padding:4px 2px; text-align:center; vertical-align:middle; }
+.casino-sportloto-drawing table.tickets td.num { font-weight:normal; width:25%; }
+.casino-sportloto-drawing table.tickets td.numbers { width:50%; white-space:nowrap; }
+.casino-sportloto-drawing table.tickets td.value { text-align:right; width:25%; }
+.casino-sportloto-drawing table.tickets td.value span.fishki i { margin-right:0; }
+.casino-sportloto-drawing table.tickets th.value { text-align:right; font-weight:normal; }
+.casino-sportloto-drawing .numbers b { color:#975d17; height:26px; line-height:26px; text-align:center; width:26px; margin:0; background:url(../images/ico/icons.png) 0 -2000px; padding:0; font-size:11px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.casino-sportloto-drawing .numbers b.guess { color:#318700; background-position:-30px -2000px; }
+.casino-sportloto-drawing .numbers b.fail { color:#d0a155; }
+.casino-sportloto-drawing .numbers b.fail { color:#d0a155; }
+.casino-sportloto-drawing .numbers b.checked { color:#301300; background-position:-60px -2000px; }
+.casino-sportloto-drawing .hint { margin-top:5px; }
+
+.casino-sportloto-ticket-new { position:relative; margin-top:10px; text-align:center; background:#fcedc6; padding:5px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+.casino-sportloto-ticket-new h3 { margin-bottom:7px !important; }
+/* .casino-sportloto-ticket-new .reload-icon { position:absolute; right:5px; top:8px; } */
+.casino-sportloto-ticket-new .randomize-link { margin:-5px 0 5px 0; }
+.casino-sportloto-ticket-new  .numbers b { margin:1px; cursor:pointer; }
+
+.casino-sportloto-drawing .timeleft { font-size:11px; background:#fbd493; color:#975d17; position:absolute; top:0; right:0; padding:2px 4px; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }

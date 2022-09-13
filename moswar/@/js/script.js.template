@@ -1,0 +1,23 @@
+/* script.js */
+js = {};
+js.include = function(path) {
+	document.write('<script type="text/javascript" src="'+path+'"></sc'+'ript>');
+}
+
+js.include('/@/js/lang/ru.js?VER');
+js.include('/@/js/jquery.js?VER');
+js.include('/@/js/lib/chili-1.7.pack.js?VER'); /* needed for accordion */
+js.include('/@/js/lib/jquery.easing.js?VER'); /* needed for accordion */
+js.include('/@/js/lib/jquery.dimensions.js?VER'); /* needed for accordion */
+js.include('/@/js/jquery.accordion.js?VER');
+js.include('/@/js/main.js?VER');
+js.include('/@/js/jquery.ui.core.js?VER');
+js.include('/@/js/jquery.ui.widget.js?VER'); /* needed for clan-affects */
+js.include('/@/js/jquery.ui.mouse.js?VER'); /* needed for clan-affects */
+js.include('/@/js/jquery.ui.slider.js?VER'); /* needed for clan-affects */
+js.include('/@/js/jquery.ui.spinner.js?VER');
+js.include('/@/js/clan.affects.js?VER');
+js.include('/@/js/swfobject.js?VER');
+js.include('/@/js/chat.new.js?VER');
+js.include('/@/js/chatframe.js?VER');
+js.include('/@/js/jcarousellite.js?VER');

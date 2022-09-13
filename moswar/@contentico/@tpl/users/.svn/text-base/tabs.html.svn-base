@@ -1,0 +1,5 @@
+<ul class="content-tabs">
+	<li <%cur-list%>><a href="/@contentico/Users/type=<%TYPE_GROUPS%>/action=<%ACTION_LIST%>/id=<%group-id%>/">Список пользователей</a></li>
+	<li <%cur-settings%>><a href="/@contentico/Users/type=<%TYPE_GROUPS%>/action=<%ACTION_EDIT%>/id=<%group-id%>/">Настройки группы</a></li>
+	<li <%cur-security%>><a href="/@contentico/Users/type=<%TYPE_SECURITY%>/action=<%ACTION_LIST%>/id=<%group-id%>/">Права доступа</a></li>
+</ul>

@@ -1,0 +1,67 @@
+<ul class="content-tabs">
+	<li class="cur"><a href="#content" onclick="ShowEditLayer('content'); return false;">Содержимое</a></li>
+	<li><a href="#data" onclick="ShowEditLayer('data'); return false;">Системные данные</a></li>
+</ul>
+
+<form action="/@contentico/Pages/action=<%action%>/metaview=<%metaview%>/<%id%>" method="post" id="object-form" class="edit-form" enctype="multipart/form-data">
+<script>
+function ShowEditLayer(key){
+	var content_layer = $('#edit-content');
+	var data_layer = $('#edit-data');
+
+	if('data' == key){
+		content_layer.hide();
+		data_layer.show();
+		$('ul.content-tabs a[href=#content]')[0].parentNode.className="";
+		$('ul.content-tabs a[href=#data]')[0].parentNode.className="cur";
+	} else {
+		content_layer.show();
+		data_layer.hide();
+		$('ul.content-tabs a[href=#content]')[0].parentNode.className="cur";
+		$('ul.content-tabs a[href=#data]')[0].parentNode.className="";
+	}
+}
+</script>
+
+<div id="edit-content">
+	<table class="forms">
+        <tr>
+        	<td class="label">Раздел:</td>
+        	<td class="input"><select name="_id"><%page-select%></select></td>
+        </tr>
+
+        <%content-fields%>
+
+    </table>
+</div>
+
+<div id="edit-data" style="display:none;">
+	<table class="forms">
+		<tr>
+			<td class="label">URL:</td>
+			<td class="input"><input type="text" name="url" class="wide" value="<%url%>" /></td>
+		</tr>
+		<tr>
+			<td class="label">Шаблон:</td>
+			<td class="input"><select name="stdtemplate_id"><%template-select%></select></td>
+		</tr>
+		<tr>
+			<td class="label">Модуль:</td>
+			<td class="input"><select name="stdmodule_id"><%module-select%></select></td>
+		</tr>
+		<tr>
+			<td class="label"></td>
+			<td class="input"><input type="checkbox" name="sitemap-xml" value="1" id="sitemap-xml" /><label for="sitemap-xml">Создать/обновить файл &laquo;sitemap.xml&raquo;</label></td>
+		</tr>
+	</table>
+</div>
+
+<div class="buttons">
+	<input class="cancel" type="button" value="Отмена" onclick="history.back(-1);" />
+	<input class="save" type="submit" value="Сохранить" />
+	<input class="apply" type="button" value="Применить изменения (Ctrl+S)" onclick="GoApply();" />
+</div>
+
+</form>
+
+<%ui-htmlarea-init%>

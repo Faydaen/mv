@@ -1,0 +1,103 @@
+.square table.buttons { margin:0 0 12px 0; }
+.square table.buttons td { padding:0 2px; }
+.square table.buttons .button { width:100%; font-size:110%; }
+.square .block-rounded .description { text-align:left; padding:5px; }
+
+.square .welcome { background:url(../images/loc/square.jpg) 50% 0% no-repeat #9fa7fa; height:300px; margin-bottom:0; position:relative; }
+.square .welcome img { position:absolute; bottom:0; left:267px; width:112px; height:106px; /*z-index:20;*/ z-index:5; }
+.square h3.curves { margin-top:0; padding:12px 0 0 0; }
+
+.square #square-shop-pic,
+.square #square-shaurburgers-pic,
+.square #square-nightclub-pic,
+.square #square-police-pic,
+.square #square-metro-pic,
+.square #square-factory-pic { background:url(../images/loc/square-buildings.png) -9999px -9999px no-repeat; position:absolute; }
+
+/*z-index:9 у ктулху в square.xsl*/
+
+.square #square-shop-pic {  width:152px; height:172px; top:109px; left:0px; z-index:8; }
+.square #square-shop-pic.hover,
+.square #square-shop-pic:hover { background-position:-3px 0; }
+
+.square #square-shaurburgers-pic {  width:119px; height:137px; top:103px; left:130px; z-index:7; }
+.square #square-shaurburgers-pic.hover,
+.square #square-shaurburgers-pic:hover { background-position:-157px 0; }
+
+.square #square-nightclub-pic {  width:144px; height:110px; top:117px; /*height:130px; top:97px;*/ left:220px; z-index:6; }
+.square #square-nightclub-pic.hover,
+.square #square-nightclub-pic:hover { background-position:-283px 0; }
+
+.square #square-police-pic {  width:131px; height:119px; top:112px; left:347px; z-index:5; }
+.square #square-police-pic.hover,
+.square #square-police-pic:hover { background-position:-430px 0; }
+
+.square #square-metro-pic {  width:97px; height:99px; top:134px; left:436px; z-index:6; }
+.square #square-metro-pic.hover,
+.square #square-metro-pic:hover { background-position:-569px 0; }
+
+.square #square-factory-pic { width:166px; height:267px; top:20px; left:488px; z-index:7; }
+.square #square-factory-pic.hover,
+.square #square-factory-pic:hover { background-position:-671px 0; }
+
+.square.street2 .welcome { background:url(../images/loc/arbat.jpg) 50% 0% no-repeat #9fa7fa; height:300px; margin-bottom:0; position:relative; }
+
+.street2 #square-berezka-pic,
+.street2 #square-bank-pic,
+.street2 #square-huntclub-pic,
+.street2 #square-casino-pic,
+.street2 #square-pizzeria-pic { background:url(../images/loc/arbat-buildings.png) no-repeat -9999px -9999px; position:absolute; }
+
+.square #square-berezka-pic {  width:165px; height:150px; top:125px; left:11px; z-index:8; }
+.square #square-berezka-pic.hover,
+.square #square-berezka-pic:hover { background-position:-7px -54px; }
+
+.square #square-huntclub-pic {  width:184px; height:179px; top:87px; left:202px; z-index:7; }
+.square #square-huntclub-pic.hover,
+.square #square-huntclub-pic:hover { background-position:-200px 0px; }
+
+.square #square-casino-pic {  width:192px; height:233px; top:30px; left:398px; z-index:6; }
+.square #square-casino-pic.hover,
+.square #square-casino-pic:hover { background-position:-441px 0px; }
+
+.square #square-bank-pic {  width:155px; height:165px; top:5px; left:93px; z-index:5; }
+.square #square-bank-pic.hover,
+.square #square-bank-pic:hover { background-position:-633px 0px; }
+
+.square #square-pizzeria-pic { width:149px; height:299px; top:0px; left:505px; z-index:8; }
+.square #square-pizzeria-pic.hover,
+.square #square-pizzeria-pic:hover { background-position:-818px 0px; }
+
+.square-coolest .hint { color:#975D17; }
+.square-coolest-player { padding:5px; font-size:90%; }
+.square-coolest-player .avatar { float:left; margin:0 10px 10px 0; }
+.square-coolest-player .slogan { margin-top:5px; }
+.square-coolest-levels { padding:5px; font-size:90%; }
+.square-coolest-levels table.list th,
+.square-coolest-levels table.list td { font-size:100%; }
+.square-coolest-levels table.list th.stats,
+.square-coolest-levels table.list td.stats { text-align:right; padding-right:5px; }
+.square-coolest-levels table.list td.level { width:2em; text-align:right; padding-right:8px; color:#975D17; }
+
+.square.street3 .welcome { background:url(../images/loc/tverskaya.jpg) 50% 0% no-repeat #9fa7fa; height:300px; margin-bottom:0; position:relative; }
+
+.street3 #square-stadium-pic,
+.street3 #square-sovet-pic,
+.street3 #square-prom-pic,
+.street3 #square-pipeline-pic { background:url(../images/loc/tverskaya-buildings.png) no-repeat -9999px -9999px; position:absolute; }
+
+.square #square-stadium-pic { width:143px; height:171px; top:121px; left:0px; z-index:8; }
+.square #square-stadium-pic.hover,
+.square #square-stadium-pic:hover { background-position:-3px 0px; }
+
+.square #square-sovet-pic { width:147px; height:287px; top:11px; left:181px; z-index:8; }
+.square #square-sovet-pic.hover,
+.square #square-sovet-pic:hover { background-position:-160px 0px; }
+
+.square #square-prom-pic { width:216px; height:160px; top:123px; left:438px; z-index:8; }
+.square #square-prom-pic.hover,
+.square #square-prom-pic:hover { background-position:-318px 0px; }
+
+.square #square-pipeline-pic { width:75px; height:120px; top:140px; left:354px; z-index:8; }
+.square #square-pipeline-pic.hover,
+.square #square-pipeline-pic:hover { background-position:-560px -28px; }

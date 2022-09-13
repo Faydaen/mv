@@ -1,0 +1,19 @@
+.special-axe .welcome { background:url(../images/loc/special-axe.jpg) 50% 0% no-repeat #000; padding-top:396px; margin-bottom:12px; zoom:1; color:#000;  }
+.special-axe .welcome i.tlc,
+.special-axe .welcome i.trc { display:none; }
+.special-axe .welcome .block-rounded { background:#9bd92f; margin:0; }
+.special-axe .welcome .block-rounded .text { text-align:left; padding:10px 20px; }
+.special-axe .welcome .block-rounded .text ol { margin:5px 0; }
+.special-axe .welcome .block-rounded .text h4 { font-size:100%; font-weight:bold; margin-bottom:5px; text-shadow:0 1px 0 #cff999; }
+
+.special-axe-form { padding:5px 10px; font-size:90%; }
+.special-axe-form p { margin:0 0 1em 0;  text-align:left;  }
+.special-axe-form table.forms { font-size:100%; }
+.special-axe-form table.forms td.label { white-space:nowrap; font-size:11px; }
+.special-axe-form table.forms .hint { font-size:100%; color:#975D17; margin-top:5px; }
+
+.special-axe-link .block-rounded { background:#000; margin:0; color:#8cdb1c; }
+.special-axe-link .block-rounded .text { text-align:center; padding:5px 20px; font-weight:bold; }
+.special-axe-link .block-rounded .text a,
+.special-axe-link .block-rounded .text a:link,
+.special-axe-link .block-rounded .text a:visited { color:#8cdb1c; }

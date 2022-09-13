@@ -1,0 +1,67 @@
+<form action="/@contentico/Users/type=<%TYPE_SECURITY%>/action=<%action%>/-page=<%-page%>/<%id%>" method="post" class="edit-form" enctype="multipart/form-data">
+    <input type="hidden" name="metaobject_type" id="metaobject_type" value="0" />
+    <input type="hidden" name="metaobject_id" id="metaobject_id" value="0" />
+
+    <div id="edit-data">
+    	<table class="forms">
+
+            <tr id="metaobjects-tr">
+            	<td class="label">Модуль:</td>
+            	<td class="input" id="metaobjects">
+            	   <select id="metaobject_select" onchange="ContenticoUsersReloadFields();">
+            	   </select>
+        	       <%module%>
+        	   </td>
+            </tr>
+
+            <tr id="mvormo-tr">
+            	<td class="label">К чему доступ?</td>
+            	<td class="input">
+            	   <div id="form-create-fields">
+                	   <input type="radio" name="target2" id="target2_1" value="1" onclick="ContenticoUsersReloadFields();" checked="checked" />
+                	       <label for="target2_1">Операции над документами</label>
+                 	   <br />
+                	   <input type="radio" name="target2" id="target2_2" value="2" onclick="ContenticoUsersReloadFields();" />
+                	       <label for="target2_2">Доступ к представлению</label>
+        	       </div>
+        	       <%moormv%>
+            	</td>
+            </tr>
+
+            <tr id="metaviews-tr">
+            	<td class="label">Представление:</td>
+            	<td class="input" id="metaviews"><%metaview%></td>
+            </tr>
+
+            <tr id="objects-tr">
+            	<td class="label">Объект:</td>
+            	<td class="input" id="objects"><%object%></td>
+            </tr>
+
+            <tr>
+            	<td class="label">Права доступа:</td>
+            	<td class="input" id="rights">
+                    <input type="checkbox" name="rights[0]" checked="checked" style="display:none;" />
+                    <input type="checkbox" name="rights[1]" <%right-read%> id="right-read" onclick="if(!this.checked){$('#right-write')[0].checked=false;$('#right-delete')[0].checked=false;}" /> <label for="right-read" id="right-read-label">Просмотр</label><br />
+                    <input type="checkbox" name="rights[2]" <%right-write%> id="right-write" onclick="if(this.checked){$('#right-read')[0].checked=true;}" /> <label for="right-write" id="right-write-label">Изменение</label><br />
+                    <input type="checkbox" name="rights[8]" <%right-delete%> id="right-delete" onclick="if(this.checked){$('#right-read')[0].checked=true;}" /> <label for="right-delete" id="right-delete-label">Удаление</label><br />
+            	</td>
+            </tr>
+
+    	</table>
+    </div>
+
+    <div class="buttons">
+    	<input class="cancel" type="button" value="Отмена" onclick="history.back(-1);" />
+    	<input class="save" type="submit" value="Сохранить" />
+    </div>
+
+</form>
+
+<script type="text/javascript">
+var action = <%action%>;
+var isSysModule = <%is-sysmodule%>;
+var isMo = <%is-mo%>;
+var Metaobjects = <%metaobjects%>;
+$(window).bind("load", ContenticoUsersReloadFields);
+</script>

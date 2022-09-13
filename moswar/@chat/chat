@@ -1,0 +1,32 @@
+#! /bin/sh
+
+DIR=./
+DAEMON=chatserver.php
+MONITOR=chatmonitor.php
+USER=www-data
+
+case "$1" in
+  start)
+        cd $DIR
+        sudo chmod 777 /tmp/chat
+        sudo -u $USER "$DIR/$DAEMON" > /tmp/chat/chat 2>&1
+        sudo chmod 666 /tmp/chat/chat
+        #sudo -u $USER "$DIR/$MONITOR" > /tmp/chat/chat-fails
+        echo "Chat server started"
+        ;;
+  stop)
+        #pkill $MONITOR;
+        pkill $DAEMON
+        echo "Chat server stoped"
+        ;;
+  restart)
+        pkill $DAEMON
+        sleep 1
+        cd $DIR
+        "$DIR/$DAEMON" > /tmp/chat/chat 2>&1
+        echo "Chat server restarted"
+        ;;
+esac
+
+exit 0
+

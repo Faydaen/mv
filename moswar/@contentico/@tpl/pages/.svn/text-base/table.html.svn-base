@@ -1,0 +1,29 @@
+<ul class="actions">
+    <li id="action-add" onclick="document.location.href='/@contentico/Pages/action=<%ACTION_CREATE%>/';">Добавить</li>
+    <li id="action-edit" onclick="GoEditPage();">Редактировать</li>
+    <li id="action-delete" onclick="GoDeletePage();">Удалить</li>
+    <li id="action-more" onmouseover="$(this).find('ul').show();" onmouseout="$(this).find('ul').hide();">Еще
+        <ul style="display: none">
+            <li>Экспорт в XML
+                (
+                <a href="javascript:void(0);" onclick="listActionExport('page', <%ACTION_EXPORT%>, 1, 1, 123);">все</a>,
+                <a href="javascript:void(0);" onclick="listActionExport('page', <%ACTION_EXPORT%>, 2, 1, 123);">выбранные</a>,
+                <a href="javascript:void(0);" onclick="listActionExport('page', <%ACTION_EXPORT%>, 3, 1, 123);">отфильтрованные</a>
+                )
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showImportXmlWindow(true);">Импорт из XML</a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+<table class="listtable">
+	<tr>
+		<th class="num"></th>
+		<th class="box"><input type="checkbox" id="<%id%>" /></th>
+		<th>Заголовок</th>
+		<th>Адрес</th>
+	</tr>
+	<%tr%>
+</table>

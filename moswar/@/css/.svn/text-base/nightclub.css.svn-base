@@ -1,0 +1,30 @@
+
+
+.nightclub .welcome { background:url(../images/loc/nightclub.jpg) 50% 0% no-repeat #630757; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.nightclub .welcome i.tlc,
+.nightclub .welcome i.trc { display:none; }
+.nightclub .welcome .block-rounded { background:#630757; margin:0; }
+.nightclub .welcome .block-rounded .text { text-align:center; padding:10px; }
+.nightclub .welcome .block-rounded .text .hint { font-size:11px; color:#ae89bd; margin-top:5px; }
+
+.nightclub-photo { font-size:11px; }
+.nightclub-photo .nightclub-photo-view { float: left; text-align: center; }
+.nightclub-photo #avatar-back { position:relative; top:-5px; }
+.nightclub-photo .description  .text { margin:0px 0 0 165px; }
+.nightclub-photo .description  .text .block-rounded { padding:10px; margin:0 0 0 -10px; font-size:12px; }
+
+.nightclub-photo .back-choose { margin:10px 0; position:relative; padding:0 50px; }
+.nightclub-photo .back-choose-block { width:100%; }
+.nightclub-photo .back-choose ul { width:100%; padding:0; margin:0; }
+.nightclub-photo .back-choose ul li { width:20%; padding:0; margin:0; text-align:center; position:relative; }
+.nightclub-photo .back-choose ul li img{ border:4px solid #fff4de; cursor:pointer; height:99px; width:99px; }
+.nightclub-photo .back-choose ul li:hover img{ border-color:#ffd786; }
+.nightclub-photo .back-choose ul li.current img,
+.nightclub-photo .back-choose ul li.current:hover img { border-color:#ffba30; }
+.nightclub-photo .back-choose ul li.locked:hover img { border-color:#fff4de; }
+.nightclub-photo .back-choose ul li .cost { color:#975D17; text-align:center;  position:relative; z-index:3; margin-top:-14px; }
+.nightclub-photo .back-choose ul li .cost b { padding:3px 5px; background:#fff4de; font-weight:normal; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px;  text-decoration:none; cursor:default; /*opacity: 0.9; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; */ }
+
+.nightclub-photo .back-choose .arrow-left { position:absolute; z-index:1; left:10px; top:50%; margin:-30px 0 0 -15px; }
+.nightclub-photo .back-choose .arrow-right { position:absolute; z-index:1; right:10px; top:50%; margin:-30px -15px 0 0; }
+.nightclub-photo .back-choose .icon-locked { position:absolute; left:50%; top:50px; margin:-22px 0 0 -22px; z-index:4; }

@@ -1,0 +1,31 @@
+.phone table.buttons { margin:0 0 12px 0; }
+.phone table.buttons td { padding:2px; width:25%; }
+.phone table.buttons .button { width:100%; font-size:110%; }
+
+.phone .contacts .block-rounded { background:#ffe3b3; padding:10px; }
+.phone .contacts-add input.name,
+.phone .contacts-add input.comment { width:200px; }
+
+.phone .welcome { display:none; /* background:url(/@/images/loc/phone.jpg) 50% 0% no-repeat #f8f7b0; height:300px; margin-bottom:12px;*/ }
+
+/* messages */
+.phone .messages .block-rounded { background:#ffe3b3; padding:10px; }
+.phone .messages-add h3 { margin:3px 0; }
+.phone .messages-add input.name { width:200px; }
+.phone .messages-add textarea { width:100%; height:4em; }
+.phone table.messages-list { margin-top:2px; border-top:1px dotted #e8d092; }
+.phone table.messages-list td { font-size:90%; padding:3px; border-bottom:1px dotted #e8d092; vertical-align:middle; }
+.phone table.messages-list td.date { width:10%; vertical-align:top; padding:3px 5px 3px 0; }
+.phone table.messages-list td.text { width:89%; vertical-align:top; }
+.phone table.messages-list td.text blockquote { margin:5px 0 0 0; padding:0; }
+.phone table.messages-list td.text .objects img { width:32px; height:32px; -ms-interpolation-mode: bicubic; }
+.phone table.messages-list td.text .grey { color:#9c917f; font-size:90%; }
+.phone table.messages-list td i.arrived,
+.phone table.messages-list td i.resident { margin-top:-3px; }
+.phone table.messages-list tr.new td.date,
+.phone table.messages-list tr.new td.text { font-weight:bold; }
+.phone table.messages-list tr.new td.text blockquote { font-weight:normal; }
+.phone table.messages-list td.actions { white-space:nowrap; width:1%; }
+.phone table.messages-list td.actions .button {  margin-left:3px; }
+.phone table.messages-list .button .f .c  { padding:0 3px; }
+.phone table.messages-list td.admin-action { color:red; }

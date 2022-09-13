@@ -1,0 +1,107 @@
+#page-index div.header #logo { top:-50px; left:50%; margin:0 0 -30px -91px; z-index:1; }
+#page-index div.column-single { float:left; width:100%; padding-top:20px; clear:left; }
+
+#page-index div.main-block,
+#page-index div.main-block-topbg,
+#page-index #main { /*background:none; */ }
+
+/* old button
+#page-index .main-image { margin:-60px 0 10px -40px; background:url(../images/index.png) no-repeat; width:938px; height:383px; position:relative; zoom:1; }
+#page-index .main-image .register { background:none; width:332px; height:130px; left:309px; top:253px; position:absolute; cursor:pointer; }
+#page-index .main-image .register:hover { background:url(../images/index.png) no-repeat -309px -390px; }
+*/
+
+/* play button */
+#page-index .main-image { margin:-60px 0 10px -40px; background:url(../images/index3.png) no-repeat; width:938px; height:391px; position:relative; zoom:1; }
+#page-index .main-image .register { background:none; width:378px; height:106px; left:278px; top:267px; position:absolute; cursor:pointer; }
+#page-index .main-image .register:hover { background:url(../images/index3.png) no-repeat -278px -397px; }
+
+/* choose */
+#page-index div.choose { width:784px; height:84px; zoom:1; display:inline-block; position:relative; margin:-18px 0 10px 0; }
+#page-index div.choose span.resident,
+#page-index div.choose span.vs,
+#page-index div.choose span.arrived { background:url('../images/ico/index-buttons.png') no-repeat 0 0; position:absolute; top:0; }
+#page-index div.choose span.resident { background-position:0px 0px; left:0; float:left; width:308px; height:77px; cursor:pointer; margin:0 0 0 30px; }
+#page-index div.choose span.resident:hover { background-position:0px -100px; }
+#page-index div.choose span.arrived { background-position:-405px 0px; right:0; float:right; width:335px; height:80px; cursor:pointer; margin-top:3px; }
+#page-index div.choose span.arrived:hover { background-position:-405px -100px; }
+#page-index div.choose span.vs { background-position:-322px -16px; left:50%; width:75px; height:62px; margin:16px 0 0 -37px; }
+
+/* texts */
+#page-index table.texts { width:760px; margin:5px 0 20px 0; font-size:90%; }
+#page-index table.texts td { color:#5d6a6d; /*padding:5px 5px 5px 0;*/ padding:0 5px 0 0 }
+#page-index table.texts td img { margin-bottom:2px; border:2px solid #f3bb84; }
+
+/* login */
+#page-index div.bar-login,
+#page-index div.bar-login div.corner,
+#page-index div.bar-login .inside {  background:url(../images/decor/index-bar.png) no-repeat 0 0; }
+#page-index div.bar-login { background-position:0 -70px; width:830px; height:59px; padding-left:28px; }
+#page-index div.bar-login div.corner { background-position:100% -140px; height:59px; padding-right:28px; }
+#page-index div.bar-login table { height:59px; font-size:90%; }
+#page-index div.bar-login .inside { background-position:0 0; background-color:#f2a33a; background-repeat:repeat-x; height:42px; vertical-align:middle; text-align:center; color:#ac550b; }
+#page-index div.bar-login .inside .error { margin:0 0 3px 0; }
+#page-index div.bar-login .inside .error span { background:red; padding:1px 4px; color:#fff; -moz-border-radius:5px; -webkit-border-radius: 5px; border-radius:5px; }
+#page-index div.bar-login a,
+#page-index div.bar-login a:link,
+#page-index div.bar-login a:visited { color:#ac550b;}
+#page-index div.bar-login input { margin:0 0 2px 0; }
+#page-index div.bar-login input#login-email,
+#page-index div.bar-login input#login-password { width:120px; }
+
+/* links */
+#page-index div.links  { font-size:90%; font-weight:bold; margin:15px;  }
+#page-index div.links a,
+#page-index div.links a:link { color:#ec7e21; margin:0 10px; }
+#page-index div.links a:visited { color:#d5955f; margin:0 10px; }
+
+/* age */
+#page-index div.age { font-size:90%; margin:15px 0 0 0; color:#b29e91; }
+
+/* register */
+#register-splash { width:430px; position:absolute; left:50%; margin-left:-200px; top:80px; font-size:90%; }
+table.avatar-change  td { padding:4px; width:33%; vertical-align:middle;  }
+table.avatar-change  td.label { /*font-weight:bold;*/ text-align:right; }
+table.avatar-change  td.input { text-align:center; }
+table.avatar-change  td.submit { text-align:center; }
+table.avatar-change  td.pers { text-align:center; }
+table.avatar-change  td.gender,
+table.avatar-change  td.gender { text-align:center; padding-top:0; }
+table.avatar-change  td.input .hint { font-weight:normal; font-size:90%; color:#975d17; margin:5px 0; }
+
+/* pers-arrow */
+.avatar-change #pers-arrow-1,
+.avatar-change #pers-arrow-2,
+.avatar-change #pers-arrow-3,
+.avatar-change #pers-arrow-4,
+.arrow-left,
+.arrow-right,
+.arrow-left-blue,
+.arrow-right-blue,
+.arrow-left-circle,
+.arrow-right-circle { background:url(../images/ico/arrows.png) no-repeat; cursor:pointer; }
+
+.avatar-change #pers-arrow-1 { width:62px; height:34px; background-position:0px 0px; float:right; }
+.avatar-change #pers-arrow-2 { width:58px; height:38px; background-position:-101px 0px; float:left; }
+.arrow-left,
+.avatar-change #pers-arrow-3 { width:51px; height:46px; background-position:-5px -100px; float:right; }
+.arrow-right,
+.avatar-change #pers-arrow-4 { width:56px; height:48px; background-position:-98px -100px; float:left; }
+.avatar-change #pers-arrow-1:hover { background-position:0px -50px; }
+.avatar-change #pers-arrow-2:hover { background-position:-101px -50px; }
+.arrow-left:hover,
+.avatar-change #pers-arrow-3:hover { background-position:-5px -150px; }
+.arrow-right:hover,
+.avatar-change #pers-arrow-4:hover { background-position:-98px -150px; }
+
+.arrow-left-blue { width:26px; height:30px; background-position:0px -210px; float:left; }
+.arrow-right-blue { width:26px; height:30px; background-position:-40px -210px; float:left; }
+.arrow-left-blue.disabled,
+.arrow-left-blue:hover { background-position:-80px -210px; float:left; }
+.arrow-right-blue.disabled,
+.arrow-right-blue:hover { background-position:-120px -210px; float:left; }
+
+.arrow-left-circle  { width:38px; height:38px; background-position:0 -250px; float:left; }
+.arrow-left-circle:hover  { background-position:-80px -250px; }
+.arrow-right-circle  { width:38px; height:38px; background-position:-40px -250px; float:right; }
+.arrow-right-circle:hover  { background-position:-120px -250px; }

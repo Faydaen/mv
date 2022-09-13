@@ -1,0 +1,71 @@
+<? informico | www.informico.ru ?>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Contentico - система управления сайтом</title>
+    <link rel="icon" href="/@contentico/@img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/@contentico/@img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/@contentico/@inc/common.css" />
+    <link rel="stylesheet" type="text/css" href="/@contentico/@inc/main.css" />
+    <script src="/@contentico/@inc/jquery.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+/* бирки */
+function lmLabelHandler(i,l)
+{
+	i.onfocus = function()
+	{
+		l.className='lmLabelHide';
+	}
+	i.onblur = function()
+	{
+		if(this.value == '')
+		{
+			l.className='lmLabelShow';
+		}
+	}
+	if(i.value != "")
+	{
+		l.className = 'lmLabelHide';
+	}
+}
+function lmLabel(id)
+{
+	if(document.getElementById && document.getElementById(id))
+	{
+		var obj=document.getElementById(id);
+		var newlabel=document.createElement("label");
+		newlabel.className = 'lmLabelShow';
+		newlabel.htmlFor = id;
+		obj.parentNode.insertBefore(newlabel,obj);
+		newlabel.innerHTML=obj.getAttribute("label");
+		newlabel.style.lineHeight = ((obj.offsetHeight))+"px";
+		lmLabelHandler (obj,newlabel);
+	}
+}
+</script>
+</head>
+<body class="login">
+
+    <div class="logo"><img alt="Contentico CMS" title="Contentico CMS" src="/@contentico/@img/logo-big.gif" /></div>
+    <form class="auth" method="post" action="/@contentico/Auth/">
+    <div align="center">
+        <%error%>
+    	<div class="auth-item"><input id="auth-login" label="Эл. почта" type="text" name="email" value="<%email%>" /></div>
+    	<div class="auth-item"><input id="auth-password" label="Пароль" type="password" name="pwd" value="" /></div>
+        <div class="auth-item" style="display:<%show-captcha%>">
+            <input id="auth-captcha" label="Код с картинки" type="text" name="captcha" value="" autocomplete="off" /><img src="/@contentico/Auth/captcha/" />
+        </div>
+    	<div class="auth-item"><input type="checkbox" name="autologin" id="auth-autologin" style="display:inline; width:20px; border:;" /> <label for="auth-autologin">Запомнить меня</label></div>
+    	<div class="auth-item button"><input type="submit" value="Войти" /></div>
+    </div>
+    </form>
+
+    <script type="text/javascript">
+    lmLabel('auth-login');
+    lmLabel('auth-password');
+    lmLabel('auth-captcha');
+    </script>
+
+</body>
+</html>

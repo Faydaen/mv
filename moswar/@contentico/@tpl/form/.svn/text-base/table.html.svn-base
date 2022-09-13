@@ -1,0 +1,20 @@
+<form action="/@contentico/Metaobjects/<%action-url%>/metaview=<%metaview%>/-page=<%-page%>/-view=<%-view%>/" method="post" class="edit-form" enctype="multipart/form-data" id="object-form">
+    <%parent%>
+    <%return-url%>
+
+    <%view-select%>
+
+	<table class="forms">
+		<%tr%>
+	</table>
+
+    <div class="buttons">
+    	<input class="cancel" type="button" value="Отмена" onclick="history.back(-1);" />
+        <%copy-button%>
+    	<input class="save" type="submit" value="Сохранить" />
+    	<input class="apply" type="button" value="Применить изменения (Ctrl+S)" onclick="GoApply();" />
+    </div>
+
+</form>
+
+<%ui-htmlarea-init%>

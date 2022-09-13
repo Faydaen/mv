@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/moswar.ru/!svn/ver/24879/prod/moswar.ru/@tpl/player
+END
+view.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/moswar.ru/!svn/ver/22863/prod/moswar.ru/@tpl/player/view.xsl
+END
+block.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/moswar.ru/!svn/ver/24879/prod/moswar.ru/@tpl/player/block.xsl
+END
+tips.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/moswar.ru/!svn/ver/22815/prod/moswar.ru/@tpl/player/tips.xsl
+END
+profile.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/moswar.ru/!svn/ver/24998/prod/moswar.ru/@tpl/player/profile.xsl
+END

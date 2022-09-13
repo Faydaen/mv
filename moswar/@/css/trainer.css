@@ -1,0 +1,51 @@
+.trainer .about { padding:0 5px; margin:0 0 10px 0;}
+.trainer .stats .label { font-size:110%; color:#000; }
+.trainer .stats li { clear:both; padding:5px !important; height:70px; }
+.trainer .stats .bar { top:0 !important;}
+.trainer .stats .text { font-weight:normal; overflow:hidden; margin:2px 0 0 0; }
+.trainer .stats .button { float:right; margin:0 0 2px 5px; }
+.trainer .stats .button .c { padding:0; width:130px; }
+
+.trainer .welcome { position:relative; background:url(../images/loc/trainer.jpg) 50% 0% no-repeat #a49f9c; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.trainer .welcome i.tlc,
+.trainer .welcome i.trc { display:none; }
+.trainer .welcome .block-rounded { background:#a49f9c; margin:0; }
+.trainer .welcome .block-rounded .text { text-align:center; padding:10px; }
+.trainer .welcome .poster { position:absolute; width:145px; height:97px; z-index:2; left:420px; top:93px; }
+.trainer .welcome .poster a { opacity: 0.7; //filter:alpha(opacity:70); }
+.trainer .welcome .poster a:hover { opacity: 1; //filter:alpha(opacity:100); }
+
+
+.trainer-personal .welcome { position:relative; background:url(../images/loc/trainer-personal.jpg) 50% 0% no-repeat #fd8853; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.trainer-personal .welcome i.tlc,
+.trainer-personal .welcome i.trc { display:none; }
+.trainer-personal .welcome .block-rounded { background:#da4c24; margin:0; }
+.trainer-personal .welcome .block-rounded .text { text-align:center; padding:10px; }
+.trainer-personal .welcome .block-rounded .dashedlink { color:#fff; border-color:#fff; }
+.trainer-personal .welcome .block-rounded .prolong { font-size:90%; font-weight:bold; }
+.trainer-personal .welcome .block-rounded .prolong p { margin-bottom:0; }
+.trainer-personal .welcome .goback { background:#FBA639; color:#8a3315; }
+.trainer-personal .welcome .goback a,
+.trainer-personal .welcome .goback a:link,
+.trainer-personal .welcome .goback a:visited { color:#8a3315; }
+
+.trainer-personal-calculator { font-size:90%; padding:5px; }
+.trainer-personal-calculator .forms { font-size:100%; margin:0 0 5px 0; }
+.trainer-personal-calculator .forms th { font-size:90%; font-weight:normal; padding:5px 2px; background:#ffdb7d; border-bottom:1px solid #facea6; text-align:center; }
+.trainer-personal-calculator .forms td { white-space:nowrap; padding:5px 2px; vertical-align:middle; text-align:center; border-bottom:1px solid #facea6; }
+.trainer-personal-calculator .forms td input { font-size:100%; }
+.trainer-personal-calculator .forms td.my input { border:none; background:none; font-weight:bold; color:#00740e; text-align:center; width:2em; }
+.trainer-personal-calculator .forms td.my b { background:#facea6; display:inline-block; zoom:1; padding:2px 4px; -moz-border-radius:5px; -webkit-border-radius: 5px; color:#00740e; }
+.trainer-personal-calculator .forms td.average { color:#975D17; }
+.trainer-personal-calculator .forms td.cost { text-align:right; padding-right:20px; }
+.trainer-personal-calculator .forms tr.total td { background:#ffdb7d; border-bottom:none; }
+.trainer-personal-calculator .forms tr.total td.my { text-align:left; font-weight:bold; }
+.trainer-personal-calculator .forms tr.total td.my div.hint { margin-top:3px; font-weight:normal; font-size:100%; color:#975D17; }
+.trainer-personal-calculator .forms td.my span.number { width:2em; display:inline-block; zoom:1; text-align:right; }
+.trainer-personal-calculator .forms .label { font-size:100%; }
+
+.trainer-personal-anabolics { font-size:90%; padding:5px; }
+.trainer-personal-anabolics p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+.trainer-personal-enterance { font-size:90%; padding:5px; }
+.trainer-personal-enterance p.hint { color:#975D17; margin-bottom:0; }

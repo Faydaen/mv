@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/moswar.ru/!svn/ver/24255/prod/moswar.ru/@tpl/clan
+END
+warehouse.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/moswar.ru/!svn/ver/22400/prod/moswar.ru/@tpl/clan/warehouse.xsl
+END
+team.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/moswar.ru/!svn/ver/22815/prod/moswar.ru/@tpl/clan/team.xsl
+END
+upgrade.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/moswar.ru/!svn/ver/22815/prod/moswar.ru/@tpl/clan/upgrade.xsl
+END
+warstats.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/moswar.ru/!svn/ver/24255/prod/moswar.ru/@tpl/clan/warstats.xsl
+END

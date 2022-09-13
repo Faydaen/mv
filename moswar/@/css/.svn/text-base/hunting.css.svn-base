@@ -1,0 +1,52 @@
+.hunting .welcome { background:url(../images/loc/hunting.jpg) 50% 0% no-repeat #551e00; padding-top:300px; margin-bottom:12px; zoom:1; color:#fff;  }
+.hunting .welcome i.tlc,
+.hunting .welcome i.trc { display:none; }
+.hunting .welcome .block-rounded { background:#7e2401; margin:0; }
+.hunting .welcome .block-rounded .text { text-align:center; padding:10px 20px; }
+.hunting .welcome .goback { background:#572100; color:#d69e5e; }
+.hunting .welcome .goback a,
+.hunting .welcome .goback a:link,
+.hunting .welcome .goback a:visited { color:#d69e5e; }
+
+.hunting-join { padding:5px; font-size:90%; }
+
+.hunting-order { padding:5px; font-size:90%; }
+
+.hunting-wanted { padding:5px; font-size:90%; }
+.hunting-wanted table.list th,
+.hunting-wanted table.list td { font-size:100%; }
+.hunting-wanted table.list td.name { white-space:nowrap; }
+.hunting-wanted table.list td.action { text-align:right; }
+.hunting-wanted table.list td.action div.wait { text-align: center; line-height:1;  width:6.7em; }
+.hunting-wanted table.list th { white-space:nowrap; }
+.hunting-wanted table.list th.value,
+.hunting-wanted table.list td.value { white-space:nowrap; text-align:right; }
+.hunting-wanted table.list th.options { text-align:right; font-weight:normal; border-bottom:none; }
+.hunting-wanted .pagescroll { font-size:100%; }
+.hunting-wanted .executor-choose {float:left; white-space:nowrap; text-align:left; margin-bottom:8px; }
+.hunting-wanted .hunting-wanted-random { margin:-5px 0 5px 10px; float:right; width:180px; background:#ffd37c; padding:8px; text-align:center; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+
+/*  
+huntstate
+0 - новый заказ (время на откуп)
+1 - активный заказ
+2 - завершенный заказ
+*/
+.hunting-wanted tr.huntstate0 td.name .user { font-weight:normal; }
+.hunting-wanted tr.huntstate1 td { background:#FFED87; }
+.hunting-wanted tr.huntstate2 td.name .user { font-weight:normal; }
+.hunting-wanted tr.huntstate2 td.name .user a,
+.hunting-wanted tr.huntstate2 td.name .user a:link,
+.hunting-wanted tr.huntstate2 td.name .user a:visited,
+.hunting-wanted tr.huntstate2 td.date { text-decoration:line-through; }
+
+.hunting-hunters { padding:5px; font-size:90%; }
+.hunting-hunters table.list th,
+.hunting-hunters table.list td { font-size:100%;}
+
+.alert#hunting-order-form { display: block; width:460px; top:180px; margin-left:-230px; }
+.alert#hunting-order-form table.forms .hint { margin-top:5px; font-size:100%; }
+.alert2#hunting-order-form { margin:15px 0 0 -215px; margin-left:-215px; }
+.alert3#hunting-order-form { margin:30px 0 0 -200px; margin-left:-200px; }
+
+

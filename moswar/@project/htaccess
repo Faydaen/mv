@@ -1,0 +1,58 @@
+# mod_rewrite
+RewriteEngine On
+Options +FollowSymLinks
+RewriteBase /
+
+# приписывание "/" к концу адреса
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !^index.php$
+RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+RewriteCond %{SCRIPT_FILENAME} !^service.php$
+RewriteRule ^(.+[^/])$ /$1/ [L,R,QSA]
+
+# Contentico
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !^index.php$
+RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+RewriteCond %{SCRIPT_FILENAME} !^service.php$
+RewriteRule ^@contentico/([^/]+)/(.*)$ /contentico.php?_m=$1&url=$2 [L,NS]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !^index.php$
+RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+RewriteCond %{SCRIPT_FILENAME} !^service.php$
+RewriteRule ^@contentico/(.*)$ /contentico.php?_m=Index [L,NS]
+
+# изображения
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !^index.php$
+RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+RewriteCond %{SCRIPT_FILENAME} !^service.php$
+RewriteRule ^@images/(.*)$ /service.php?_a=image&id=$1 [L,NS]
+
+# файлы
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !^index.php$
+RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+RewriteCond %{SCRIPT_FILENAME} !^service.php$
+RewriteRule ^@files/(.*)$ /service.php?_a=file&id=$1 [L,NS]
+
+################################################################################
+
+## <Module>
+#
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{SCRIPT_FILENAME} !^index.php$
+#RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+#RewriteCond %{SCRIPT_FILENAME} !^service.php$
+#RewriteRule ^<module>/([^/]+)$ /index.php?_m=News&page=$1 [L,NS]
+
+<%modules%>
+
+# статические страницы
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !^index.php$
+RewriteCond %{SCRIPT_FILENAME} !^contentico.php$
+RewriteCond %{SCRIPT_FILENAME} !^service.php$
+RewriteRule ^(.*)$ /index.php?_m=Page&url=$1 [L,NS]

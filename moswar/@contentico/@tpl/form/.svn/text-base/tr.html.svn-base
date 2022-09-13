@@ -1,0 +1,5 @@
+<%group%>
+<tr>
+	<td class="label"><%name%></td>
+	<td class="input"><%control%><%unit%><%hint%></td>
+</tr>

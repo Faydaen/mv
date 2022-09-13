@@ -1,0 +1,44 @@
+.petarena-training .welcome { background:url(../images/loc/petarena-training.jpg) 50% 0% no-repeat #f1cd83; padding-top:320px; margin-bottom:12px; zoom:1; color:#fff;  }
+.petarena-training .welcome i.tlc,
+.petarena-training .welcome i.trc { display:none; }
+.petarena-training .welcome .block-rounded { background:#bc4e33; margin:0; }
+.petarena-training .welcome .block-rounded .text { text-align:center; padding:10px 20px; }
+
+.petarena-training h3.curves { position:relative; }
+.petarena-training h3.curves .goback { position: absolute; left: 5px; top: 5px; font-size: 11px; font-weight: normal; text-shadow: none; }
+.petarena-training h3.curves .goback .arrow { font-family: Times New Roman; margin-right: 3px; }
+
+.petarena-training-description { text-align:center; padding:5px; font-size:90%; }
+.petarena-training-description p { margin:0 0 1em 0; text-align:left;  }
+.petarena-training-description p.hint { margin:1em 0 0 0; }
+.petarena-training-description p.total { border:1px solid #FFC466; color:#975D17; font-weight:bold; padding:5px; text-align:center; }
+
+
+.petarena-training table.inventary dd .object-thumbs  { height:176px }
+
+.petarena-training .stats .label { font-size:110%; color:#000; }
+.petarena-training .stats li.stat { font-size:100%;  clear:both; padding:5px !important; height:auto; }
+.petarena-training .stats .bar { top:0 !important;}
+.petarena-training .stats .text { font-weight:normal; overflow:hidden; margin:2px 0 0 0; }
+.petarena-training .stats .button { float:right; margin:0 0 2px 5px; }
+.petarena-training .stats .button .c { padding:0; /*width:150px;*/ }
+
+.pet-info .block-rounded  { padding:0; font-size:90%; }
+.pet-info td.description  { width:35%; padding:15px; }
+.pet-info td.description .life  { text-align:left; margin-bottom:5px; }
+.pet-info td.description .tonus  { text-align:left; }
+.pet-info td.avatar  { background:url(../images/decor/pet-bg.png) 50% 50% no-repeat; text-align:center; padding:0 10px; width:30%; vertical-align:middle; }
+.pet-info td.avatar img.injured  { background:url(../images/decor/pet-back.png); background-position:-128px 0; }
+.pet-info td.avatar span.smile1 { position:absolute; left:82px; top:52px; font-size:120px; color:green; line-height:1; }
+.pet-info td.avatar span.smile2 { position:absolute; left:70px; top:-60px; font-size:90px; color:blue; line-height:1; }
+.pet-info td.avatar span.smile3 { position:absolute; left:32px; top:32px; font-size:50px; color:#009ef8; line-height:1; }
+.pet-info td.data  { width:35%; padding:15px; }
+.pet-info table.buttons { margin:0 0 12px 0; }
+.pet-info table.buttons td { padding:2px; }
+.pet-info table.buttons .button { width:100%; }
+.pet-info .cure { color:red; text-align:center; font-weight:bold; background:#fcbf87; margin:0; padding:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.pet-info .cure form { color:#905B06; }
+
+.petarena-training-form { padding:5px; font-size:90%; }
+.petarena-training-form .button .c span i { margin-top:-2px; }
+
